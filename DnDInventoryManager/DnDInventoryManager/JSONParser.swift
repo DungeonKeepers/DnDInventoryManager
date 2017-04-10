@@ -27,10 +27,10 @@ class JSONParser {
     
     class func itemsFrom(data: Data, callback: JSONParserCallback) {
         do {
-            if let rootObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
+            if let rootObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any], let compendiumObject = rootObject["compendium"] as? [String : Any], let itemsArray = compendiumObject["item"] as? [[String : Any]] {
                 var items = [Item]()
                 
-                for itemDictionary in rootObject {
+                for itemDictionary in itemsArray {
                     if let item = Item(json: itemDictionary) {
                         items.append(item)
                     }

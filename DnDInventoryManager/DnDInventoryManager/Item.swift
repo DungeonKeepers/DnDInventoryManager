@@ -15,9 +15,11 @@ class Item {
     
     init?(json: [String : Any]) {
         
-        if let name = json["name"] as? String, let text = json["text"] as? String {
+        print(json)
+        
+        if let name = json["name"] as? String, let text = json["text"] as? [String] {
             self.name = name
-            self.text = text
+            self.text = text.first ?? "Unknown"
         } else {
             return nil
         }
