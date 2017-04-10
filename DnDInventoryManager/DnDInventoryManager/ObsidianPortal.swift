@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OAuthSwift
 
 typealias ObsidianPortalOAuthCompletion = (Bool) -> ()
 typealias FetchCampaignsCompletion = ([Campaign]?) -> ()
@@ -35,4 +36,28 @@ class ObsidianPortal {
         self.components.host = "www.obsidianportal.com"
     }
     
+    var oauthswift = OAuth1Swift(
+        consumerKey:    consumerKey,
+        consumerSecret: consumerSecret,
+        requestTokenUrl: "https://api.twitter.com/oauth/request_token",
+        authorizeUrl:    "https://api.twitter.com/oauth/authorize",
+        accessTokenUrl:  "https://api.twitter.com/oauth/access_token"
+    )
+    
+    func getOAuth(viewController: UIViewController) {
+        self.oauthswift.authorizeURLHandler = SafariURLHandler(viewController: viewController, oauthSwift: oauthswift)
+        let handle = oauthswift.authorize(
+            withCallbackURL: URL(string: "dndinventorymanager://oauth-callback/obsidianportal")!,
+            success: { credential, response, parameters in
+                print(credential.oauthToken)
+                print(credential.oauthTokenSecret)
+                print(parameters["user_id"])
+        },
+            failure: { error in
+                print(error.localizedDescription)
+        }
+        )
+    }
+    
 }
+
