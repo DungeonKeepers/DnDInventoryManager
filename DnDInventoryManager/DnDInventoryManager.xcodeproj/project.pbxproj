@@ -19,6 +19,7 @@
 		83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB373F1E9BE7FD00B6FEA6 /* Character.swift */; };
 		83D911541E9C214A00E1F9C7 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */; };
 		83D911561E9C217000E1F9C7 /* OAuthSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		83CB373D1E9BE7EB00B6FEA6 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		83CB373F1E9BE7FD00B6FEA6 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
+		83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				83CB373B1E9BE7D200B6FEA6 /* User.swift */,
 				83CB373D1E9BE7EB00B6FEA6 /* Campaign.swift */,
 				83CB373F1E9BE7FD00B6FEA6 /* Character.swift */,
+				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				83CB373E1E9BE7EB00B6FEA6 /* Campaign.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
+				83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
 				83CB373C1E9BE7D200B6FEA6 /* User.swift in Sources */,
 				83CB373A1E9BE65600B6FEA6 /* ObsidianPortal.swift in Sources */,

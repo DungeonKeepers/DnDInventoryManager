@@ -50,11 +50,25 @@ class ObsidianPortal {
             withCallbackURL: URL(string: "dndinventorymanager://oauth-callback/")!,
             success: { credential, response, parameters in
                 print(credential.oauthToken)
+                UserDefaults.standard.save(oauthToken: credential.oauthToken)
                 print(credential.oauthTokenSecret)
-                print(response?.dataString())
+                UserDefaults.standard.save(oauthTokenSecret: credential.oauthTokenSecret)
+
         },
             failure: { error in
                 print(error.localizedDescription)
+        }
+        )
+    }
+    
+    func makeSignedRequest() {
+        oauthswift.client.get("http://api.obsidianportal.com/v1/users/me.json",
+            success: { response in
+                let dataString = response.string
+                print(dataString)
+            },
+            failure: { error in
+                print(error)
         }
         )
     }

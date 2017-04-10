@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ObsidianPortal.shared.getOAuth(viewController: self)
-    }
+            ObsidianPortal.shared.getOAuth(viewController: self)
+            ObsidianPortal.shared.makeSignedRequest()
+        }
 }
 
