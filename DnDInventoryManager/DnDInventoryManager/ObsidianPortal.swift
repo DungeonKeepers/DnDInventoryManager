@@ -39,19 +39,19 @@ class ObsidianPortal {
     var oauthswift = OAuth1Swift(
         consumerKey:    consumerKey,
         consumerSecret: consumerSecret,
-        requestTokenUrl: "https://api.twitter.com/oauth/request_token",
-        authorizeUrl:    "https://api.twitter.com/oauth/authorize",
-        accessTokenUrl:  "https://api.twitter.com/oauth/access_token"
+        requestTokenUrl: "https://www.obsidianportal.com/oauth/request_token",
+        authorizeUrl:    "https://www.obsidianportal.com/oauth/authorize",
+        accessTokenUrl:  "https://www.obsidianportal.com/oauth/access_token"
     )
     
     func getOAuth(viewController: UIViewController) {
         self.oauthswift.authorizeURLHandler = SafariURLHandler(viewController: viewController, oauthSwift: oauthswift)
         let handle = oauthswift.authorize(
-            withCallbackURL: URL(string: "dndinventorymanager://oauth-callback/obsidianportal")!,
+            withCallbackURL: URL(string: "dndinventorymanager://oauth-callback/")!,
             success: { credential, response, parameters in
                 print(credential.oauthToken)
                 print(credential.oauthTokenSecret)
-                print(parameters["user_id"])
+                print(response?.dataString())
         },
             failure: { error in
                 print(error.localizedDescription)
