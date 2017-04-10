@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Items {
+class Item {
 
     let name : String
     let text : String

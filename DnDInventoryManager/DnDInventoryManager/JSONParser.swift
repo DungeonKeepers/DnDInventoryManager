@@ -8,18 +8,38 @@
 
 import Foundation
 
-class JSONParser {
+typealias JSONParserCallback = (Bool, [Item]?)->()
 
+class JSONParser {
+    
     static var jsonData : Data {
-        guard let jsonPath = Bundle.main.url(forResource: "iteminventory", withExtension: "json") else { fatalError("iteminventory.json does not exist in this bundle.") }
+        guard let jsonDataPath = Bundle.main.url(forResource: "ItemInventory", withExtension: "json") else { fatalError("ItemInventory.json does not exist in this bundle.") }
         
         do {
-            let jsonItemData = try Data(contentsOf: jsonPath)
+            let itemJSONData = try Data(contentsOf: jsonDataPath)
             
-            print(jsonItemData)
-            return jsonItemData
+            return itemJSONData
+            
         } catch {
-            fatalError("Failed to create data from jsonPath")
+            fatalError("Failed to create data from iteJSONPath.")
+        }
+    }
+    
+    class func itemsFrom(data: Data, callback: JSONParserCallback) {
+        do {
+            if let rootObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
+                var items = [Item]()
+                
+                for itemDictionary in rootObject {
+                    if let item = Item(json: itemDictionary) {
+                        items.append(item)
+                    }
+                }
+                callback(true, items)
+            }
+        } catch {
+            print("Error serlializing JSON.")
+            callback(false, nil)
         }
     }
 }
