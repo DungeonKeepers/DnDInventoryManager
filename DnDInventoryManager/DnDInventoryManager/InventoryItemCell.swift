@@ -9,16 +9,18 @@
 import UIKit
 
 class InventoryItemCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var quantity: UILabel!
+    @IBOutlet weak var itemName: UILabel!
+    
+    var item : [Item : Int]! {
+        didSet {
+            for (key, value) in item {
+                self.quantity.text = String(value)
+                self.itemName.text = key.name
+            }
+            
+        }
     }
     
 }

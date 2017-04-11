@@ -9,7 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailController" customModule="DnDInventoryManager" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailController" customModule="DnDInventoryManager" customModuleProvider="target">
+            <connections>
+                <outlet property="characterName" destination="EIY-k3-vYn" id="ecN-qJ-XQj"/>
+                <outlet property="inventoryTableView" destination="6Cd-Ui-41P" id="Pm3-e4-8c4"/>
+                <outlet property="profileImage" destination="1vc-56-FuP" id="Bpa-0P-Pdi"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="blN-1g-0ZU" customClass="CharacterDetailController" customModule="DnDInventoryManager" customModuleProvider="target">
             <layoutGuides>
@@ -19,8 +25,48 @@
             <view key="view" contentMode="scaleToFill" id="ewA-dn-hvE">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-56-FuP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="339"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmG-Bo-0a0">
+                        <rect key="frame" x="0.0" y="281" width="375" height="58"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-k3-vYn">
+                        <rect key="frame" x="0.0" y="281" width="375" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="58" id="JfS-O9-4Xr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-Ui-41P">
+                        <rect key="frame" x="0.0" y="347" width="375" height="320"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="6Cd-Ui-41P" firstAttribute="top" secondItem="EIY-k3-vYn" secondAttribute="bottom" constant="8" id="7b1-0W-ezf"/>
+                    <constraint firstAttribute="trailing" secondItem="6Cd-Ui-41P" secondAttribute="trailing" id="8zU-Un-9Yr"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="bottom" secondItem="xmG-Bo-0a0" secondAttribute="bottom" id="9rc-0T-07N"/>
+                    <constraint firstItem="1vc-56-FuP" firstAttribute="top" secondItem="ewA-dn-hvE" secondAttribute="top" id="AiW-9A-fIN"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="trailing" secondItem="6Cd-Ui-41P" secondAttribute="trailing" id="CVB-Uo-VPW"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="bottom" secondItem="1vc-56-FuP" secondAttribute="bottom" id="Hm3-rd-cwA"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="top" secondItem="NdE-nx-qFa" secondAttribute="bottom" constant="261" id="Mj9-WU-U2o"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="leading" secondItem="xmG-Bo-0a0" secondAttribute="leading" id="QVF-1n-jyB"/>
+                    <constraint firstItem="6Cd-Ui-41P" firstAttribute="leading" secondItem="ewA-dn-hvE" secondAttribute="leading" id="fQ9-Jy-AHQ"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="trailing" secondItem="xmG-Bo-0a0" secondAttribute="trailing" id="iLf-O4-D8k"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="leading" secondItem="6Cd-Ui-41P" secondAttribute="leading" id="iuF-aX-izK"/>
+                    <constraint firstItem="zHQ-Cu-ZiB" firstAttribute="top" secondItem="6Cd-Ui-41P" secondAttribute="bottom" id="mMU-19-fy8"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="leading" secondItem="1vc-56-FuP" secondAttribute="leading" id="rOn-Cy-dsz"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="top" secondItem="xmG-Bo-0a0" secondAttribute="top" id="raM-pX-v18"/>
+                    <constraint firstItem="EIY-k3-vYn" firstAttribute="trailing" secondItem="1vc-56-FuP" secondAttribute="trailing" id="vk0-RY-f36"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
         </viewController>
     </objects>
 </document>
