@@ -10,13 +10,11 @@ import UIKit
 
 class Character {
     
-    var campaignID = String()
-    let name : String
+    var userID = String()
+    var campaignID : String?
+    var name : String?
     var inventory = [[Item : Int]]()
     var avatar : UIImage?
     
-    init(name: String) {
-        self.name = name
-    }
-    
+    init(){}
 }
