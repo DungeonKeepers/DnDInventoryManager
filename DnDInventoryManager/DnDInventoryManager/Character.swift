@@ -12,7 +12,7 @@ class Character {
     
     var campaignID = String()
     let name : String
-    var inventory = [Item]()
+    var inventory = [[Item : Int]]()
     var avatar : UIImage?
     
     init(name: String) {

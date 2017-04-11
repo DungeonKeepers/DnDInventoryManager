@@ -8,6 +8,16 @@
 
 import UIKit
 
-class CharacterCell: UICollectionViewCell {
+class CharacterCell: UITableViewCell {
+
+    @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var characterName: UILabel!
+    
+    var character : Character! {
+        didSet {
+            self.characterName.text = character.name
+            self.characterImage.image = character.avatar
+        }
+    }
     
 }
