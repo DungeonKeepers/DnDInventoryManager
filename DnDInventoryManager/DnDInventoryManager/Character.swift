@@ -6,19 +6,17 @@
 //  Copyright © 2017 Mike Miksch. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Character {
     
-    var id = String()
+    var campaignID = String()
     let name : String
-    let characterURL : String
-    let avatarURL : String?
+    var inventory = [Item]()
+    var avatar : UIImage?
     
-    init(json: [String : Any]) {
-        self.name = json["name"] as? String ?? "Name Unknown"
-        self.characterURL = json["character_url"] as? String ?? "No character URL found"
-        self.avatarURL = json["avatar_url"] as? String ?? nil
+    init(name: String) {
+        self.name = name
     }
     
 }
