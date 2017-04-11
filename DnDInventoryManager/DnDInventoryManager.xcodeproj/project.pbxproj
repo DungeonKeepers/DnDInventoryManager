@@ -21,8 +21,10 @@
 		83D911561E9C217000E1F9C7 /* OAuthSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */; };
 		83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */; };
-		83D9115F1E9D449200E1F9C7 /* CharacterGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9115D1E9D449200E1F9C7 /* CharacterGalleryController.swift */; };
-		83D911601E9D449200E1F9C7 /* CharacterGalleryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D9115E1E9D449200E1F9C7 /* CharacterGalleryController.xib */; };
+		83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */; };
+		83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */; };
+		83D9116B1E9D486500E1F9C7 /* CharacterGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */; };
+		83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */; };
 		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
 		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
 /* End PBXBuildFile section */
@@ -56,8 +58,10 @@
 		83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
 		83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemInventory.json; sourceTree = "<group>"; };
-		83D9115D1E9D449200E1F9C7 /* CharacterGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGalleryController.swift; sourceTree = "<group>"; };
-		83D9115E1E9D449200E1F9C7 /* CharacterGalleryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterGalleryController.xib; sourceTree = "<group>"; };
+		83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
+		83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailController.xib; sourceTree = "<group>"; };
+		83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGalleryController.swift; sourceTree = "<group>"; };
+		83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterGalleryController.xib; sourceTree = "<group>"; };
 		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +124,8 @@
 		83CB37341E9BE35300B6FEA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */,
+				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
 			);
@@ -130,8 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
-				83D9115D1E9D449200E1F9C7 /* CharacterGalleryController.swift */,
-				83D9115E1E9D449200E1F9C7 /* CharacterGalleryController.xib */,
+				83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */,
+				83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -209,7 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */,
-				83D911601E9D449200E1F9C7 /* CharacterGalleryController.xib in Resources */,
+				83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */,
+				83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */,
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
 				83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */,
@@ -223,12 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D9115F1E9D449200E1F9C7 /* CharacterGalleryController.swift in Sources */,
 				83CB37381E9BE3AE00B6FEA6 /* tokens.swift in Sources */,
 				83CB373E1E9BE7EB00B6FEA6 /* Campaign.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
 				83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */,
+				83D9116B1E9D486500E1F9C7 /* CharacterGalleryController.swift in Sources */,
 				EFA7D9111E9C1869009C41DB /* Item.swift in Sources */,
+				83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */,
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
 				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
