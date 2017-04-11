@@ -11,15 +11,19 @@ import Foundation
 class Item {
 
     let name : String
-    let text : String
+    var text = String()
     
     init?(json: [String : Any]) {
         
         print(json)
         
-        if let name = json["name"] as? String, let text = json["text"] as? [String] {
+        if let name = json["name"] as? String, let textJSON = json["text"] as? [Any] {
             self.name = name
-            self.text = text.first ?? "Unknown"
+            for each in textJSON {
+                if let itemText = each as? String {
+                    self.text = "\(self.text)\r \(itemText)"
+                }
+            }
         } else {
             return nil
         }

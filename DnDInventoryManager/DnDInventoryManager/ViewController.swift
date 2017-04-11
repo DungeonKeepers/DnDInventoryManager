@@ -32,12 +32,13 @@ class ViewController: UIViewController {
                 guard let items = items else { fatalError("Items came back nil.") }
                 
                 for item in items {
-                    print(item.name)
+//                    print(item.name)
                     ItemList.shared.addItem(item: item)
                 }
                 dataSource = ItemList.shared.allItems
             }
         }
+        print(dataSource[0].text)
         // Do any additional setup after loading the view, typically from a nib.
     }
 }
