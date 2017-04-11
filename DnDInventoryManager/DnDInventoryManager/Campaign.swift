@@ -10,20 +10,12 @@ import Foundation
 
 class Campaign {
     
-    var id = String()
     let name : String
-    let campaignURL : String
-    var playerIDs = [String]()
+    let image : String
     
-    init(json: [String : Any]) {
-        self.name = json["name"] as? String ?? "Campaign name not found"
-        self.campaignURL = json["campaign_url"] as? String ?? "No campaign URL found"
-        for players in json["players"] as! Array<NSDictionary> {
-            let playerID = players["id"]
-            self.playerIDs.append(playerID as! String)
-        }
-        
+    init(name: String, image: String) {
+        self.name = name
+        self.image = image
     }
-    
 }
 
