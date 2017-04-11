@@ -12,6 +12,9 @@
 		83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CB37251E9BD6F400B6FEA6 /* Main.storyboard */; };
 		83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */; };
 		83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */; };
+		EF33DFA51E9C143B00CA8103 /* ItemInventory.json in Resources */ = {isa = PBXBuildFile; fileRef = EF33DFA41E9C143B00CA8103 /* ItemInventory.json */; };
+		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
+		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83CB372B1E9BD6F400B6FEA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83CB372D1E9BD6F400B6FEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF33DFA41E9C143B00CA8103 /* ItemInventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ItemInventory.json; path = ../../../../../../../Downloads/ItemInventory.json; sourceTree = "<group>"; };
+		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		83CB37201E9BD6F400B6FEA6 /* DnDInventoryManager */ = {
 			isa = PBXGroup;
 			children = (
+				EF33DFA41E9C143B00CA8103 /* ItemInventory.json */,
+				EFA7D9101E9C1869009C41DB /* Item.swift */,
+				EFA7D9121E9C21A9009C41DB /* JSONParser.swift */,
 				83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */,
 				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
@@ -96,7 +105,7 @@
 				TargetAttributes = {
 					83CB371D1E9BD6F400B6FEA6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = NM45JY8S5A;
+						DevelopmentTeam = 77479ZW9G2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,6 +136,7 @@
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
 				83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */,
+				EF33DFA51E9C143B00CA8103 /* ItemInventory.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA7D9111E9C1869009C41DB /* Item.swift in Sources */,
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
+				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NM45JY8S5A;
+				DEVELOPMENT_TEAM = 77479ZW9G2;
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManager;
@@ -274,7 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NM45JY8S5A;
+				DEVELOPMENT_TEAM = 77479ZW9G2;
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManager;
@@ -302,6 +314,7 @@
 				83CB37321E9BD6F400B6FEA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
