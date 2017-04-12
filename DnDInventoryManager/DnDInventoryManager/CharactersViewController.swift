@@ -32,7 +32,25 @@ class CharactersViewController: UIViewController {
         update()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: segue)
+        if segue.identifier == CharacterDetailController.identifier {
+            if let selectedIndex = self.charactersViewTable.indexPathForSelectedRow?.row {
+                let selectedCharacter = self.characters[selectedIndex]
+                
+                guard let destinationController = segue.destination as? CharacterDetailController else { return }
+                
+                destinationController.character = selectedCharacter
+            }
+        }
+    }
+    
     func update() {
+        self.navigationItem.title = "My Characters"
+        let characterCell = UINib(nibName: "CharacterCell", bundle: nil)
+        self.charactersViewTable.register(characterCell, forCellReuseIdentifier: CharacterCell.identifier)
+        self.charactersViewTable.estimatedRowHeight = 250
+        self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
         
     }
 
