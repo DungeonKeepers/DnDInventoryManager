@@ -10,7 +10,7 @@ import UIKit
 import OAuthSwift
 
 typealias ObsidianPortalOAuthCompletion = (Bool) -> ()
-typealias FetchCampaignsCompletion = ([Campaign]?) -> ()
+//typealias FetchCampaignsCompletion = ([Campaign]?) -> ()
 
 enum ObsidianPortalAuthError : Error {
     case extractingCode

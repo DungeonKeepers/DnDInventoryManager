@@ -10,8 +10,6 @@ import UIKit
 import CloudKit
 
 class CloudKit {
-
-    var campaignList: Array<CKRecord> = []
     
     func ViewDidLoad() {
 
