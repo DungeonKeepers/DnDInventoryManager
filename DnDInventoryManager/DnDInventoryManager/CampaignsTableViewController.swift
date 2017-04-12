@@ -27,25 +27,44 @@ class CampaignsTableViewController: UITableViewController {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Campaigns", predicate: predicate)
         
-        
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        publicDatabase.perform(query, inZoneWith: nil) { (results, error) in
+            if error != nil {
+                OperationQueue.main.addOperation {
+                    print("Error: \(error.debugDescription)")
+                }
+            } else {
+                if let results = results {
+                    for result in results {
+                        self.campaignsList.append(result)
+                    }
+                }
+                
+                OperationQueue.main.addOperation {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return campaignsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CampaignCell", for: indexPath) as UITableViewCell
+        let noteRecord: CKRecord = campaignsList[(indexPath.row)]
+        
+        cell.textLabel?.text = noteRecord.value(forKey: "name") as? String
+        cell.imageView?.image = noteRecord.value(forKey: "img") as? UIImage
 
         return cell
     }
