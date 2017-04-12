@@ -12,7 +12,7 @@ class User {
     
     static let shared = User()
     let id : String
-    var camapignIDs = [String]()
+    var campaigns = [Campaign]()
     var characters = [Character]()
     
     private init() {
@@ -21,4 +21,13 @@ class User {
 
     }
     
+}
+
+extension User {
+    class func recordFor(post: User) throws -> CKRecord? {
+        guard let data = String else { return }
+        do {
+            try
+        }
+    }
 }

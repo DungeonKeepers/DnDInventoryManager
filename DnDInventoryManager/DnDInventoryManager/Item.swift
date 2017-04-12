@@ -40,3 +40,4 @@ extension Item : Hashable {
         return lhs.name == rhs.name && lhs.text == rhs.text
     }
 }
+

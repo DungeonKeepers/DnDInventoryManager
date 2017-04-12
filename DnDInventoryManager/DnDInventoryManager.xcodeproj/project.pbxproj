@@ -18,6 +18,7 @@
 		8352CC3D1E9E86DD004E8949 /* CharactersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */; };
 		8352CC3F1E9E8C41004E8949 /* EditCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */; };
 		8352CC411E9E95FD004E8949 /* InventoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */; };
+		8352CC451E9EC84F004E8949 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC441E9EC84F004E8949 /* Post.swift */; };
 		8389DA901E9D8A4A007F37D5 /* CharacterCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */; };
 		8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */; };
 		83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 		8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CharactersStoryboard.storyboard; sourceTree = "<group>"; };
 		8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCharacterController.swift; sourceTree = "<group>"; };
 		8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailController.swift; sourceTree = "<group>"; };
+		8352CC441E9EC84F004E8949 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCreationController.swift; sourceTree = "<group>"; };
 		8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCreationController.xib; sourceTree = "<group>"; };
 		83CB371E1E9BD6F400B6FEA6 /* DnDInventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDInventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 				EFA7D9121E9C21A9009C41DB /* JSONParser.swift */,
 				83D911731E9D4DCC00E1F9C7 /* UIExtensions.swift */,
 				83CB373B1E9BE7D200B6FEA6 /* User.swift */,
+				8352CC441E9EC84F004E8949 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
 				83D9116E1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift in Sources */,
 				83CB373C1E9BE7D200B6FEA6 /* User.swift in Sources */,
+				8352CC451E9EC84F004E8949 /* Post.swift in Sources */,
 				832B13B01E9D868800BD36EE /* ItemList.swift in Sources */,
 				83CB373A1E9BE65600B6FEA6 /* ObsidianPortal.swift in Sources */,
 			);
