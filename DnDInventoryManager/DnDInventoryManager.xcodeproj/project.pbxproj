@@ -127,6 +127,9 @@
 		832B13AE1E9D6C4700BD36EE /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				832B13A11E9D620100BD36EE /* CharactersViewController.xib */,
+				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
+				8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */,
 				83CB37371E9BE3AE00B6FEA6 /* tokens.swift */,
 				83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */,
 				83D9116D1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift */,
@@ -191,11 +194,8 @@
 		83CB37341E9BE35300B6FEA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */,
 				832B13A71E9D670700BD36EE /* CharacterCell.xib */,
 				832B13A41E9D649800BD36EE /* CustomTransition.swift */,
-				832B13A11E9D620100BD36EE /* CharactersViewController.xib */,
-				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,

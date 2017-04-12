@@ -33,6 +33,7 @@
                                 <items>
                                     <barButtonItem title="New" width="361" id="XJd-21-7pL">
                                         <connections>
+                                            <action selector="newButtonPressed:" destination="KFJ-6f-cDM" id="vjv-EI-EZ0"/>
                                             <segue destination="5fW-hW-GHh" kind="show" identifier="CharacterCreationController" id="U2t-yr-tny"/>
                                         </connections>
                                     </barButtonItem>
@@ -42,6 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="charactersViewTable" destination="IVA-zj-Svh" id="wn9-iX-hN1"/>
                         <segue destination="Fem-BC-aQc" kind="showDetail" identifier="CharacterDetailController" id="e26-UK-nWN"/>
                     </connections>
                 </viewController>
@@ -94,6 +96,10 @@
                                 <state key="normal" title="Dismiss">
                                     <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="Fem-BC-aQc" eventType="touchUpInside" id="po2-ZW-vqG"/>
+                                    <action selector="editButtonClicked:" destination="Fem-BC-aQc" eventType="touchUpInside" id="q6q-R4-j2P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-mz-NUQ">
                                 <rect key="frame" x="329" y="243" width="30" height="30"/>
@@ -101,6 +107,7 @@
                                     <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="editButtonClicked:" destination="Fem-BC-aQc" eventType="touchUpInside" id="sOP-GB-3BA"/>
                                     <segue destination="bG1-r9-qLy" kind="presentation" identifier="EditCharacterController" id="9gD-jm-dp7"/>
                                 </connections>
                             </button>
@@ -128,6 +135,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="characterName" destination="wmU-Rl-snM" id="5lH-fM-Hqs"/>
+                        <outlet property="inventoryTableView" destination="1oX-pV-KXE" id="gDo-FP-K5e"/>
+                        <outlet property="profileImage" destination="etF-Qp-2kJ" id="Cdy-kn-J8J"/>
                         <segue destination="DIY-3X-JzS" kind="show" identifier="InventoryDetailController" id="CTz-uG-dSn"/>
                     </connections>
                 </viewController>
@@ -150,6 +160,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b10-Gh-IbZ">
                                 <rect key="frame" x="16" y="623" width="343" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="DIY-3X-JzS" eventType="touchUpInside" id="FFL-EX-pQ4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhD-nu-XXo">
                                 <rect key="frame" x="16" y="28" width="343" height="21"/>
@@ -268,10 +281,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
                                 <rect key="frame" x="16" y="629" width="343" height="30"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="5fW-hW-GHh" eventType="touchUpInside" id="fUX-91-FfC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8P-fG-qvq">
                                 <rect key="frame" x="16" y="591" width="343" height="30"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="5fW-hW-GHh" eventType="touchUpInside" id="j6H-I0-awC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,9 +317,18 @@
                             <constraint firstItem="FHP-vN-HYf" firstAttribute="top" secondItem="P8P-fG-qvq" secondAttribute="bottom" constant="8" id="sp7-LG-HVo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="campaignToken" destination="16F-rx-AqT" id="v6b-xd-WcF"/>
+                        <outlet property="imageView" destination="kVn-lN-btP" id="80m-3g-A8p"/>
+                        <outlet property="nameField" destination="NKa-XM-4wf" id="Muj-gw-wnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlc-wb-fCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="49I-Aw-2D7"/>
+                <tapGestureRecognizer id="49I-Aw-2D7">
+                    <connections>
+                        <action selector="imageTapped:" destination="5fW-hW-GHh" id="9MT-PG-1pA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1068" y="572"/>
         </scene>
@@ -332,18 +360,22 @@
                                 <rect key="frame" x="16" y="20" width="343" height="308"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0OP-m2-yN2" appends="YES" id="hAK-7y-tIc"/>
-                                    <outletCollection property="gestureRecognizers" destination="0OP-m2-yN2" appends="YES" id="AVn-Dw-JkS"/>
-                                    <outletCollection property="gestureRecognizers" destination="0OP-m2-yN2" appends="YES" id="73b-i6-IHa"/>
+                                    <outletCollection property="gestureRecognizers" destination="dqO-7C-17K" appends="YES" id="1DX-tG-dB0"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiX-kH-6CY">
                                 <rect key="frame" x="16" y="629" width="343" height="30"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="bG1-r9-qLy" eventType="touchUpInside" id="k0S-CC-Xw8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ld-WC-aYC">
                                 <rect key="frame" x="16" y="591" width="343" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="bG1-r9-qLy" eventType="touchUpInside" id="eH6-BP-2vj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,9 +402,18 @@
                             <constraint firstItem="TI6-Mh-vn9" firstAttribute="top" secondItem="we1-cE-zGu" secondAttribute="bottom" constant="8" id="z8t-Ix-NTZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="campaignToken" destination="TI6-Mh-vn9" id="cX5-yQ-IzF"/>
+                        <outlet property="imageView" destination="kjt-kQ-piF" id="Wim-4K-bkf"/>
+                        <outlet property="nameField" destination="we1-cE-zGu" id="isP-ab-aPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fe2-1W-zeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0OP-m2-yN2"/>
+                <tapGestureRecognizer id="dqO-7C-17K">
+                    <connections>
+                        <action selector="imageTapped:" destination="bG1-r9-qLy" id="eis-Qp-m47"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1986" y="-552"/>
         </scene>

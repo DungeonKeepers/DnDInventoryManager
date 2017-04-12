@@ -23,6 +23,10 @@ class CharactersViewController: UIViewController {
     }
     
     @IBOutlet weak var charactersViewTable: UITableView!
+    
+    @IBAction func newButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "CharacterCreationController", sender: sender)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

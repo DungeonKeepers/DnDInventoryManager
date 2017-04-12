@@ -19,22 +19,24 @@ class InventoryDetailController: UIViewController {
     @IBOutlet weak var itemQuantity: UILabel!
     
     @IBAction func minusButtonPressed(_ sender: Any) {
+        item.count = item.count - 1
+        viewDidLoad()
     }
     @IBAction func plusButtonPressed(_ sender: Any) {
+        item.count = item.count + 1
+        viewDidLoad()
     }
-    
-    @IBOutlet weak var saveButtonPressed: UIButton!
-    
-    
-    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        character.inventory[itemIndex].count = item.count
+        self.dismiss(animated: true, completion: nil)
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itemName.text = item.item.name
-        self.itemQuantity.text = "\(item.count)"
-        
-        
+        self.itemQuantity.text = "Quantity: \(item.count)"
 
-        // Do any additional setup after loading the view.
     }
 
 }

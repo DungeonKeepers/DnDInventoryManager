@@ -13,14 +13,12 @@ class InventoryItemCell: UITableViewCell {
     @IBOutlet weak var quantity: UILabel!
     @IBOutlet weak var itemName: UILabel!
     
-    var item : [Item : Int]! {
+    var item : (item: Item, count: Int)! {
         didSet {
-            for (key, value) in item {
-                self.quantity.text = String(value)
-                self.itemName.text = key.name
+            self.quantity.text = "\(item.count)"
+            self.itemName.text = item.item.name
             }
             
         }
-    }
     
 }
