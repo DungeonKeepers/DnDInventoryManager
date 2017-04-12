@@ -13,6 +13,8 @@ class CampaignsTableViewController: UITableViewController {
     
     var campaignsList: Array<CKRecord> = []
         
+    @IBOutlet weak var campaignsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
