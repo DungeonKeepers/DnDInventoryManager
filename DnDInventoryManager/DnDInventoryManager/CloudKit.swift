@@ -13,8 +13,8 @@ class CloudKit {
 
     var campaignList: Array<CKRecord> = []
     
-    override func ViewDideLoad() {
-        super.ViewDidLoad
+    func ViewDidLoad() {
+
     }
     
     // MARK: fetchCampaigns
