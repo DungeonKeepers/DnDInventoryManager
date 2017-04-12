@@ -10,7 +10,9 @@ import UIKit
 
 class InventoryDetailController: UIViewController {
     
-    var item : [Item : Int]!
+    var character : Character!
+    var itemIndex : Int!
+    var item : (item: Item, count: Int)!
 
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemText: UILabel!
@@ -27,7 +29,9 @@ class InventoryDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.itemName.text = item.keys.
+        self.itemName.text = item.item.name
+        self.itemQuantity.text = "\(item.count)"
+        
         
 
         // Do any additional setup after loading the view.

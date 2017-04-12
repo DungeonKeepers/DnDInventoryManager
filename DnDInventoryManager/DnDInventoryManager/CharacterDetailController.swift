@@ -30,6 +30,7 @@ class CharacterDetailController: UIViewController {
         super.viewDidLoad()
         self.profileImage.image = character.avatar
         self.characterName.text = character.name
+        self.inventoryTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,6 +41,8 @@ class CharacterDetailController: UIViewController {
                 
                 guard let destinationController = segue.destination as? InventoryDetailController else { return }
                 
+                destinationController.character  = character
+                destinationController.itemIndex = selectedIndex
                 destinationController.item = selectedItem
             }
         }
