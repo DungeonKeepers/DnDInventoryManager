@@ -12,38 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CampaignsTableViewController" customModule="DnDInventoryManager" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="Gf9-eg-foD">
-            <layoutGuides>
-                <viewControllerLayoutGuide type="top" id="B4v-Eq-9Bg"/>
-                <viewControllerLayoutGuide type="bottom" id="oEG-0R-eiS"/>
-            </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="5NK-hw-rtc">
+            <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="99H-TI-6Na">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            </view>
+            </tableView>
             <point key="canvasLocation" x="-91" y="-8"/>
         </viewController>
-        <tableViewController id="2Xw-JQ-VE2">
-            <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZoQ-Rr-bJe">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                <prototypes>
-                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9yV-1i-fQz">
-                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9yV-1i-fQz" id="hWg-kd-D2U">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </tableViewCellContentView>
-                    </tableViewCell>
-                </prototypes>
-                <connections>
-                    <outlet property="dataSource" destination="2Xw-JQ-VE2" id="5ee-c8-tlP"/>
-                    <outlet property="delegate" destination="2Xw-JQ-VE2" id="2O2-hX-IC3"/>
-                </connections>
-            </tableView>
-            <point key="canvasLocation" x="-83" y="3"/>
-        </tableViewController>
     </objects>
 </document>
