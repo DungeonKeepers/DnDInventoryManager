@@ -35,5 +35,27 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func presentActionSheet(){
+        
+        let actionSheetController = UIAlertController(title: "Item Management", message: "What action would you like to perform?", preferredStyle: .actionSheet)
+        
+        actionSheetController.popoverPresentationController?.sourceView = self.view
+        actionSheetController.modalPresentationStyle = .popover
+        
+        let addItemAction = UIAlertAction(title: "Add Item", style: .default, handler: nil)
+        
+        let removeItemAction = UIAlertAction(title: "Remove Item", style: .default, handler: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        
+        
+        actionSheetController.addAction(addItemAction)
+        actionSheetController.addAction(removeItemAction)
+        actionSheetController.addAction(cancelAction)
+        
+        self.present(actionSheetController, animated: true, completion: nil)
+        
+    }
 }
 
