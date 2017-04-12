@@ -26,9 +26,8 @@ class CharacterCreationController: UIViewController {
         newCharacter.userID = User.shared.id
         newCharacter.campaignID = campaignToken?.text
         newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
-        newCharacter.avatar = imageView?.image
-        //Save to CloudKit
-        //Return to CharactersView
+        CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
