@@ -23,8 +23,9 @@ class CloudKit {
         database = container.publicCloudDatabase
     }
     
+    // MARK: fetchCampaignsBabiFüd
     func fetchCampaigns(completion: @escaping CampaignCompletion) {
-        let postQuery = CKQuery(recordType: "Fetch", predicate: NSPredicate(value: true))
+        let postQuery = CKQuery(recordType: "Campaigns", predicate: NSPredicate(value: true))
         
         self.database.perform(postQuery, inZoneWith: nil) { (records, error) in
             if error != nil {
@@ -37,19 +38,19 @@ class CloudKit {
                     
                     for record in records {
                         let name = record.recordType
-                        if let image = record["image"] as? CKAsset {
-                            let path = image.fileURL.path
+                        if let asset = record["img"] as? CKAsset {
+                            let path = asset.fileURL.path
                             
-                            if let image = UIImage(contentsOfFile: path) {
-                                let addCampaign = Campaign(name: name, image: image)
+                            if let image = UIImage(contentsOfFile: path) != nil {
+                                let addCampaign = Campaign(name: name, image: path)
                                 campaigns.append(addCampaign)
                             }
                         }
                     }
-                }
-                
-                OperationQueue.main.addOperation {
-                    completion(campaigns)
+                    
+                    OperationQueue.main.addOperation {
+                        completion(campaigns)
+                    }
                 }
             }
         }

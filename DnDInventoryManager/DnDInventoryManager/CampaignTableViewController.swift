@@ -9,10 +9,26 @@
 import UIKit
 
 class CampaignTableViewController: UITableViewController {
-        
+    
+    @IBOutlet weak var tableViewCell: UITableViewCell!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var campaign : Campaign! {
+        didSet {
+            self.nameLabel.text = campaign.name
+            self.imageView.image = campaign.image
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
 
     // MARK: - Table view data source

@@ -23,8 +23,8 @@
 		83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */; };
 		EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */; };
 		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
-		EFA2EA401E9D89BD00AFEE91 /* CampaignTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA3E1E9D89BD00AFEE91 /* CampaignTableViewController.swift */; };
-		EFA2EA411E9D89BD00AFEE91 /* CampaignTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA3F1E9D89BD00AFEE91 /* CampaignTableViewController.xib */; };
+		EFA2EA4E1E9D9DF500AFEE91 /* CampaignTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA4C1E9D9DF500AFEE91 /* CampaignTableViewController.swift */; };
+		EFA2EA4F1E9D9DF500AFEE91 /* CampaignTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA4D1E9D9DF500AFEE91 /* CampaignTableViewController.xib */; };
 		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
 		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
 /* End PBXBuildFile section */
@@ -61,8 +61,8 @@
 		83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemInventory.json; sourceTree = "<group>"; };
 		EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
-		EFA2EA3E1E9D89BD00AFEE91 /* CampaignTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignTableViewController.swift; sourceTree = "<group>"; };
-		EFA2EA3F1E9D89BD00AFEE91 /* CampaignTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignTableViewController.xib; sourceTree = "<group>"; };
+		EFA2EA4C1E9D9DF500AFEE91 /* CampaignTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignTableViewController.swift; sourceTree = "<group>"; };
+		EFA2EA4D1E9D9DF500AFEE91 /* CampaignTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignTableViewController.xib; sourceTree = "<group>"; };
 		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +128,6 @@
 		83CB37341E9BE35300B6FEA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFA2EA3F1E9D89BD00AFEE91 /* CampaignTableViewController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
 			);
@@ -138,9 +137,10 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EFA2EA4C1E9D9DF500AFEE91 /* CampaignTableViewController.swift */,
+				EFA2EA4D1E9D9DF500AFEE91 /* CampaignTableViewController.xib */,
 				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
 				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
-				EFA2EA3E1E9D89BD00AFEE91 /* CampaignTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */,
-				EFA2EA411E9D89BD00AFEE91 /* CampaignTableViewController.xib in Resources */,
+				EFA2EA4F1E9D9DF500AFEE91 /* CampaignTableViewController.xib in Resources */,
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
 				83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */,
@@ -257,7 +257,7 @@
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
 				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
-				EFA2EA401E9D89BD00AFEE91 /* CampaignTableViewController.swift in Sources */,
+				EFA2EA4E1E9D9DF500AFEE91 /* CampaignTableViewController.swift in Sources */,
 				83CB373C1E9BE7D200B6FEA6 /* User.swift in Sources */,
 				83CB373A1E9BE65600B6FEA6 /* ObsidianPortal.swift in Sources */,
 			);

@@ -6,14 +6,14 @@
 //  Copyright © 2017 Mike Miksch. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Campaign {
     
     let name : String
-    let image : String
+    let image : UIImage
     
-    init(name: String, image: String) {
+    init(name: String, image: UIImage) {
         self.name = name
         self.image = image
     }
