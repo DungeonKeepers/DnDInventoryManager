@@ -32,6 +32,9 @@
 		83D911561E9C217000E1F9C7 /* OAuthSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */; };
 		83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */; };
+		C8523CAF1E9D47980004652C /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */; };
+		C8523CB01E9D47980004652C /* InventoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */; };
+		C8523CB21E9D6E510004652C /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8523CB11E9D6E500004652C /* ItemCell.swift */; };
 		EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */; };
 		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
 		EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */; };
@@ -88,6 +91,9 @@
 		83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
 		83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemInventory.json; sourceTree = "<group>"; };
+		C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
+		C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryTableViewController.xib; sourceTree = "<group>"; };
+		C8523CB11E9D6E500004652C /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
+				C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */,
 				EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */,
 				832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */,
 			);
@@ -205,6 +212,9 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
+				C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */,
+				C8523CB11E9D6E500004652C /* ItemCell.swift */,
 				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */,
 				83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */,
@@ -302,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */,
+				C8523CB01E9D47980004652C /* InventoryTableViewController.xib in Resources */,
 				83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */,
 				83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */,
 				832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */,
@@ -325,6 +336,7 @@
 				83CB37381E9BE3AE00B6FEA6 /* tokens.swift in Sources */,
 				EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */,
 				83CB373E1E9BE7EB00B6FEA6 /* Campaign.swift in Sources */,
+				C8523CAF1E9D47980004652C /* InventoryTableViewController.swift in Sources */,
 				EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
 				83D911741E9D4DCC00E1F9C7 /* UIExtensions.swift in Sources */,
@@ -337,6 +349,7 @@
 				83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */,
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
 				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
+				C8523CB21E9D6E510004652C /* ItemCell.swift in Sources */,
 				832B13A51E9D649800BD36EE /* CustomTransition.swift in Sources */,
 				832B13A81E9D670700BD36EE /* CharacterCell.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
