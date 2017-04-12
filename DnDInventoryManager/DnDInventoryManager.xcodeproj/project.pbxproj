@@ -50,6 +50,7 @@
 		EFA2EA571E9E8C3000AFEE91 /* CampaignsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */; };
 		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
 		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
+		EFADD9581E9EBF15004AB20C /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFADD9571E9EBF15004AB20C /* Campaign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +112,7 @@
 		EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignsCell.xib; sourceTree = "<group>"; };
 		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		EFADD9571E9EBF15004AB20C /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA2EA541E9E8C3000AFEE91 /* CampaignsCell.swift */,
+				EFADD9571E9EBF15004AB20C /* Campaign.swift */,
 				C8523CB11E9D6E500004652C /* ItemCell.swift */,
 				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				832B13AF1E9D868800BD36EE /* ItemList.swift */,
@@ -360,6 +363,7 @@
 				83D9116E1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift in Sources */,
 				83CB373C1E9BE7D200B6FEA6 /* User.swift in Sources */,
 				832B13B01E9D868800BD36EE /* ItemList.swift in Sources */,
+				EFADD9581E9EBF15004AB20C /* Campaign.swift in Sources */,
 				83CB373A1E9BE65600B6FEA6 /* ObsidianPortal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
