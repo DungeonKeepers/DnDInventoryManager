@@ -40,6 +40,9 @@ extension Character {
                 characterRecord.setValue(character.inventory, forKey: "inventory")
                 characterRecord.setValue(character.userID, forKey: "userID")
                 characterRecord.setValue(character.campaignID, forKey: "campaignID")
+                
+                return characterRecord
+                
             } catch {
                 throw CharacterError.writingDatatoDisc
             }
