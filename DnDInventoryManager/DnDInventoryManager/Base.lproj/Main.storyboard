@@ -52,9 +52,11 @@
         <!--Tab Bar Controller-->
         <scene sceneID="S8m-Ch-csU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0h-J3-mBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wGa-qa-kS2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="T7J-eX-Scj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -62,7 +64,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lO6-2m-UKa"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v0h-J3-mBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2954" y="-620"/>
         </scene>

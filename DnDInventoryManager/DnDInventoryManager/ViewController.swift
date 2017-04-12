@@ -28,6 +28,8 @@ class ViewController: UIViewController {
                 
                 for item in items {
                     ItemList.shared.addItem(item: item)
+                    CloudKit.shared.saveItem(item: item, completion: { (success) in
+                    })
                 }
                 dataSource = ItemList.shared.allItems
             }

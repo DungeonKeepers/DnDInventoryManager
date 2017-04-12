@@ -9,47 +9,59 @@
 import UIKit
 import CloudKit
 
+typealias PostCompletion = (Bool) -> ()
+//typealias CampaignsCompletion = ([Campaign]?) -> ()
+typealias CharactersCompetion = ([Character]?) -> ()
+typealias UserIDCompletion = (String) -> ()
+typealias ItemsCompletion = ([Item]?) -> ()
+
 class CloudKit {
     
-    func ViewDidLoad() {
-
+    static let shared = CloudKit()
+    
+    let container : CKContainer
+    let privateDatabase : CKDatabase
+    let publicDatabase : CKDatabase
+    
+    private init() {
+        self.container = CKContainer.default()
+        self.privateDatabase = self.container.privateCloudDatabase
+        self.publicDatabase = self.container.publicCloudDatabase
     }
     
-    // MARK: fetchCampaigns
-    
-    func fetchCampaigns() {
-        
+    func saveItem(item: Item, completion: @escaping PostCompletion) {
+        let itemRecord = Item.recordFor(item: item)
+        self.publicDatabase.save(itemRecord) { (savedRecord, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                OperationQueue.main.addOperation {
+                    completion(false)
+                }
+            } else {
+                print(savedRecord ?? "No saved item")
+                OperationQueue.main.addOperation {
+                    completion(true)
+                }
+            }
+        }
     }
     
-//    func fetchCampaigns(completion: @escaping CampaignCompletion) {
-//        let postQuery = CKQuery(recordType: "Campaigns", predicate: NSPredicate(value: true))
-//        
-//        self.database.perform(postQuery, inZoneWith: nil) { (records, error) in
-//            if error != nil {
-//                OperationQueue.main.addOperation {
-//                    completion(nil)
-//                }
-//                
-//                if let records = records {
-//                    var campaigns = [Campaign]()
-//                    
-//                    for record in records {
-//                        let name = record.recordType
-//                        if let asset = record["img"] as? CKAsset {
-//                            let path = asset.fileURL.path
-//                            
-//                            if let image = UIImage(contentsOfFile: path) != nil {
-//                                let addCampaign = Campaign(name: name, image: path)
-//                                campaigns.append(addCampaign)
-//                            }
-//                        }
-//                    }
-//                    
-//                    OperationQueue.main.addOperation {
-//                        completion(campaigns)
-//                    }
-//                }
-//            }
-//        }
-//    }
+    
+// TODO: Fix this shit somehow.
+    func saveCharacter(character: Character, completion: @escaping PostCompletion) {
+        let characterRecord = try? Character.recordFor(character: character)
+        self.publicDatabase.save(characterRecord!!) { (savedRecord, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                OperationQueue.main.addOperation {
+                    completion(false)
+                }
+            } else {
+                print(savedRecord ?? "No saved character")
+                OperationQueue.main.addOperation {
+                    completion(true)
+                }
+            }
+        }
+    }
 }

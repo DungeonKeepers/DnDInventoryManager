@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 class Item {
 
@@ -38,5 +39,16 @@ extension Item : Hashable {
     
     static func == (lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name && lhs.text == rhs.text
+    }
+}
+
+extension Item {
+    class func recordFor(item: Item) -> CKRecord {
+        let id = item.name
+        let itemID = CKRecordID(recordName: id)
+        let record = CKRecord(recordType: "Item", recordID: itemID)
+        record.setValue(item.name, forKey: "name")
+        record.setValue(item.text, forKey: "text")
+        return record
     }
 }
