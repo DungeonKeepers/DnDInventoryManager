@@ -46,6 +46,8 @@ extension Character {
             } catch {
                 throw CharacterError.writingDatatoDisc
             }
+        } else {
+            return nil
         }
     }
 }
