@@ -12,6 +12,7 @@ class Item {
 
     let name : String
     var text = String()
+
     
     init?(json: [String : Any]) {
         
@@ -27,5 +28,15 @@ class Item {
         } else {
             return nil
         }
+    }
+}
+
+extension Item : Hashable {
+    var hashValue: Int {
+        return name.hashValue ^ text.hashValue
+    }
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.name == rhs.name && lhs.text == rhs.text
     }
 }

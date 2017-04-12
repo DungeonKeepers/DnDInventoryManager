@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832B139E1E9D5BF200BD36EE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832B139D1E9D5BF200BD36EE /* CloudKit.framework */; };
+		832B13A21E9D620100BD36EE /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13A01E9D620100BD36EE /* CharactersViewController.swift */; };
+		832B13A31E9D620100BD36EE /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B13A11E9D620100BD36EE /* CharactersViewController.xib */; };
+		832B13A51E9D649800BD36EE /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13A41E9D649800BD36EE /* CustomTransition.swift */; };
+		832B13A81E9D670700BD36EE /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13A61E9D670700BD36EE /* CharacterCell.swift */; };
+		832B13A91E9D670700BD36EE /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B13A71E9D670700BD36EE /* CharacterCell.xib */; };
+		832B13AC1E9D6BFF00BD36EE /* InventoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */; };
+		832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */; };
+		832B13B01E9D868800BD36EE /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AF1E9D868800BD36EE /* ItemList.swift */; };
+		8389DA901E9D8A4A007F37D5 /* CharacterCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */; };
+		8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */; };
 		83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */; };
 		83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37231E9BD6F400B6FEA6 /* ViewController.swift */; };
 		83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CB37251E9BD6F400B6FEA6 /* Main.storyboard */; };
@@ -25,6 +36,12 @@
 		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
 		EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */; };
 		EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */; };
+		83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */; };
+		83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */; };
+		83D9116B1E9D486500E1F9C7 /* CharacterGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */; };
+		83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */; };
+		83D9116E1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9116D1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift */; };
+		83D911741E9D4DCC00E1F9C7 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911731E9D4DCC00E1F9C7 /* UIExtensions.swift */; };
 		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
 		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +60,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		832B139F1E9D5CBE00BD36EE /* DnDInventoryManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DnDInventoryManager.entitlements; sourceTree = "<group>"; };
+
+		8301F5611E9D5AB2005E7876 /* DnDInventoryManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DnDInventoryManager.entitlements; sourceTree = "<group>"; };
+		832B139D1E9D5BF200BD36EE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		832B13A01E9D620100BD36EE /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		832B13A11E9D620100BD36EE /* CharactersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
+		832B13A41E9D649800BD36EE /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		832B13A61E9D670700BD36EE /* CharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		832B13A71E9D670700BD36EE /* CharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItemCell.swift; sourceTree = "<group>"; };
+		832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryItemCell.xib; sourceTree = "<group>"; };
+		832B13AF1E9D868800BD36EE /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCreationController.swift; sourceTree = "<group>"; };
+		8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCreationController.xib; sourceTree = "<group>"; };
 		83CB371E1E9BD6F400B6FEA6 /* DnDInventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDInventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CB37231E9BD6F400B6FEA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +92,12 @@
 		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
 		EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignsTableViewController.xib; sourceTree = "<group>"; };
+		83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
+		83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailController.xib; sourceTree = "<group>"; };
+		83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGalleryController.swift; sourceTree = "<group>"; };
+		83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterGalleryController.xib; sourceTree = "<group>"; };
+		83D9116D1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGalleryFlowLayout.swift; sourceTree = "<group>"; };
+		83D911731E9D4DCC00E1F9C7 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,10 +115,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8301F5621E9D5AB8005E7876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				832B139D1E9D5BF200BD36EE /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832B13AE1E9D6C4700BD36EE /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				83CB37371E9BE3AE00B6FEA6 /* tokens.swift */,
+				83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */,
+				83D9116D1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift */,
+				83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */,
+				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
+				83CB37391E9BE65600B6FEA6 /* ObsidianPortal.swift */,
+			);
+			name = Deprecated;
+			path = DnDInventoryManager;
+			sourceTree = "<group>";
+		};
 		83CB37151E9BD6F400B6FEA6 = {
 			isa = PBXGroup;
 			children = (
 				83CB37201E9BD6F400B6FEA6 /* DnDInventoryManager */,
+				832B13AE1E9D6C4700BD36EE /* Deprecated */,
 				83CB371F1E9BD6F400B6FEA6 /* Products */,
 				83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */,
 				EFA2EA321E9D5D2E00AFEE91 /* Frameworks */,
@@ -101,7 +159,8 @@
 		83CB37201E9BD6F400B6FEA6 /* DnDInventoryManager */ = {
 			isa = PBXGroup;
 			children = (
-				832B139F1E9D5CBE00BD36EE /* DnDInventoryManager.entitlements */,
+				8301F5611E9D5AB2005E7876 /* DnDInventoryManager.entitlements */,
+
 				83CB37331E9BE34400B6FEA6 /* Model */,
 				83CB37341E9BE35300B6FEA6 /* View */,
 				83CB37351E9BE35800B6FEA6 /* Controller */,
@@ -113,14 +172,16 @@
 		83CB37331E9BE34400B6FEA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */,
-				83CB37391E9BE65600B6FEA6 /* ObsidianPortal.swift */,
-				83CB373B1E9BE7D200B6FEA6 /* User.swift */,
 				83CB373D1E9BE7EB00B6FEA6 /* Campaign.swift */,
+				832B13AF1E9D868800BD36EE /* ItemList.swift */,
+				832B13A61E9D670700BD36EE /* CharacterCell.swift */,
 				83CB373F1E9BE7FD00B6FEA6 /* Character.swift */,
-				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
+				832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */,
 				EFA7D9101E9C1869009C41DB /* Item.swift */,
+				83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */,
 				EFA7D9121E9C21A9009C41DB /* JSONParser.swift */,
+				83D911731E9D4DCC00E1F9C7 /* UIExtensions.swift */,
+				83CB373B1E9BE7D200B6FEA6 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -128,9 +189,15 @@
 		83CB37341E9BE35300B6FEA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */,
+				832B13A71E9D670700BD36EE /* CharacterCell.xib */,
+				832B13A41E9D649800BD36EE /* CustomTransition.swift */,
+				832B13A11E9D620100BD36EE /* CharactersViewController.xib */,
+				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
 				EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */,
+				832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -138,9 +205,11 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
 				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */,
+				83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */,
+				832B13A01E9D620100BD36EE /* CharactersViewController.swift */,
+				8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -149,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				83CB372D1E9BD6F400B6FEA6 /* Info.plist */,
-				83CB37371E9BE3AE00B6FEA6 /* tokens.swift */,
 				83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */,
 				83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */,
 			);
@@ -234,10 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */,
+				83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */,
+				83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */,
+				832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */,
+				8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */,
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
+				832B13A31E9D620100BD36EE /* CharactersViewController.xib in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
 				EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */,
 				83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */,
+				832B13A91E9D670700BD36EE /* CharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +327,22 @@
 				83CB373E1E9BE7EB00B6FEA6 /* Campaign.swift in Sources */,
 				EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
+				83D911741E9D4DCC00E1F9C7 /* UIExtensions.swift in Sources */,
 				83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */,
+				83D9116B1E9D486500E1F9C7 /* CharacterGalleryController.swift in Sources */,
+				8389DA901E9D8A4A007F37D5 /* CharacterCreationController.swift in Sources */,
 				EFA7D9111E9C1869009C41DB /* Item.swift in Sources */,
+				832B13AC1E9D6BFF00BD36EE /* InventoryItemCell.swift in Sources */,
+				832B13A21E9D620100BD36EE /* CharactersViewController.swift in Sources */,
+				83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */,
 				83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */,
 				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
+				832B13A51E9D649800BD36EE /* CustomTransition.swift in Sources */,
+				832B13A81E9D670700BD36EE /* CharacterCell.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,
+				83D9116E1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift in Sources */,
 				83CB373C1E9BE7D200B6FEA6 /* User.swift in Sources */,
+				832B13B01E9D868800BD36EE /* ItemList.swift in Sources */,
 				83CB373A1E9BE65600B6FEA6 /* ObsidianPortal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
