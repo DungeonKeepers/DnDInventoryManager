@@ -13,6 +13,7 @@ class User {
     static let shared = User()
     let id : String
     var camapignIDs = [String]()
+    var characters = [Character]()
     
     private init() {
         self.id = UUID().uuidString

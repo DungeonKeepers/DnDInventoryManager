@@ -1,5 +1,5 @@
 //
-//  CharacterCreationController.swift
+//  EditCharacterController.swift
 //  DnDInventoryManager
 //
 //  Created by Mike Miksch on 4/11/17.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CharacterCreationController: UIViewController {
+class EditCharacterController: UIViewController {
+    
+    var currentCharacter : Character!
     
     let imagePicker = UIImagePickerController()
     
@@ -21,23 +23,24 @@ class CharacterCreationController: UIViewController {
         self.presentActionSheet()
     }
     
-    @IBAction func createButtonPressed(_ sender: Any) {
-        var newCharacter = Character()
-        newCharacter.userID = User.shared.id
-        newCharacter.campaignID = campaignToken?.text
-        newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
-        newCharacter.avatar = imageView?.image
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        currentCharacter.campaignID = campaignToken?.text
+        currentCharacter.name = nameField?.text ?? "The (wo)man With No Name"
+        currentCharacter.avatar = imageView?.image
         //Save to CloudKit
-        //Return to CharactersView
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.image = currentCharacter?.avatar
+        nameField.text = currentCharacter.name
+        campaignToken.text = currentCharacter?.campaignID ?? "No campaign"
+        
         // Do any additional setup after loading the view.
     }
     
@@ -59,7 +62,7 @@ class CharacterCreationController: UIViewController {
 }
 
 //MARK: UIImagePickerControllerDelegate
-extension CharacterCreationController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension EditCharacterController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imageView.image = chosenImage

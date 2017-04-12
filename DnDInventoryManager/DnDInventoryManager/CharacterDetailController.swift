@@ -11,15 +11,41 @@ import UIKit
 class CharacterDetailController: UIViewController {
     
     var character : Character!
+    
+// NEED TO RELINK ALL THESE ACTIONS AND OUTLETS
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var inventoryTableView: UITableView!
     
+    @IBAction func dismissButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func editButtonClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "EditCharacterController", sender: sender)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileImage.image = character.avatar
         self.characterName.text = character.name
+        self.inventoryTableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: segue)
+        if segue.identifier == InventoryDetailController.identifier {
+            if let selectedIndex = self.inventoryTableView.indexPathForSelectedRow?.row {
+                let selectedItem = self.character.inventory[selectedIndex]
+                
+                guard let destinationController = segue.destination as? InventoryDetailController else { return }
+                
+                destinationController.character  = character
+                destinationController.itemIndex = selectedIndex
+                destinationController.item = selectedItem
+            }
+        }
     }
 
 }
