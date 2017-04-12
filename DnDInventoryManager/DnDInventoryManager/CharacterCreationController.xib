@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterCreationController" customModule="DnDInventoryManager" customModuleProvider="target">
+            <connections>
+                <outlet property="campaignToken" destination="F9b-gK-pSe" id="fdJ-3L-UNc"/>
+                <outlet property="imageView" destination="TNN-qF-0tu" id="knW-8E-srY"/>
+                <outlet property="nameField" destination="UPu-Nh-ptA" id="975-Ec-1Tp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="s0G-k4-1sb" customClass="CharacterCreationController" customModule="DnDInventoryManager" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="ttb-62-K25"/>
+                <viewControllerLayoutGuide type="bottom" id="Z1l-hc-p1T"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="tWS-sd-jDp">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPu-Nh-ptA">
+                        <rect key="frame" x="16" y="336" width="343" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Campaign Token" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-gK-pSe">
+                        <rect key="frame" x="16" y="374" width="343" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-qF-0tu">
+                        <rect key="frame" x="16" y="20" width="343" height="308"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Uou-Ze-ht0" appends="YES" id="0xR-cV-KIK"/>
+                        </connections>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0B-fg-1Ll">
+                        <rect key="frame" x="16" y="629" width="343" height="30"/>
+                        <state key="normal" title="Cancel"/>
+                        <connections>
+                            <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="JVN-qy-Fr0"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMU-3R-12c">
+                        <rect key="frame" x="16" y="591" width="343" height="30"/>
+                        <state key="normal" title="Create"/>
+                        <connections>
+                            <action selector="createButtonPressed:" destination="-1" eventType="touchUpInside" id="p6h-Ag-C09"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="uMU-3R-12c" firstAttribute="leading" secondItem="tWS-sd-jDp" secondAttribute="leadingMargin" id="4kB-Jf-LTL"/>
+                    <constraint firstItem="W0B-fg-1Ll" firstAttribute="top" secondItem="uMU-3R-12c" secondAttribute="bottom" constant="8" id="67G-aK-4Th"/>
+                    <constraint firstItem="uMU-3R-12c" firstAttribute="trailing" secondItem="tWS-sd-jDp" secondAttribute="trailingMargin" id="7IA-6Q-vmn"/>
+                    <constraint firstItem="W0B-fg-1Ll" firstAttribute="trailing" secondItem="tWS-sd-jDp" secondAttribute="trailingMargin" id="DqH-kj-DTi"/>
+                    <constraint firstItem="F9b-gK-pSe" firstAttribute="top" secondItem="UPu-Nh-ptA" secondAttribute="bottom" constant="8" id="Iu4-xS-eCn"/>
+                    <constraint firstItem="TNN-qF-0tu" firstAttribute="leading" secondItem="tWS-sd-jDp" secondAttribute="leadingMargin" id="JYJ-ok-VII"/>
+                    <constraint firstItem="F9b-gK-pSe" firstAttribute="top" secondItem="UPu-Nh-ptA" secondAttribute="bottom" constant="8" id="KSf-V0-vYH"/>
+                    <constraint firstItem="W0B-fg-1Ll" firstAttribute="leading" secondItem="tWS-sd-jDp" secondAttribute="leadingMargin" id="NVN-t2-hDj"/>
+                    <constraint firstItem="TNN-qF-0tu" firstAttribute="trailing" secondItem="tWS-sd-jDp" secondAttribute="trailingMargin" id="NVw-x4-qKO"/>
+                    <constraint firstItem="W0B-fg-1Ll" firstAttribute="top" secondItem="uMU-3R-12c" secondAttribute="bottom" constant="8" id="PJI-5h-mbx"/>
+                    <constraint firstItem="UPu-Nh-ptA" firstAttribute="leading" secondItem="tWS-sd-jDp" secondAttribute="leadingMargin" id="U0t-Xa-DA1"/>
+                    <constraint firstItem="uMU-3R-12c" firstAttribute="top" secondItem="F9b-gK-pSe" secondAttribute="bottom" constant="187" id="UXg-7C-JCk"/>
+                    <constraint firstItem="F9b-gK-pSe" firstAttribute="leading" secondItem="tWS-sd-jDp" secondAttribute="leadingMargin" id="VBY-hP-7nv"/>
+                    <constraint firstItem="F9b-gK-pSe" firstAttribute="trailing" secondItem="tWS-sd-jDp" secondAttribute="trailingMargin" id="XY3-iK-QOr"/>
+                    <constraint firstItem="UPu-Nh-ptA" firstAttribute="top" secondItem="TNN-qF-0tu" secondAttribute="bottom" constant="8" id="bgi-MS-D1j"/>
+                    <constraint firstItem="UPu-Nh-ptA" firstAttribute="trailing" secondItem="tWS-sd-jDp" secondAttribute="trailingMargin" id="dbm-uV-Y37"/>
+                    <constraint firstItem="UPu-Nh-ptA" firstAttribute="top" secondItem="TNN-qF-0tu" secondAttribute="bottom" constant="8" id="eXh-GC-ET4"/>
+                    <constraint firstItem="uMU-3R-12c" firstAttribute="top" secondItem="F9b-gK-pSe" secondAttribute="bottom" constant="187" id="sFH-HA-QgT"/>
+                    <constraint firstItem="TNN-qF-0tu" firstAttribute="top" secondItem="ttb-62-K25" secondAttribute="bottom" id="ser-8u-loG"/>
+                    <constraint firstItem="Z1l-hc-p1T" firstAttribute="top" secondItem="W0B-fg-1Ll" secondAttribute="bottom" constant="8" id="u09-nw-FkI"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-246.5" y="94.5"/>
+        </viewController>
+        <tapGestureRecognizer id="Uou-Ze-ht0">
+            <connections>
+                <action selector="imageTapped:" destination="-1" id="0Fg-IQ-fj9"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
