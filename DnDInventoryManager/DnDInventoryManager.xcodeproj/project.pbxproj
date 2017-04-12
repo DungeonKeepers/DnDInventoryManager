@@ -56,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+
 		8301F5611E9D5AB2005E7876 /* DnDInventoryManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DnDInventoryManager.entitlements; sourceTree = "<group>"; };
 		832B139D1E9D5BF200BD36EE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		832B13A01E9D620100BD36EE /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8301F5611E9D5AB2005E7876 /* DnDInventoryManager.entitlements */,
+
 				83CB37331E9BE34400B6FEA6 /* Model */,
 				83CB37341E9BE35300B6FEA6 /* View */,
 				83CB37351E9BE35800B6FEA6 /* Controller */,
@@ -251,6 +253,7 @@
 							com.apple.Push = {
 								enabled = 1;
 							};
+
 							com.apple.iCloud = {
 								enabled = 1;
 							};
