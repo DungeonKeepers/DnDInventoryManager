@@ -32,6 +32,10 @@
 		83D911561E9C217000E1F9C7 /* OAuthSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */; };
 		83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */; };
+		EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */; };
+		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
+		EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */; };
+		EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */; };
 		83D911631E9D45D100E1F9C7 /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */; };
 		83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */; };
 		83D9116B1E9D486500E1F9C7 /* CharacterGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */; };
@@ -84,6 +88,10 @@
 		83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
 		83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemInventory.json; sourceTree = "<group>"; };
+		EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
+		EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
+		EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignsTableViewController.xib; sourceTree = "<group>"; };
 		83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
 		83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailController.xib; sourceTree = "<group>"; };
 		83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGalleryController.swift; sourceTree = "<group>"; };
@@ -100,7 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D911541E9C214A00E1F9C7 /* OAuthSwift.framework in Frameworks */,
-				832B139E1E9D5BF200BD36EE /* CloudKit.framework in Frameworks */,
+				EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +144,7 @@
 				832B13AE1E9D6C4700BD36EE /* Deprecated */,
 				83CB371F1E9BD6F400B6FEA6 /* Products */,
 				83D911531E9C214A00E1F9C7 /* OAuthSwift.framework */,
-				8301F5621E9D5AB8005E7876 /* Frameworks */,
+				EFA2EA321E9D5D2E00AFEE91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +196,7 @@
 				83D911621E9D45D100E1F9C7 /* CharacterDetailController.xib */,
 				83CB37251E9BD6F400B6FEA6 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
+				EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */,
 				832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */,
 			);
 			name = View;
@@ -196,7 +205,8 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
+				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
+				EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */,
 				83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */,
 				832B13A01E9D620100BD36EE /* CharactersViewController.swift */,
 				8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */,
@@ -212,6 +222,14 @@
 				83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		EFA2EA321E9D5D2E00AFEE91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,13 +265,12 @@
 				TargetAttributes = {
 					83CB371D1E9BD6F400B6FEA6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = HDU39LZWX7;
+						DevelopmentTeam = 77479ZW9G2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
-
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -292,6 +309,7 @@
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
 				832B13A31E9D620100BD36EE /* CharactersViewController.xib in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
+				EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */,
 				83CB37271E9BD6F400B6FEA6 /* Main.storyboard in Resources */,
 				832B13A91E9D670700BD36EE /* CharacterCell.xib in Resources */,
 			);
@@ -305,7 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CB37381E9BE3AE00B6FEA6 /* tokens.swift in Sources */,
+				EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */,
 				83CB373E1E9BE7EB00B6FEA6 /* Campaign.swift in Sources */,
+				EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
 				83D911741E9D4DCC00E1F9C7 /* UIExtensions.swift in Sources */,
 				83D9115A1E9C3FE800E1F9C7 /* FoundationExtensions.swift in Sources */,
@@ -447,14 +467,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = HDU39LZWX7;
+				DEVELOPMENT_TEAM = 77479ZW9G2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -465,14 +485,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = HDU39LZWX7;
+				DEVELOPMENT_TEAM = 77479ZW9G2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
