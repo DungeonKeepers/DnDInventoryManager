@@ -10,17 +10,7 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = [Character]() {
-        didSet {
-            self.charactersViewTable.reloadData()
-        }
-    }
-    
-    var displayCharacters : [Character]? {
-        didSet {
-            self.charactersViewTable.reloadData()
-        }
-    }
+    var characters = User.shared.characters
     
     @IBOutlet weak var charactersViewTable: UITableView!
     
@@ -70,7 +60,7 @@ extension CharactersViewController : UIViewControllerTransitioningDelegate {
 //MARK: UITableViewDataSource
 extension CharactersViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayCharacters?.count ?? characters.count
+        return characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
