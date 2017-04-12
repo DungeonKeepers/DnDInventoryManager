@@ -22,11 +22,11 @@ enum PostError : Error {
     case writingDataToDisk
 }
 
-extension Post {
-    class func recordFor(post: Post) throws -> CKRecord? {
-        guard let data = 
-        do {
-            
-        }
-    }
-}
+//extension Post {
+//    class func recordFor(post: Post) throws -> CKRecord? {
+//        guard let data = 
+//        do {
+//            
+//        }
+//    }
+//}

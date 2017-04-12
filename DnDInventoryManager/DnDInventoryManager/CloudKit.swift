@@ -29,8 +29,38 @@ class CloudKit {
         self.publicDatabase = self.container.publicCloudDatabase
     }
     
-    func saveItem(item: Item, completion: @escaping PostCompletion {
-        
+    func saveItem(item: Item, completion: @escaping PostCompletion) {
+        let itemRecord = Item.recordFor(item: item)
+        self.publicDatabase.save(itemRecord) { (savedRecord, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                OperationQueue.main.addOperation {
+                    completion(false)
+                }
+            } else {
+                print(savedRecord ?? "No saved item")
+                OperationQueue.main.addOperation {
+                    completion(true)
+                }
+            }
+        }
+    }
+    
+    func saveCharacter(character: Character, completion: @escaping PostCompletion) {
+        let characterRecord = Character.recordFor(character: character)
+        self.publicDatabase.save(characterRecord) { (savedRecord, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                OperationQueue.main.addOperation {
+                    completion(false)
+                }
+            } else {
+                print(savedRecord ?? "No saved character")
+                OperationQueue.main.addOperation {
+                    completion(true)
+                }
+            }
+        }
     }
     
 //    func save (post: Post, completion: @escaping PostCompletion) {
