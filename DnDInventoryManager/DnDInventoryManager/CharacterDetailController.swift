@@ -22,9 +22,6 @@ class CharacterDetailController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func editButtonClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "EditCharacterController", sender: sender)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

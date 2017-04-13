@@ -139,6 +139,7 @@
 		832B13AE1E9D6C4700BD36EE /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */,
 				8352CC441E9EC84F004E8949 /* Post.swift */,
 				832B13AF1E9D868800BD36EE /* ItemList.swift */,
 				EFA2EA541E9E8C3000AFEE91 /* CampaignsCell.swift */,
@@ -230,7 +231,6 @@
 				83D911611E9D45D100E1F9C7 /* CharacterDetailController.swift */,
 				832B13A01E9D620100BD36EE /* CharactersViewController.swift */,
 				8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */,
-				8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */,
 				8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */,
 				8352CC461E9F1386004E8949 /* ItemsViewController.swift */,
 			);
