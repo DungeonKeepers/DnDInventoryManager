@@ -284,7 +284,7 @@
 				TargetAttributes = {
 					83CB371D1E9BD6F400B6FEA6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 77479ZW9G2;
+						DevelopmentTeam = HDU39LZWX7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -488,14 +488,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = 77479ZW9G2;
+				DEVELOPMENT_TEAM = HDU39LZWX7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagerasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -506,14 +506,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = 77479ZW9G2;
+				DEVELOPMENT_TEAM = HDU39LZWX7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagerasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

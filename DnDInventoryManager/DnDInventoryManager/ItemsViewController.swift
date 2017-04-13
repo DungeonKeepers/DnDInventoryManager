@@ -33,9 +33,7 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         self.searchBar.delegate = self
         self.itemsTableView.delegate = self
-        self.itemsTableView.dataSource = self
-        let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
-        self.itemsTableView.register(itemNib, forCellReuseIdentifier: ItemViewCell.identifier)
+
         if allItems.count == 0 {
             JSONParser.itemsFrom(data: JSONParser.jsonData) { (success, items) in
                 if success {
@@ -46,6 +44,15 @@ class ItemsViewController: UIViewController {
                 }
             }
         }
+        
+        update()
+    }
+    
+    func update() {
+        let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
+        self.itemsTableView.register(itemNib, forCellReuseIdentifier: ItemViewCell.identifier)
+        self.itemsTableView.estimatedRowHeight = 50
+        self.itemsTableView.dataSource = self
     }
 
 

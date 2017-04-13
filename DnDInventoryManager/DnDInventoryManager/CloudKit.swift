@@ -31,7 +31,7 @@ class CloudKit {
     
     func saveItem(item: Item, completion: @escaping PostCompletion) {
         let itemRecord = Item.recordFor(item: item)
-        self.publicDatabase.save(itemRecord) { (savedRecord, error) in
+        self.privateDatabase.save(itemRecord) { (savedRecord, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 OperationQueue.main.addOperation {
@@ -92,7 +92,7 @@ class CloudKit {
                     if let character = Character(record: record) {
                         let listID = record.recordID
                         let recordToMatch = CKReference(recordID: listID, action: .deleteSelf)
-                        let predicate = NSPredicate(format: "owningCharacters =%@", recordToMatch)
+                        let predicate = NSPredicate(format: "owningCharacter =%@", recordToMatch)
                         let query = CKQuery(recordType: "Item", predicate: predicate)
                         self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
                             if error != nil {

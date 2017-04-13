@@ -31,9 +31,15 @@ class CharacterDetailController: UIViewController {
 //        self.profileImage.image = character.avatar
         self.characterName.text = character.name
         self.inventoryTableView.delegate = self
-        self.inventoryTableView.dataSource = self
         self.inventoryTableView.reloadData()
         print(self.character.inventory)
+    }
+    
+    func update() {
+        let inventoryItemNib = UINib(nibName: "InventoryItemVCell", bundle: nil)
+        self.inventoryTableView.register(inventoryItemNib, forCellReuseIdentifier: InventoryItemCell.identifier)
+        self.inventoryTableView.estimatedRowHeight = 50
+        self.inventoryTableView.dataSource = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
