@@ -50,14 +50,24 @@ class CloudKit {
 // TODO: Fix this shit somehow.
     func saveCharacter(character: Character, completion: @escaping PostCompletion) {
         let characterRecord = try? Character.recordFor(character: character)
-        self.publicDatabase.save(characterRecord!!) { (savedRecord, error) in
+        self.publicDatabase.save(characterRecord!!) { (savedCharacter, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 OperationQueue.main.addOperation {
                     completion(false)
                 }
             } else {
-                print(savedRecord ?? "No saved character")
+                print("Saving Character")
+                let inventoryRecord = character.inventory.flatMap { Item.recordFor(item: $0) }
+                for itemRecord in inventoryRecord {
+                    itemRecord["owningCharacter"] = CKReference(record: savedCharacter!, action: .deleteSelf)
+                    CloudKit.shared.publicDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
+                        print("Saving items within inventory")
+                        debugPrint(error ?? "No error")
+                        debugPrint(savedItem ?? "no saved record")
+                })
+            }
+            print(savedCharacter ?? "No saved Character")
                 OperationQueue.main.addOperation {
                     completion(true)
                 }

@@ -13,6 +13,7 @@ class Item {
 
     let name : String
     var text = String()
+    var quantity = 1
 
     
     init?(json: [String : Any]) {
@@ -30,6 +31,11 @@ class Item {
             return nil
         }
     }
+    
+    init(name: String, text: String) {
+        self.name = name
+        self.text = text
+    }
 }
 
 extension Item : Hashable {
@@ -44,11 +50,11 @@ extension Item : Hashable {
 
 extension Item {
     class func recordFor(item: Item) -> CKRecord {
-        let id = item.name
-        let itemID = CKRecordID(recordName: id)
-        let record = CKRecord(recordType: "Item", recordID: itemID)
+
+        let record = CKRecord(recordType: "Item")
         record.setValue(item.name, forKey: "name")
         record.setValue(item.text, forKey: "text")
+        record.setValue(item.quantity, forKey: "quantity")
         return record
     }
 }

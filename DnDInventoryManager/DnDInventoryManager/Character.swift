@@ -14,10 +14,21 @@ class Character {
     var userID = String()
     var campaignID : String?
     var name : String?
-    var inventory = [(item: Item, count: Int)]()
+    var inventory = [Item]()
     var avatar : UIImage?
     
-    init(){}
+    init(){
+        self.avatar = #imageLiteral(resourceName: "default")
+//        self.inventory = []
+//        let name = "Chalk"
+//        let text = "A piece of chalk"
+//        
+//        let json = ["name": name, "text": text]
+//        
+//        if let chalk = Item(json: json) {
+//            self.inventory.append((item: chalk, count: 1))
+        
+    }
 }
 
 enum CharacterError : Error {
@@ -37,10 +48,9 @@ extension Character {
                 let characterRecord = CKRecord(recordType: "Character")
                 characterRecord.setValue(asset, forKey: "avatar")
                 characterRecord.setValue(character.name, forKey: "name")
-                characterRecord.setValue(character.inventory, forKey: "inventory")
                 characterRecord.setValue(character.userID, forKey: "userID")
                 characterRecord.setValue(character.campaignID, forKey: "campaignID")
-                
+
                 return characterRecord
                 
             } catch {

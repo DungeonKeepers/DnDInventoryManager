@@ -12,7 +12,6 @@ class CharacterDetailController: UIViewController {
     
     var character : Character!
     
-// NEED TO RELINK ALL THESE ACTIONS AND OUTLETS
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!
@@ -30,6 +29,8 @@ class CharacterDetailController: UIViewController {
         super.viewDidLoad()
         self.profileImage.image = character.avatar
         self.characterName.text = character.name
+        self.inventoryTableView.delegate = self
+        self.inventoryTableView.dataSource = self
         self.inventoryTableView.reloadData()
     }
     

@@ -10,7 +10,9 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = User.shared.characters
+    var characters = [Character]()
+    
+    static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
     
@@ -22,6 +24,7 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         self.charactersViewTable.dataSource = self
         self.charactersViewTable.delegate = self
+        setupTabBarDelegate()
         
         update()
     }
@@ -77,10 +80,23 @@ extension CharactersViewController : UITableViewDataSource, UITableViewDelegate 
     }
 }
 
+//MARK: setupTabBarDelegate
+extension CharactersViewController : UINavigationControllerDelegate {
+    func setupTabBarDelegate() {
+        if let tabBarController = self.tabBarController {
+            guard let viewControllers = tabBarController.viewControllers else { return }
+            guard let charactersViewController = viewControllers[1] as? ItemsViewController else { return }
+//            charactersViewController.delegate = self
+        }
+    }
+}
 
-
-
-
+//MARK: ItemsViewControllerDelegate
+extension CharactersViewController  {
+    func viewController() {
+    self.tabBarController?.selectedIndex = 0
+    }
+}
 
 
 
