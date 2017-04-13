@@ -50,7 +50,7 @@ class CloudKit {
 // TODO: Fix this shit somehow.
     func saveCharacter(character: Character, completion: @escaping PostCompletion) {
         let characterRecord = try? Character.recordFor(character: character)
-        self.publicDatabase.save(characterRecord!!) { (savedCharacter, error) in
+        self.privateDatabase.save(characterRecord!!) { (savedCharacter, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 OperationQueue.main.addOperation {
@@ -61,7 +61,7 @@ class CloudKit {
                 let inventoryRecord = character.inventory.flatMap { Item.recordFor(item: $0) }
                 for itemRecord in inventoryRecord {
                     itemRecord["owningCharacter"] = CKReference(record: savedCharacter!, action: .deleteSelf)
-                    CloudKit.shared.publicDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
+                    CloudKit.shared.privateDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
                         print("Saving items within inventory")
                         debugPrint(error ?? "No error")
                         debugPrint(savedItem ?? "no saved record")
@@ -81,7 +81,7 @@ class CloudKit {
         let predicate = NSPredicate(format: "name == %@", characterName)
         let query = CKQuery(recordType: "Character", predicate: predicate)
         
-        self.publicDatabase.perform(query, inZoneWith: nil) { (fetchedCharacters, error) in
+        self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacters, error) in
             if error != nil {
                 print(".........error in fetchedCharacters...............")
                 print(error!.localizedDescription)
@@ -94,7 +94,7 @@ class CloudKit {
                         let recordToMatch = CKReference(recordID: listID, action: .deleteSelf)
                         let predicate = NSPredicate(format: "owningCharacters =%@", recordToMatch)
                         let query = CKQuery(recordType: "Item", predicate: predicate)
-                        self.publicDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
+                        self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
                             if error != nil {
                                 print("Error fetching items in characterFetch")
                                 print(error!.localizedDescription)
