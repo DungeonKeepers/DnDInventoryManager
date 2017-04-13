@@ -30,6 +30,8 @@ class InventoryDetailController: UIViewController {
         self.itemQuantity.text = "Quantity: \(item.quantity)"
         if item.quantity == 0 {
             saveButton.setTitle("Remove",for: .normal)
+        } else {
+            saveButton.setTitle("Save", for: .normal)
         }
         
     }
