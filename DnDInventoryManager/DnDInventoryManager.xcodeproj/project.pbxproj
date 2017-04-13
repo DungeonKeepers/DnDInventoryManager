@@ -146,7 +146,6 @@
 				83D911691E9D486500E1F9C7 /* CharacterGalleryController.swift */,
 				83D9116D1E9D4C9F00E1F9C7 /* CharacterGalleryFlowLayout.swift */,
 				83D9116A1E9D486500E1F9C7 /* CharacterGalleryController.xib */,
-				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
 				83CB37391E9BE65600B6FEA6 /* ObsidianPortal.swift */,
 			);
 			name = Deprecated;
@@ -187,13 +186,14 @@
 		83CB37331E9BE34400B6FEA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8352CC481E9F1BC7004E8949 /* ItemViewCell.swift */,
 				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				832B13A61E9D670700BD36EE /* CharacterCell.swift */,
 				83CB373F1E9BE7FD00B6FEA6 /* Character.swift */,
+				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
 				832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */,
 				EFA7D9101E9C1869009C41DB /* Item.swift */,
 				83D9115B1E9D375B00E1F9C7 /* ItemInventory.json */,
+				8352CC481E9F1BC7004E8949 /* ItemViewCell.swift */,
 				EFA7D9121E9C21A9009C41DB /* JSONParser.swift */,
 				83D911731E9D4DCC00E1F9C7 /* UIExtensions.swift */,
 				83CB373B1E9BE7D200B6FEA6 /* User.swift */,

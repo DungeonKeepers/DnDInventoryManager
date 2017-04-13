@@ -410,21 +410,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-nd-92u">
-                                <rect key="frame" x="16" y="28" width="343" height="590"/>
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" id="0cQ-li-q72"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="trailing" secondItem="0Em-eU-bKW" secondAttribute="trailingMargin" id="7FT-yk-hBo"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leadingMargin" id="HUW-XB-kpo"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="8" id="wqX-4M-umJ"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="44" id="wqX-4M-umJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
                     <connections>
                         <outlet property="itemsTableView" destination="vWm-nd-92u" id="g3a-2S-vsG"/>
+                        <outlet property="searchBar" destination="tLM-bO-TM5" id="WDm-RK-fND"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-uH-Kxm" userLabel="First Responder" sceneMemberID="firstResponder"/>

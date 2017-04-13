@@ -11,14 +11,27 @@ import UIKit
 
 class ItemsViewController: UIViewController {
     
-    var allItems = [Item]()
+    var allItems = [Item]() {
+        didSet {
+            self.itemsTableView.reloadData()
+        }
+    }
+    
+    var displayItems : [Item]? {
+        didSet {
+            self.itemsTableView.reloadData()
+        }
+    }
     
     //Populate all items with CloudKit?
 
     @IBOutlet weak var itemsTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
         self.itemsTableView.delegate = self
         self.itemsTableView.dataSource = self
         let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
@@ -76,4 +89,32 @@ extension ItemsViewController : UITableViewDelegate {
         
     }
     
+}
+
+//MARK: UISearchBarDelegate
+extension ItemsViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.validate() {
+            let lastIndex = searchText.index(before: searchText.endIndex)
+            searchBar.text = searchText.substring(to: lastIndex)
+
+        }
+        
+        if let searchedText = searchBar.text {
+            self.displayItems = self.allItems.filter({($0.name.contains(searchedText))})
+        }
+        
+        if searchBar.text == "" {
+            self.displayItems = nil
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.displayItems = nil
+        self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
+    }
 }
