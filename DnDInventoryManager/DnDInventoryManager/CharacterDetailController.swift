@@ -35,10 +35,16 @@ class CharacterDetailController: UIViewController {
         print(self.character.inventory)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        update()
+    }
+    
     func update() {
-        let inventoryItemNib = UINib(nibName: "InventoryItemVCell", bundle: nil)
+        let inventoryItemNib = UINib(nibName: "InventoryItemCell", bundle: nil)
         self.inventoryTableView.register(inventoryItemNib, forCellReuseIdentifier: InventoryItemCell.identifier)
-        self.inventoryTableView.estimatedRowHeight = 50
+//        self.inventoryTableView.estimatedRowHeight = 50
+//        self.inventoryTableView.rowHeight = UITableViewAutomaticDimension
         self.inventoryTableView.dataSource = self
     }
     
@@ -64,7 +70,7 @@ class CharacterDetailController: UIViewController {
 
 }
 
-//MARK: UITableViewDataSource
+//MARK: UITableViewDataSource & UITableViewDelegate
 extension CharacterDetailController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return character.inventory.count
@@ -77,7 +83,13 @@ extension CharacterDetailController : UITableViewDataSource, UITableViewDelegate
         cell.item = inventoryItem
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: InventoryDetailController.identifier, sender: self)
+    }
 }
+
+
 
 //MARK: UIViewControllerTransitioningDelegate
 extension CharacterDetailController : UIViewControllerTransitioningDelegate {

@@ -236,12 +236,11 @@
                         <outlet property="itemName" destination="nhD-nu-XXo" id="slL-io-FM0"/>
                         <outlet property="itemQuantity" destination="ery-Dz-Bkr" id="X2L-cE-0Gr"/>
                         <outlet property="itemText" destination="MRf-yy-mWc" id="WgM-6h-H66"/>
-                        <outlet property="saveButtonPressed" destination="b10-Gh-IbZ" id="FiY-Xg-gpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uu-2Z-K0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="155.17241379310346"/>
+            <point key="canvasLocation" x="2916" y="241"/>
         </scene>
         <!--Character Creation Controller-->
         <scene sceneID="ATi-YL-w26">

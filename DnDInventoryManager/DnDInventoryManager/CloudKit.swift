@@ -49,8 +49,8 @@ class CloudKit {
     
 // TODO: Fix this shit somehow.
     func saveCharacter(character: Character, completion: @escaping PostCompletion) {
-        let characterRecord = try? Character.recordFor(character: character)
-        self.privateDatabase.save(characterRecord!!) { (savedCharacter, error) in
+        let characterRecord = Character.recordFor(character: character)
+        self.privateDatabase.save(characterRecord!) { (savedCharacter, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 OperationQueue.main.addOperation {
