@@ -15,8 +15,8 @@ class CharacterCell: UITableViewCell {
     
     var character : Character! {
         didSet {
-            self.characterName.text = character.name
-            self.characterImage.image = character.avatar
+            self.characterName.text = character.inventory.first!.name
+//            self.characterImage.image = character.avatar
         }
     }
     

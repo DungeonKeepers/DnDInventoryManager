@@ -26,7 +26,7 @@ class EditCharacterController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: Any) {
         currentCharacter.campaignID = campaignToken?.text
         currentCharacter.name = nameField?.text ?? "The (wo)man With No Name"
-        currentCharacter.avatar = imageView?.image
+//        currentCharacter.avatar = imageView?.image
         //Save to CloudKit
         self.dismiss(animated: true, completion: nil)
     }
@@ -37,7 +37,7 @@ class EditCharacterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = currentCharacter?.avatar
+//        imageView.image = currentCharacter?.avatar
         nameField.text = currentCharacter.name
         campaignToken.text = currentCharacter?.campaignID ?? "No campaign"
         
