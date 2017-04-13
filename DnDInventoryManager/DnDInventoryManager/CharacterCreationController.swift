@@ -17,9 +17,9 @@ class CharacterCreationController: UIViewController {
     @IBOutlet weak var campaignToken: UITextField!
     
     
-    @IBAction func imageTapped(_ sender: Any) {
-        self.presentActionSheet()
-    }
+//    @IBAction func imageTapped(_ sender: Any) {
+//        self.presentActionSheet()
+//    }
     
     @IBAction func createButtonPressed(_ sender: Any) {
         let newCharacter = Character()
@@ -27,7 +27,8 @@ class CharacterCreationController: UIViewController {
         newCharacter.campaignID = campaignToken?.text
         newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
         let item = Item(name: "Super Sword", text: "This sword is REALLY super")
-        newCharacter.inventory = [(item: item, count: 2 )]
+        newCharacter.inventory = [item]
+        print("Got this far")
         CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
         self.dismiss(animated: true, completion: nil)
     }

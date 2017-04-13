@@ -13,6 +13,7 @@ class Item {
 
     let name : String
     var text = String()
+    var quantity = 1
 
     
     init?(json: [String : Any]) {
@@ -54,6 +55,7 @@ extension Item {
         let record = CKRecord(recordType: "Item", recordID: itemID)
         record.setValue(item.name, forKey: "name")
         record.setValue(item.text, forKey: "text")
+        record.setValue(item.quantity, forKey: "quantity")
         return record
     }
 }
