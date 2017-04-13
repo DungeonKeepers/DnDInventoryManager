@@ -423,6 +423,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
+                    <connections>
+                        <outlet property="itemsTableView" destination="vWm-nd-92u" id="g3a-2S-vsG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-uH-Kxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
