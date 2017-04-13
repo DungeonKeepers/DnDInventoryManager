@@ -93,7 +93,7 @@ extension CharactersViewController : UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: CharactersViewController.identifier, sender: nil)
+        self.performSegue(withIdentifier: CharacterDetailController.identifier, sender: nil)
     }
 }
 

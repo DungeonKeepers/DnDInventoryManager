@@ -21,8 +21,17 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         self.itemsTableView.delegate = self
         self.itemsTableView.dataSource = self
+        let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
+        self.itemsTableView.register(itemNib, forCellReuseIdentifier: ItemViewCell.identifier)
 
-        // Do any additional setup after loading the view.
+        JSONParser.itemsFrom(data: JSONParser.jsonData) { (success, items) in
+            if success {
+                guard let items = items else { fatalError("Items came back nil") }
+                for item in items {
+                    allItems.append(item)
+                }
+            }
+        }
     }
 
 
@@ -48,6 +57,7 @@ extension ItemsViewController : UITableViewDataSource {
 extension ItemsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = allItems[indexPath.row]
+        print(selectedItem)
         presentActionSheet(item: selectedItem)
     }
     
