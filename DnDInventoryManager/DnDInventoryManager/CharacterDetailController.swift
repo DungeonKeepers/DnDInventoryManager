@@ -32,7 +32,7 @@ class CharacterDetailController: UIViewController {
         self.characterName.text = character.name
         self.inventoryTableView.delegate = self
         self.inventoryTableView.reloadData()
-        print(self.character.inventory)
+        update()
     }
     
     override func viewDidAppear(_ animated: Bool) {
