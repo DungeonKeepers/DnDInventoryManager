@@ -369,7 +369,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
-                                <rect key="frame" x="0.0" y="20" width="392" height="44"/>
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -381,13 +381,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="AXv-B6-EHY"/>
-                            <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" constant="8" id="QVD-Go-bgz"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="centerX" secondItem="vWm-nd-92u" secondAttribute="centerX" constant="9" id="WUB-r7-S77"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="YTM-lv-vMW"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" id="g8H-eG-TOE"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="trailing" secondItem="0Em-eU-bKW" secondAttribute="trailingMargin" id="j5w-Vf-4ew"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leadingMargin" id="yf0-zP-NPB"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="2Dn-Xh-sfH"/>
+                            <constraint firstAttribute="trailing" secondItem="vWm-nd-92u" secondAttribute="trailing" constant="16" id="Bnc-X0-02g"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="HQ2-52-mkP"/>
+                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" constant="16" id="LOT-Ms-sfk"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="YpC-WI-cTm"/>
+                            <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" constant="8" id="mmb-Te-m7Y"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="sRP-26-yla"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" id="v2C-1i-Mtg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" image="items" id="wpd-WD-YfJ"/>
