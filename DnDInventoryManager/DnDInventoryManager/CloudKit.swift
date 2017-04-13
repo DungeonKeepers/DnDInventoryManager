@@ -158,6 +158,9 @@ class CloudKit {
                             }
                         })
                     }
+                }
+            }
+        }
 
     func updateCharacter(character: Character) {
         let id = character.name
@@ -178,8 +181,9 @@ class CloudKit {
         }
     }
  
-    func udpateItem(character: CKRecord, item: Item) {
-        let 
-    }
+//    func udpateItem(character: CKRecord, item: Item) {
+//        let 
+//    }
 
+    }
 }
