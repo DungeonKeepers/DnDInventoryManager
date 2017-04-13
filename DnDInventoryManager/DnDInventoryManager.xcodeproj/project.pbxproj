@@ -186,9 +186,9 @@
 		83CB37331E9BE34400B6FEA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				832B13A61E9D670700BD36EE /* CharacterCell.swift */,
 				83CB373F1E9BE7FD00B6FEA6 /* Character.swift */,
+				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
 				832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */,
 				EFA7D9101E9C1869009C41DB /* Item.swift */,

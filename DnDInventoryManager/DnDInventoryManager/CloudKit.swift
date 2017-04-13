@@ -78,7 +78,7 @@ class CloudKit {
     func fetchCharacters(characterName: String, completion: @escaping (_ fetchedCharacters: [Character]?, _ error: Error?)-> Void ) {
         var fetchedCharacter = [Character]()
         
-        let predicate = NSPredicate(format: "name == %@", characterName)
+        let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Character", predicate: predicate)
         
         self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacters, error) in
