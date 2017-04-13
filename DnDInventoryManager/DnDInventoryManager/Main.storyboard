@@ -272,12 +272,11 @@
                         <outlet property="itemName" destination="nhD-nu-XXo" id="slL-io-FM0"/>
                         <outlet property="itemQuantity" destination="ery-Dz-Bkr" id="X2L-cE-0Gr"/>
                         <outlet property="itemText" destination="MRf-yy-mWc" id="WgM-6h-H66"/>
-                        <outlet property="saveButtonPressed" destination="b10-Gh-IbZ" id="FiY-Xg-gpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uu-2Z-K0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="155.17241379310346"/>
+            <point key="canvasLocation" x="2916" y="241"/>
         </scene>
         <!--Character Creation Controller-->
         <scene sceneID="ATi-YL-w26">
@@ -453,6 +452,7 @@
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -470,7 +470,7 @@
                     <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
                     <connections>
                         <outlet property="itemsTableView" destination="vWm-nd-92u" id="g3a-2S-vsG"/>
-                        <outlet property="searchBar" destination="tLM-bO-TM5" id="WDm-RK-fND"/>
+                        <outlet property="searchBar" destination="tLM-bO-TM5" id="vAc-5K-Eou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-uH-Kxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
