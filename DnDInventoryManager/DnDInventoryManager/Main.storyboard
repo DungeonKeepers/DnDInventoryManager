@@ -27,7 +27,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IVA-zj-Svh">
                                 <rect key="frame" x="16" y="81" width="343" height="537"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou9-L8-wen">
@@ -61,7 +61,7 @@
                             <constraint firstAttribute="bottom" secondItem="mGp-zn-FFa" secondAttribute="bottom" id="xzU-Jr-Y9y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Characters" selectedImage="PawnIcon" id="fNk-wi-zMZ">
+                    <tabBarItem key="tabBarItem" title="Characters" id="fNk-wi-zMZ">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -459,7 +459,7 @@
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="44" id="wqX-4M-umJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Items" selectedImage="ShieldIcon" id="wpd-WD-YfJ"/>
+                    <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
                     <connections>
                         <outlet property="itemsTableView" destination="vWm-nd-92u" id="g3a-2S-vsG"/>
                         <outlet property="searchBar" destination="tLM-bO-TM5" id="WDm-RK-fND"/>
@@ -477,7 +477,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SMG-lm-fyq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="KFJ-6f-cDM" kind="relationship" relationship="viewControllers" id="ilO-b2-Loe"/>
@@ -490,8 +491,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PawnIcon" width="40" height="40"/>
-        <image name="ShieldIcon" width="40" height="40"/>
         <image name="default" width="626" height="626"/>
         <image name="landing page background" width="1920" height="1080"/>
     </resources>

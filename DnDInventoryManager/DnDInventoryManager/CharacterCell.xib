@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="165" height="278"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="165" height="277.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="165" height="278"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-Vm-7AK">
@@ -28,15 +28,19 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hft-rE-udR">
                         <rect key="frame" x="8" y="239" width="150" height="31"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okl-uu-EAy">
-                                <rect key="frame" x="0.0" y="-7" width="150" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okl-uu-EAy">
+                                <rect key="frame" x="0.0" y="8" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="okl-uu-EAy" firstAttribute="leading" secondItem="Hft-rE-udR" secondAttribute="leading" id="iSi-XD-Irm"/>
+                            <constraint firstAttribute="trailing" secondItem="okl-uu-EAy" secondAttribute="trailing" id="kpE-fD-CnW"/>
+                            <constraint firstItem="okl-uu-EAy" firstAttribute="top" secondItem="Hft-rE-udR" secondAttribute="top" constant="8" id="lOu-K5-hAz"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
