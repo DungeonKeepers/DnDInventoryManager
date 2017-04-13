@@ -452,19 +452,18 @@
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" id="0cQ-li-q72"/>
                             <constraint firstItem="tLM-bO-TM5" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" id="0n3-ie-jK3"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="Euc-Xt-JzT"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="M1t-Mu-nfT"/>
                             <constraint firstItem="tLM-bO-TM5" firstAttribute="width" secondItem="0Em-eU-bKW" secondAttribute="width" id="M2o-W4-Kah"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="width" secondItem="0Em-eU-bKW" secondAttribute="width" id="TTU-HY-l0P"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="vWm-nd-92u" secondAttribute="leading" id="gAN-hA-iGk"/>
+                            <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" id="Y2v-9e-MtL"/>
+                            <constraint firstAttribute="trailing" secondItem="vWm-nd-92u" secondAttribute="trailing" id="gWC-nY-hel"/>
                             <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="jY8-Ni-sLu"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="44" id="wqX-4M-umJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
