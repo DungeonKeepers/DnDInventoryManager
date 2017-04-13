@@ -65,6 +65,7 @@ class CharactersViewController: UIViewController {
             if let characterArray = characterArray {
                 self.characters = characterArray
                 print(characterArray.first ?? "Fuck... no character.")
+                print(self.characters)
             }
         }
     }
