@@ -27,7 +27,7 @@ class CharacterDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.profileImage.image = character.avatar
+//        self.profileImage.image = character.avatar
         self.characterName.text = character.name
         self.inventoryTableView.delegate = self
         self.inventoryTableView.dataSource = self

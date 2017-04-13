@@ -74,4 +74,49 @@ class CloudKit {
             }
         }
     }
+    
+    func fetchCharacters(characterName: String, completion: @escaping (_ fetchedCharacters: [Character]?, _ error: Error?)-> Void ) {
+        var fetchedCharacter = [Character]()
+        
+        let predicate = NSPredicate(format: "name == %@", characterName)
+        let query = CKQuery(recordType: "Character", predicate: predicate)
+        
+        self.publicDatabase.perform(query, inZoneWith: nil) { (fetchedCharacters, error) in
+            if error != nil {
+                print(".........error in fetchedCharacters...............")
+                print(error!.localizedDescription)
+            }
+            
+            if let fetchedCharacters = fetchedCharacters {
+                for record in fetchedCharacters {
+                    if let character = Character(record: record) {
+                        let listID = record.recordID
+                        let recordToMatch = CKReference(recordID: listID, action: .deleteSelf)
+                        let predicate = NSPredicate(format: "owningCharacters =%@", recordToMatch)
+                        let query = CKQuery(recordType: "Item", predicate: predicate)
+                        self.publicDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
+                            if error != nil {
+                                print("Error fetching items in characterFetch")
+                                print(error!.localizedDescription)
+                            }
+                            
+                            if let fetchedItems = fetchedItems {
+                                for record in fetchedItems {
+                                    if let fetchedItem = Item(record: record) {
+                                        print(fetchedItem)
+                                        character.inventory.append(fetchedItem)
+                                        print(character.inventory.first ?? "Fuck... no character.")
+                                    }
+                                }
+                            }
+                            fetchedCharacter.append(character)
+                            OperationQueue.main.addOperation {
+                                completion(fetchedCharacter, error)
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    }
 }

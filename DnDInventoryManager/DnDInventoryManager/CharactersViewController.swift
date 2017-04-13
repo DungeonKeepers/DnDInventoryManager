@@ -10,7 +10,11 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = [Character]()
+    var characters = [Character]() {
+        didSet {
+            self.charactersViewTable.reloadData()
+        }
+    }
     
     static let shared = CharactersViewController()
     
@@ -26,6 +30,11 @@ class CharactersViewController: UIViewController {
         self.charactersViewTable.delegate = self
         setupTabBarDelegate()
         
+        update()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         update()
     }
     
@@ -49,8 +58,16 @@ class CharactersViewController: UIViewController {
         self.charactersViewTable.estimatedRowHeight = 250
         self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
         
+        CloudKit.shared.fetchCharacters(characterName: "Bilbo") { (characterArray, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            if let characterArray = characterArray {
+                self.characters = characterArray
+                print(characterArray.first ?? "Fuck... no character.")
+            }
+        }
     }
-
 }
 
 //MARK: UIViewControllerTransitioningDelegate

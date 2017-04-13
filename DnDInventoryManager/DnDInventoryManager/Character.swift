@@ -15,10 +15,10 @@ class Character {
     var campaignID : String?
     var name : String?
     var inventory = [Item]()
-    var avatar : UIImage?
+//    var avatar : UIImage?
     
     init(){
-        self.avatar = #imageLiteral(resourceName: "default")
+//        self.avatar = #imageLiteral(resourceName: "default")
 //        self.inventory = []
 //        let name = "Chalk"
 //        let text = "A piece of chalk"
@@ -29,6 +29,17 @@ class Character {
 //            self.inventory.append((item: chalk, count: 1))
         
     }
+    
+    init?(record: CKRecord) {
+        if let name = record["name"] as? String, let userID = record["userID"] as? String, let campaignID = record["campaignID"] as? String {
+            self.name = name
+            self.userID = userID
+            self.campaignID = campaignID
+            self.inventory = [Item]()
+        } else {
+            return nil
+        }
+    }
 }
 
 enum CharacterError : Error {
@@ -37,27 +48,27 @@ enum CharacterError : Error {
 }
 
 extension Character {
-    class func recordFor(character: Character) throws -> CKRecord? {
-        if let avatar = character.avatar {
-            guard let data = UIImageJPEGRepresentation(avatar, 0.7) else { throw CharacterError.writingImageToData }
+    class func recordFor(character: Character) -> CKRecord? {
+//        if let avatar = character.avatar {
+//            guard let data = UIImageJPEGRepresentation(avatar, 0.7) else { throw CharacterError.writingImageToData }
+//        
+//            do {
+//                try data.write(to: avatar.path)
+//                let asset = CKAsset(fileURL: avatar.path)
         
-            do {
-                try data.write(to: avatar.path)
-                let asset = CKAsset(fileURL: avatar.path)
-            
                 let characterRecord = CKRecord(recordType: "Character")
-                characterRecord.setValue(asset, forKey: "avatar")
+//                characterRecord.setValue(asset, forKey: "avatar")
                 characterRecord.setValue(character.name, forKey: "name")
                 characterRecord.setValue(character.userID, forKey: "userID")
                 characterRecord.setValue(character.campaignID, forKey: "campaignID")
 
                 return characterRecord
                 
-            } catch {
-                throw CharacterError.writingDatatoDisc
-            }
-        } else {
-            return nil
+//            } catch {
+//                throw CharacterError.writingDatatoDisc
+//            }
+//        } else {
+//            return nil
         }
     }
-}
+//}

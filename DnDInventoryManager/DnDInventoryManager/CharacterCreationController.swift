@@ -26,7 +26,7 @@ class CharacterCreationController: UIViewController {
         newCharacter.userID = User.shared.id
         newCharacter.campaignID = campaignToken?.text
         newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
-        let item = Item(name: "Super Sword", text: "This sword is REALLY super")
+        let item = Item(name: "Super Sword", text: "This sword is REALLY super", quantity: 1)
         newCharacter.inventory = [item]
         print("Got this far")
         CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })

@@ -32,9 +32,20 @@ class Item {
         }
     }
     
-    init(name: String, text: String) {
+    init(name: String, text: String, quantity: Int) {
         self.name = name
         self.text = text
+        self.quantity = quantity
+    }
+    
+    init?(record: CKRecord) {
+        if let name = record["name"] as? String, let text = record["text"] as? String, let quantity = record["quantity"] as? Int {
+            self.name = name
+            self.text = text
+            self.quantity = quantity
+        } else {
+            return nil
+        }
     }
 }
 
