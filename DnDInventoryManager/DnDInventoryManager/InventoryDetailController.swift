@@ -18,25 +18,36 @@ class InventoryDetailController: UIViewController {
     @IBOutlet weak var itemText: UILabel!
     @IBOutlet weak var itemQuantity: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        update()
+    }
+    
+    func update() {
+        self.itemName.text = item.name
+        self.itemText.text = item.text
+        self.itemQuantity.text = "Quantity: \(item.quantity)"
+        
+    }
+
     @IBAction func minusButtonPressed(_ sender: Any) {
         item.quantity = item.quantity - 1
-        viewDidLoad()
+        update()
     }
     @IBAction func plusButtonPressed(_ sender: Any) {
         item.quantity = item.quantity + 1
-        viewDidLoad()
+        update()
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
         character.inventory[itemIndex].quantity = item.quantity
-        self.dismiss(animated: true, completion: nil)
-    }
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.itemName.text = item.name
-        self.itemQuantity.text = "Quantity: \(item.quantity)"
-
+        CloudKit.shared.saveCharacter(character: self.character) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("that did NOT save...waaah-waaah-WAAAAAAA")
+            }
+        }
     }
 
 }

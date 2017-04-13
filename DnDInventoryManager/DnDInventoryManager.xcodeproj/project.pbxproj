@@ -186,9 +186,9 @@
 		83CB37331E9BE34400B6FEA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				832B13A61E9D670700BD36EE /* CharacterCell.swift */,
 				83CB373F1E9BE7FD00B6FEA6 /* Character.swift */,
+				EFA2EA351E9D708300AFEE91 /* CloudKit.swift */,
 				83D911591E9C3FE800E1F9C7 /* FoundationExtensions.swift */,
 				832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */,
 				EFA7D9101E9C1869009C41DB /* Item.swift */,
@@ -284,7 +284,7 @@
 				TargetAttributes = {
 					83CB371D1E9BD6F400B6FEA6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 77479ZW9G2;
+						DevelopmentTeam = QB9VT5PHVK;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -488,14 +488,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = 77479ZW9G2;
+				DEVELOPMENT_TEAM = QB9VT5PHVK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagerasa;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikemiksch.DnDInventoryManagers-jeremy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -506,14 +506,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DnDInventoryManager/DnDInventoryManager.entitlements;
-				DEVELOPMENT_TEAM = 77479ZW9G2;
+				DEVELOPMENT_TEAM = QB9VT5PHVK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagerasa;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikemiksch.DnDInventoryManagers-jeremy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -10,7 +10,7 @@ import UIKit
 
 class CharacterCell: UITableViewCell {
 
-    @IBOutlet weak var characterImage: UIImageView!
+//    @IBOutlet weak var characterImage: UIImageView?
     @IBOutlet weak var characterName: UILabel!
     
     var character : Character! {
