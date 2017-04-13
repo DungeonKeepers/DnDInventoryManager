@@ -32,13 +32,13 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou9-L8-wen">
                                 <rect key="frame" x="16" y="28" width="343" height="45"/>
-                                <color key="backgroundColor" red="0.75686274509803919" green="0.035294117647058823" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.49433019301470588" green="0.035294117647058823" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="oOK-6Q-jYq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="ADD NEW CHARACTER">
-                                    <color key="titleColor" red="0.92156862745098034" green="0.72156862745098038" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="newButtonPressed:" destination="KFJ-6f-cDM" eventType="touchUpInside" id="Yun-Lc-UwS"/>
@@ -292,6 +292,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-cy-9aw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter character name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-XM-4wf">
                                 <rect key="frame" x="16" y="287" width="343" height="30"/>
                                 <nil key="textColor"/>
@@ -307,10 +310,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8P-fG-qvq">
                                 <rect key="frame" x="16" y="325" width="218" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.39215686274509803" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="CREATE CHARACTER">
-                                    <color key="titleColor" red="0.9309113621711731" green="0.71438699960708618" blue="0.035574041306972504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="5fW-hW-GHh" eventType="touchUpInside" id="j6H-I0-awC"/>
@@ -318,7 +321,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
                                 <rect key="frame" x="242" y="325" width="117" height="30"/>
-                                <color key="backgroundColor" red="0.81303626298904419" green="0.12553593516349792" blue="0.087146036326885223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="F2U-f8-V9R"/>
                                 </constraints>
@@ -334,14 +337,18 @@
                             <constraint firstItem="NKa-XM-4wf" firstAttribute="top" secondItem="kVn-lN-btP" secondAttribute="bottom" constant="8" symbolic="YES" id="5nE-Rq-cy8"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="trailing" secondItem="FHP-vN-HYf" secondAttribute="trailing" id="Eoa-cH-8KU"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="trailing" secondItem="NKa-XM-4wf" secondAttribute="trailing" id="G0W-bT-5SP"/>
+                            <constraint firstItem="Ffm-cy-9aw" firstAttribute="width" secondItem="VjS-Dt-Jmg" secondAttribute="width" id="H4U-o4-UaT"/>
                             <constraint firstItem="FHP-vN-HYf" firstAttribute="leading" secondItem="P8P-fG-qvq" secondAttribute="trailing" constant="8" symbolic="YES" id="Oum-D1-Eb1"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="leading" secondItem="VjS-Dt-Jmg" secondAttribute="leading" constant="16" id="PoK-VI-wpg"/>
+                            <constraint firstItem="ON0-42-U3z" firstAttribute="top" secondItem="Ffm-cy-9aw" secondAttribute="bottom" id="Vdp-zJ-HWk"/>
                             <constraint firstAttribute="trailing" secondItem="kVn-lN-btP" secondAttribute="trailing" constant="16" id="XaD-oL-cuQ"/>
                             <constraint firstItem="FHP-vN-HYf" firstAttribute="baseline" secondItem="P8P-fG-qvq" secondAttribute="baseline" id="YLz-Oq-3QF"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="leading" secondItem="P8P-fG-qvq" secondAttribute="leading" id="Yuw-sZ-FnV"/>
                             <constraint firstItem="FHP-vN-HYf" firstAttribute="top" secondItem="NKa-XM-4wf" secondAttribute="bottom" constant="8" symbolic="YES" id="auP-Cj-pNS"/>
+                            <constraint firstItem="Ffm-cy-9aw" firstAttribute="top" secondItem="VjS-Dt-Jmg" secondAttribute="top" id="cSg-x9-Ek0"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="leading" secondItem="NKa-XM-4wf" secondAttribute="leading" id="cpW-RU-9uN"/>
                             <constraint firstItem="kVn-lN-btP" firstAttribute="top" secondItem="CWs-o4-Pj3" secondAttribute="bottom" id="oFo-LO-ddD"/>
+                            <constraint firstItem="Ffm-cy-9aw" firstAttribute="centerX" secondItem="NKa-XM-4wf" secondAttribute="centerX" id="sEJ-WB-HxW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -479,7 +486,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SMG-lm-fyq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
