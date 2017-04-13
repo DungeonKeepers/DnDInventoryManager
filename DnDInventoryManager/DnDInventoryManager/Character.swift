@@ -34,7 +34,6 @@ class Character {
         if let name = record["name"] as? String, let userID = record["userID"] as? String {
             self.name = name
             self.userID = userID
-//            self.campaignID = campaignID
             self.inventory = [Item]()
         } else {
             return nil
@@ -55,13 +54,13 @@ extension Character {
 //            do {
 //                try data.write(to: avatar.path)
 //                let asset = CKAsset(fileURL: avatar.path)
-        guard let id = character.name else { return nil }
-        let recordID = CKRecordID(recordName: id)
-        let characterRecord = CKRecord(recordType: "Character", recordID: recordID)
+
+                guard let id = character.name else {return nil}
+                let recordID = CKRecordID(recordName: id)
+                let characterRecord = CKRecord(recordType: "Character", recordID: recordID)
 //                characterRecord.setValue(asset, forKey: "avatar")
-        characterRecord.setValue(character.name, forKey: "name")
-        characterRecord.setValue(character.userID, forKey: "userID")
-//                characterRecord.setValue(character.campaignID, forKey: "campaignID")
+                characterRecord.setValue(character.name, forKey: "name")
+                characterRecord.setValue(character.userID, forKey: "userID")
 
         return characterRecord
                 

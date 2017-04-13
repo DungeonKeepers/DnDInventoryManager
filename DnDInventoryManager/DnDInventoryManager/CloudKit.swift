@@ -158,8 +158,28 @@ class CloudKit {
                             }
                         })
                     }
+
+    func updateCharacter(character: Character) {
+        let id = character.name
+        let recordID = CKRecordID(recordName: id!)
+        self.publicDatabase.fetch(withRecordID: recordID) { (characterRecord, error) in
+            if error != nil {
+                print("Error fetching character to be updated. \(error!.localizedDescription)")
+            } else {
+                if let characterRecord = characterRecord {
+                    characterRecord["name"] = character.name as CKRecordValue?
+                    self.publicDatabase.save(characterRecord, completionHandler: { (saveRecord, error) in
+                        if error != nil {
+                            print("Error saving updated character. \(error!.localizedDescription)")
+                        }
+                    })
                 }
             }
         }
     }
+ 
+    func udpateItem(character: CKRecord, item: Item) {
+        let 
+    }
+
 }
