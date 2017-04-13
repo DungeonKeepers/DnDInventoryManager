@@ -61,8 +61,9 @@ extension Item : Hashable {
 
 extension Item {
     class func recordFor(item: Item) -> CKRecord {
-
-        let record = CKRecord(recordType: "Item")
+        let id = item.name
+        let recordID = CKRecordID(recordName: id)
+        let record = CKRecord(recordType: "Item", recordID: recordID)
         record.setValue(item.name, forKey: "name")
         record.setValue(item.text, forKey: "text")
         record.setValue(item.quantity, forKey: "quantity")

@@ -161,7 +161,100 @@ class CloudKit {
                 }
             }
         }
+    }
+    
+    func addItemToCharacter(characterName: String, item: Item) {
+        
+        let predicate = NSPredicate(format: "name == %@", characterName)
+        let query = CKQuery(recordType: "Character", predicate: predicate)
+        
+        self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacter, error) in
+            if error != nil {
+                print(".........error in additemToCharacter...............")
+                print(error!.localizedDescription)
+            }
+            
+            if let fetchedCharacter = fetchedCharacter {
+                for characterRecord in fetchedCharacter {
+                    let itemRecord = Item.recordFor(item: item)
+                    itemRecord["owningCharacter"] = CKReference(record: characterRecord, action: .deleteSelf)
+                    self.privateDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
+                        if error != nil {
+                            print("error adding Item to charater line 183")
+                            print(error!.localizedDescription)
+                        }
+                        print(savedItem ?? "item not saved")
+                        print("item saved on \(characterName)")
+                    })
+                }
+            }
+        }
+    }
 
+    func updateItemQuanitityOnCharacter(characterName: String, item: Item) {
+        let predicate = NSPredicate(format: "name == %@", characterName)
+        let query = CKQuery(recordType: "Character", predicate: predicate)
+        
+        self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacter, error) in
+            if error != nil {
+                print(".........error in additemToCharacter...............")
+                print(error!.localizedDescription)
+            }
+            
+            if let fetchedCharacter = fetchedCharacter {
+                for characterRecord in fetchedCharacter {
+                    let predicate = NSPredicate(format: "name == %@ AND owningCharacter == %@", item.name, characterRecord)
+                    let query = CKQuery(recordType: "Item", predicate: predicate)
+                    self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
+                        
+   //DANGER:  BANG BANG Force unwrap
+                        for fetchedItemRecord in fetchedItems! {
+                            let itemToUpdate = Item(record: fetchedItemRecord)
+                            itemToUpdate!.quantity = item.quantity
+    //DANGER:  BANG BANG Force unwrap
+                            let itemRecord = Item.recordFor(item: itemToUpdate!)
+                            self.privateDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
+                                if error != nil {
+                                    print("error adding Item to charater line 218")
+                                    print(error!.localizedDescription)
+                                }
+                                print(savedItem ?? "item not saved")
+                                print("item saved on \(characterName)")
+                            })
+                        }
+                    })
+                }
+            }
+        }
+    }
+    
+//    func fetchItems(characterRecord: CKRecord) -> [Item]? {
+//            if let character = Character(record: characterRecord) {
+//                let characterID = characterRecord.recordID
+//                let recordToMatch = CKReference(recordID: characterID, action: .deleteSelf)
+//                let predicate = NSPredicate(format: "owningCharacter =%@", recordToMatch)
+//                let query = CKQuery(recordType: "Item", predicate: predicate)
+//                self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
+//                    if error != nil {
+//                        print("Error fetching items in characterFetch")
+//                        print(error!.localizedDescription)
+//                    }
+//                    
+//                    if let fetchedItems = fetchedItems {
+//                        for record in fetchedItems {
+//                            if let fetchedItem = Item(record: record) {
+//                                print(fetchedItem)
+//                                character.inventory.append(fetchedItem)
+//                                print(character.inventory.first ?? "Fuck... no character.")
+//                            }
+//                        }
+//                    }
+//
+//                })
+//            }
+//
+//    }
+    
     func updateCharacter(character: Character) {
         let id = character.name
         let recordID = CKRecordID(recordName: id!)
@@ -180,10 +273,9 @@ class CloudKit {
             }
         }
     }
- 
+}
 //    func udpateItem(character: CKRecord, item: Item) {
 //        let 
 //    }
 
-    }
-}
+

@@ -95,6 +95,8 @@ extension ItemsViewController : UITableViewDelegate {
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         actionSheetController.addAction(cancelAction)
         
+        self.present(actionSheetController, animated: true, completion: nil)
+        
     }
     
 }

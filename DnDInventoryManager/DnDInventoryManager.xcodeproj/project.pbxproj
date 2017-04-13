@@ -45,6 +45,8 @@
 		C8523CAF1E9D47980004652C /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */; };
 		C8523CB01E9D47980004652C /* InventoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */; };
 		C8523CB21E9D6E510004652C /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8523CB11E9D6E500004652C /* ItemCell.swift */; };
+		C8E198101EA02EAE0005006F /* FantaisieArtistique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E1980F1EA02EAE0005006F /* FantaisieArtistique.ttf */; };
+		C8E198121EA0301A0005006F /* Banda.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8E198111EA0301A0005006F /* Banda.otf */; };
 		EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */; };
 		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
 		EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */; };
@@ -109,6 +111,8 @@
 		C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
 		C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryTableViewController.xib; sourceTree = "<group>"; };
 		C8523CB11E9D6E500004652C /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		C8E1980F1EA02EAE0005006F /* FantaisieArtistique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FantaisieArtistique.ttf; sourceTree = "<group>"; };
+		C8E198111EA0301A0005006F /* Banda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Banda.otf; sourceTree = "<group>"; };
 		EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 		83CB37361E9BE35D00B6FEA6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				C8E198111EA0301A0005006F /* Banda.otf */,
+				C8E1980F1EA02EAE0005006F /* FantaisieArtistique.ttf */,
 				83CB372D1E9BD6F400B6FEA6 /* Info.plist */,
 				83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */,
 				83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */,
@@ -320,9 +326,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E198101EA02EAE0005006F /* FantaisieArtistique.ttf in Resources */,
 				83D9115C1E9D375B00E1F9C7 /* ItemInventory.json in Resources */,
 				8352CC4B1E9F1BC7004E8949 /* ItemViewCell.xib in Resources */,
 				C8523CB01E9D47980004652C /* InventoryTableViewController.xib in Resources */,
+				C8E198121EA0301A0005006F /* Banda.otf in Resources */,
 				83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */,
 				83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */,
 				832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */,
@@ -495,7 +503,7 @@
 				);
 				INFOPLIST_FILE = DnDInventoryManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemiksch.DnDInventoryManagera;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikemiksch.DnDInventoryManagers-jeremy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
