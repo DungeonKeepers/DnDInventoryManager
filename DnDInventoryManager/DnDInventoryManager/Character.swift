@@ -12,7 +12,7 @@ import CloudKit
 class Character {
     
     var userID = String()
-    var campaignID : String?
+//    var campaignID : String?
     var name : String?
     var inventory = [Item]()
 //    var avatar : UIImage?
@@ -54,6 +54,7 @@ extension Character {
 //            do {
 //                try data.write(to: avatar.path)
 //                let asset = CKAsset(fileURL: avatar.path)
+
                 guard let id = character.name else {return nil}
                 let recordID = CKRecordID(recordName: id)
                 let characterRecord = CKRecord(recordType: "Character", recordID: recordID)
@@ -61,8 +62,7 @@ extension Character {
                 characterRecord.setValue(character.name, forKey: "name")
                 characterRecord.setValue(character.userID, forKey: "userID")
 
-
-                return characterRecord
+        return characterRecord
                 
 //            } catch {
 //                throw CharacterError.writingDatatoDisc

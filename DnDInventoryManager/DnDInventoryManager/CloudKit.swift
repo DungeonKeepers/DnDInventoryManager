@@ -75,7 +75,7 @@ class CloudKit {
         }
     }
     
-    func fetchCharacters(characterName: String, completion: @escaping (_ fetchedCharacters: [Character]?, _ error: Error?)-> Void ) {
+    func fetchAllCharacters(completion: @escaping (_ fetchedCharacters: [Character]?, _ error: Error?)-> Void ) {
         var fetchedCharacter = [Character]()
         
         let predicate = NSPredicate(value: true)
@@ -120,6 +120,45 @@ class CloudKit {
         }
     }
     
+    func fetchCharacterBy(characterName: String, completion: @escaping (_ fetchedCharacter: Character?, _ error: Error?)-> Void ) {
+        
+        let predicate = NSPredicate(format: "name == %@", characterName)
+        let query = CKQuery(recordType: "Character", predicate: predicate)
+        
+        self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacter, error) in
+            if error != nil {
+                print(".........error in fetchedCharacters...............")
+                print(error!.localizedDescription)
+            }
+            
+            if let fetchedCharacter = fetchedCharacter {
+                for record in fetchedCharacter {
+                    if let character = Character(record: record) {
+                        let characterID = record.recordID
+                        let recordToMatch = CKReference(recordID: characterID, action: .deleteSelf)
+                        let predicate = NSPredicate(format: "owningCharacter =%@", recordToMatch)
+                        let query = CKQuery(recordType: "Item", predicate: predicate)
+                        self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
+                            if error != nil {
+                                print("Error fetching items in characterFetch")
+                                print(error!.localizedDescription)
+                            }
+                            
+                            if let fetchedItems = fetchedItems {
+                                for record in fetchedItems {
+                                    if let fetchedItem = Item(record: record) {
+                                        print(fetchedItem)
+                                        character.inventory.append(fetchedItem)
+                                        print(character.inventory.first ?? "Fuck... no character.")
+                                    }
+                                }
+                            }
+                            OperationQueue.main.addOperation {
+                                completion(character, error)
+                            }
+                        })
+                    }
+
     func updateCharacter(character: Character) {
         let id = character.name
         let recordID = CKRecordID(recordName: id!)
@@ -138,8 +177,9 @@ class CloudKit {
             }
         }
     }
-    
+ 
     func udpateItem(character: CKRecord, item: Item) {
         let 
     }
+
 }

@@ -24,7 +24,7 @@ class EditCharacterController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        currentCharacter.campaignID = campaignToken?.text
+//        currentCharacter.campaignID = campaignToken?.text
         currentCharacter.name = nameField?.text ?? "The (wo)man With No Name"
         CharacterDetailController.shared.character.name = currentCharacter.name
         self.dismiss(animated: true, completion: nil)
@@ -38,7 +38,7 @@ class EditCharacterController: UIViewController {
         super.viewDidLoad()
 //        imageView.image = currentCharacter?.avatar
         nameField.text = currentCharacter.name
-        campaignToken.text = currentCharacter?.campaignID ?? "No campaign"
+//        campaignToken.text = currentCharacter?.campaignID ?? "No campaign"
         
         // Do any additional setup after loading the view.
     }
