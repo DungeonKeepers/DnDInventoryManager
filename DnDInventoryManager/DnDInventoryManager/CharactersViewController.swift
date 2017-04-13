@@ -58,7 +58,7 @@ class CharactersViewController: UIViewController {
         self.charactersViewTable.estimatedRowHeight = 250
         self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
         
-        CloudKit.shared.fetchCharacters(characterName: "Bilbo") { (characterArray, error) in
+        CloudKit.shared.fetchAllCharacters() { (characterArray, error) in
             if error != nil {
                 print(error!.localizedDescription)
             }
