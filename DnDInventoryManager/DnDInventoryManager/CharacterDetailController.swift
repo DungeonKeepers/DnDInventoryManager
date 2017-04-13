@@ -32,13 +32,14 @@ class CharacterDetailController: UIViewController {
         self.characterName.text = character.name
         self.inventoryTableView.delegate = self
         self.inventoryTableView.reloadData()
-        print(self.character.inventory)
+        update()
     }
     
     func update() {
-        let inventoryItemNib = UINib(nibName: "InventoryItemVCell", bundle: nil)
+        let inventoryItemNib = UINib(nibName: "InventoryItemCell", bundle: nil)
         self.inventoryTableView.register(inventoryItemNib, forCellReuseIdentifier: InventoryItemCell.identifier)
         self.inventoryTableView.estimatedRowHeight = 50
+        self.inventoryTableView.rowHeight = UITableViewAutomaticDimension
         self.inventoryTableView.dataSource = self
     }
     
@@ -71,11 +72,16 @@ extension CharacterDetailController : UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("Hi! \(character.inventory)")
         let cell = tableView.dequeueReusableCell(withIdentifier: InventoryItemCell.identifier, for: indexPath) as! InventoryItemCell
         let inventoryItem = character.inventory[indexPath.row]
         
         cell.item = inventoryItem
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: InventoryDetailController.identifier, sender: nil)
     }
 }
 
