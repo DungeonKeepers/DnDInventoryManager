@@ -50,12 +50,7 @@ extension Character {
                 characterRecord.setValue(character.name, forKey: "name")
                 characterRecord.setValue(character.userID, forKey: "userID")
                 characterRecord.setValue(character.campaignID, forKey: "campaignID")
-                var itemRecords = [CKRecord]()
-                itemRecords = character.inventory.map { Item.recordFor(item: $0) }
-                debugPrint(itemRecords)
-                
-                characterRecord.setValue(itemRecords, forKey: "inventory")
-                
+
                 return characterRecord
                 
             } catch {

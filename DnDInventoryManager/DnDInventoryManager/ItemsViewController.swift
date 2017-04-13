@@ -47,6 +47,23 @@ extension ItemsViewController : UITableViewDataSource {
 //MARK: UITableViewDelegate {
 extension ItemsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: ItemViewCell.identifier, sender: nil)
+        let selectedItem = allItems[indexPath.row]
+        presentActionSheet(item: selectedItem)
     }
+    
+    func presentActionSheet(item: Item) {
+        let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
+        
+        for each in CharactersViewController.shared.characters {
+            let action = UIAlertAction(title: each.name, style: .default) { (action) in
+                each.inventory.append(item)
+            }
+            actionSheetController.addAction(action)
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        actionSheetController.addAction(cancelAction)
+        
+    }
+    
 }

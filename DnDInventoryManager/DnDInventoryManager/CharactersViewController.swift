@@ -10,7 +10,9 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = User.shared.characters
+    var characters = [Character]()
+    
+    static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
     
