@@ -8,20 +8,20 @@
 
 import Foundation
 
-extension UserDefaults {
-    
-    func getAccessToken() -> String? {
-        guard let token = UserDefaults.standard.string(forKey: "access_token") else { return nil }
-        return token
-    }
-    
-    func save(oauthToken: String) -> Bool {
-        UserDefaults.standard.set(oauthToken, forKey: "oauth_token")
-        return UserDefaults.standard.synchronize()
-    }
-    
-    func save(oauthTokenSecret: String) -> Bool {
-        UserDefaults.standard.set(oauthTokenSecret, forKey: "oauth_token_secret")
-        return UserDefaults.standard.synchronize()
+extension String {
+    func validate() -> Bool {
+        let pattern = "[^0-9a-z]"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+            let range = NSRange(location: 0, length: self.characters.count)
+            let matches = regex.numberOfMatches(in: self, options: .reportCompletion, range: range)
+            if matches > 0 {
+                return false
+            }
+            return true
+        } catch {
+            return false
+        }
     }
 }

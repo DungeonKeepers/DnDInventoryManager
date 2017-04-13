@@ -23,19 +23,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IVA-zj-Svh">
-                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                                <rect key="frame" x="16" y="80" width="343" height="538"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8d8-6F-UCl">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="New"/>
-                                    <connections>
-                                        <action selector="newButtonPressed:" destination="KFJ-6f-cDM" eventType="touchUpInside" id="N3x-sq-lzP"/>
-                                        <segue destination="5fW-hW-GHh" kind="show" identifier="CharacterCreationController" id="whY-R9-4jE"/>
-                                    </connections>
-                                </button>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou9-L8-wen">
+                                <rect key="frame" x="16" y="28" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New"/>
+                                <connections>
+                                    <action selector="newButtonPressed:" destination="KFJ-6f-cDM" eventType="touchUpInside" id="Yun-Lc-UwS"/>
+                                    <segue destination="5fW-hW-GHh" kind="show" identifier="CharacterCreationController" id="thr-1I-tKd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -63,6 +63,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etF-Qp-2kJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="339"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VK-5n-SkO">
                                 <rect key="frame" x="0.0" y="281" width="375" height="58"/>
@@ -95,8 +96,7 @@
                                     <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissButtonPressed:" destination="Fem-BC-aQc" eventType="touchUpInside" id="po2-ZW-vqG"/>
-                                    <action selector="editButtonClicked:" destination="Fem-BC-aQc" eventType="touchUpInside" id="q6q-R4-j2P"/>
+                                    <action selector="dismissButtonPressed:" destination="Fem-BC-aQc" eventType="touchUpInside" id="2hi-Ey-Hqi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-mz-NUQ">
@@ -105,7 +105,7 @@
                                     <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="editButtonClicked:" destination="Fem-BC-aQc" eventType="touchUpInside" id="sOP-GB-3BA"/>
+                                    <action selector="editButtonClicked:" destination="Fem-BC-aQc" eventType="touchUpInside" id="E4a-aF-Grk"/>
                                     <segue destination="bG1-r9-qLy" kind="presentation" identifier="EditCharacterController" id="9gD-jm-dp7"/>
                                 </connections>
                             </button>
@@ -133,9 +133,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="characterName" destination="wmU-Rl-snM" id="5lH-fM-Hqs"/>
-                        <outlet property="inventoryTableView" destination="1oX-pV-KXE" id="gDo-FP-K5e"/>
-                        <outlet property="profileImage" destination="etF-Qp-2kJ" id="Cdy-kn-J8J"/>
+                        <outlet property="characterName" destination="wmU-Rl-snM" id="jrI-W6-l7F"/>
+                        <outlet property="inventoryTableView" destination="1oX-pV-KXE" id="HRw-sa-LaM"/>
+                        <outlet property="profileImage" destination="etF-Qp-2kJ" id="Mca-j6-ZYc"/>
                         <segue destination="DIY-3X-JzS" kind="show" identifier="InventoryDetailController" id="CTz-uG-dSn"/>
                     </connections>
                 </viewController>
@@ -410,21 +410,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-nd-92u">
-                                <rect key="frame" x="16" y="28" width="343" height="590"/>
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" id="0cQ-li-q72"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="trailing" secondItem="0Em-eU-bKW" secondAttribute="trailingMargin" id="7FT-yk-hBo"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leadingMargin" id="HUW-XB-kpo"/>
-                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="8" id="wqX-4M-umJ"/>
+                            <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" constant="44" id="wqX-4M-umJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" id="wpd-WD-YfJ"/>
                     <connections>
                         <outlet property="itemsTableView" destination="vWm-nd-92u" id="g3a-2S-vsG"/>
+                        <outlet property="searchBar" destination="tLM-bO-TM5" id="WDm-RK-fND"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-uH-Kxm" userLabel="First Responder" sceneMemberID="firstResponder"/>

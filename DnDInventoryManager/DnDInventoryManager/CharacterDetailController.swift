@@ -12,6 +12,7 @@ class CharacterDetailController: UIViewController {
     
     var character : Character!
     
+    static var shared = CharacterDetailController()
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!
@@ -32,6 +33,7 @@ class CharacterDetailController: UIViewController {
         self.inventoryTableView.delegate = self
         self.inventoryTableView.dataSource = self
         self.inventoryTableView.reloadData()
+        print(self.character.inventory)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,6 +48,11 @@ class CharacterDetailController: UIViewController {
                 destinationController.itemIndex = selectedIndex
                 destinationController.item = selectedItem
             }
+        }
+        
+        if segue.identifier == EditCharacterController.identifier {
+            guard let destinationController = segue.destination as? EditCharacterController else { return }
+            destinationController.currentCharacter = character
         }
     }
 
