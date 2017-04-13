@@ -269,7 +269,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVn-lN-btP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="kVn-lN-btP">
                                 <rect key="frame" x="16" y="20" width="343" height="308"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -278,7 +278,7 @@
                                     <outletCollection property="gestureRecognizers" destination="49I-Aw-2D7" appends="YES" id="ilh-2P-9V5"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
                                 <rect key="frame" x="16" y="629" width="343" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
@@ -418,4 +418,7 @@
             <point key="canvasLocation" x="1986" y="-552"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default" width="626" height="626"/>
+    </resources>
 </document>

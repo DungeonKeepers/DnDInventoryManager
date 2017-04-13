@@ -15,7 +15,7 @@
 		832B13AC1E9D6BFF00BD36EE /* InventoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */; };
 		832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */; };
 		832B13B01E9D868800BD36EE /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AF1E9D868800BD36EE /* ItemList.swift */; };
-		8352CC3D1E9E86DD004E8949 /* CharactersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */; };
+		8352CC3D1E9E86DD004E8949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352CC3C1E9E86DD004E8949 /* Main.storyboard */; };
 		8352CC3F1E9E8C41004E8949 /* EditCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */; };
 		8352CC411E9E95FD004E8949 /* InventoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */; };
 		8352CC451E9EC84F004E8949 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC441E9EC84F004E8949 /* Post.swift */; };
@@ -75,7 +75,7 @@
 		832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItemCell.swift; sourceTree = "<group>"; };
 		832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryItemCell.xib; sourceTree = "<group>"; };
 		832B13AF1E9D868800BD36EE /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
-		8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CharactersStoryboard.storyboard; sourceTree = "<group>"; };
+		8352CC3C1E9E86DD004E8949 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCharacterController.swift; sourceTree = "<group>"; };
 		8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailController.swift; sourceTree = "<group>"; };
 		8352CC441E9EC84F004E8949 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */,
 				832B13A71E9D670700BD36EE /* CharacterCell.xib */,
 				832B13A41E9D649800BD36EE /* CustomTransition.swift */,
-				8352CC3C1E9E86DD004E8949 /* CharactersStoryboard.storyboard */,
+				8352CC3C1E9E86DD004E8949 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
 				C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */,
 				EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */,
@@ -322,7 +322,7 @@
 				832B13A31E9D620100BD36EE /* CharactersViewController.xib in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
 				EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */,
-				8352CC3D1E9E86DD004E8949 /* CharactersStoryboard.storyboard in Resources */,
+				8352CC3D1E9E86DD004E8949 /* Main.storyboard in Resources */,
 				832B13A91E9D670700BD36EE /* CharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

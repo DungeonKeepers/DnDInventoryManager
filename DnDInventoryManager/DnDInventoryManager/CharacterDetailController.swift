@@ -12,7 +12,6 @@ class CharacterDetailController: UIViewController {
     
     var character : Character!
     
-// NEED TO RELINK ALL THESE ACTIONS AND OUTLETS
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!

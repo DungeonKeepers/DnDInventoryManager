@@ -22,10 +22,12 @@ class CharacterCreationController: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
-        var newCharacter = Character()
+        let newCharacter = Character()
         newCharacter.userID = User.shared.id
         newCharacter.campaignID = campaignToken?.text
         newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
+        let item = Item(name: "Super Sword", text: "This sword is REALLY super")
+        newCharacter.inventory = [(item: item, count: 2 )]
         CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
         self.dismiss(animated: true, completion: nil)
     }

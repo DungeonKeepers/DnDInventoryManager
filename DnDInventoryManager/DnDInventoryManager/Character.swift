@@ -14,10 +14,22 @@ class Character {
     var userID = String()
     var campaignID : String?
     var name : String?
-    var inventory = [(item: Item, count: Int)]()
+    var inventory : [(item: Item, count: Int)]
     var avatar : UIImage?
     
-    init(){}
+    init(){
+        self.avatar = #imageLiteral(resourceName: "default")
+        self.inventory = []
+        let name = "Chalk"
+        let text = "A piece of chalk"
+        
+        let json = ["name": name, "text": text]
+        
+        if let chalk = Item(json: json) {
+            self.inventory.append((item: chalk, count: 1))
+        }
+        
+    }
 }
 
 enum CharacterError : Error {
