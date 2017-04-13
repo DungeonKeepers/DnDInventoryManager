@@ -24,7 +24,7 @@ class CharacterCreationController: UIViewController {
     @IBAction func createButtonPressed(_ sender: Any) {
         let newCharacter = Character()
         newCharacter.userID = User.shared.id
-        newCharacter.campaignID = campaignToken?.text
+//        newCharacter.campaignID = campaignToken?.text
         newCharacter.name = nameField?.text ?? "The (wo)man With No Name"
         let item = Item(name: "Super Sword", text: "This sword is REALLY super", quantity: 1)
         newCharacter.inventory = [item]
