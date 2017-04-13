@@ -31,10 +31,11 @@ class Character {
     }
     
     init?(record: CKRecord) {
-        if let name = record["name"] as? String, let userID = record["userID"] as? String, let campaignID = record["campaignID"] as? String {
+        if let name = record["name"] as? String, let userID = record["userID"] as? String {
+//            , let campaignID = record["campaignID"] as? String {
             self.name = name
             self.userID = userID
-            self.campaignID = campaignID
+//            self.campaignID = campaignID
             self.inventory = [Item]()
         } else {
             return nil
@@ -60,7 +61,7 @@ extension Character {
 //                characterRecord.setValue(asset, forKey: "avatar")
                 characterRecord.setValue(character.name, forKey: "name")
                 characterRecord.setValue(character.userID, forKey: "userID")
-                characterRecord.setValue(character.campaignID, forKey: "campaignID")
+//                characterRecord.setValue(character.campaignID, forKey: "campaignID")
 
                 return characterRecord
                 
