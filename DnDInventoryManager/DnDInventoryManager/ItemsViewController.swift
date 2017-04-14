@@ -8,6 +8,7 @@
 
 import UIKit
 
+typealias characterCallback = ([Character]) -> ()
 
 class ItemsViewController: UIViewController {
     
@@ -92,21 +93,38 @@ extension ItemsViewController : UITableViewDelegate {
         presentActionSheet(item: selectedItem)
     }
     
+    func getCharacters(completion: @escaping characterCallback) {
+        func returnToMain(results: [Character]?) {
+            OperationQueue.main.addOperation {
+                completion(results!)
+            }
+        }
+    }
+    
+    
     func presentActionSheet(item: Item) {
         let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
+        
+        let totalChar = CharactersViewController.shared.characters.count
+        print(CharactersViewController.shared.characters)
+        var actionChar = 0
+        print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
         
         for each in CharactersViewController.shared.characters {
             let action = UIAlertAction(title: each.name, style: .default) { (action) in
                 each.inventory.append(item)
+                actionChar += 1
+                actionSheetController.addAction(action)
             }
-            actionSheetController.addAction(action)
+            //actionSheetController.addAction(action)
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         actionSheetController.addAction(cancelAction)
         
-        self.present(actionSheetController, animated: true, completion: nil)
-        
+        if actionChar == totalChar {
+            self.present(actionSheetController, animated: true, completion: nil)
+        }
     }
     
 }
