@@ -621,7 +621,7 @@
                     </view>
                     <connections>
                         <outlet property="itemName" destination="FPH-Aa-sJ0" id="61S-0t-cRa"/>
-                        <outlet property="itemText" destination="qqa-iZ-QBe" id="nog-xo-8yt"/>
+                        <outlet property="itemText" destination="qqa-iZ-QBe" id="Wjf-z7-DeH"/>
                         <segue destination="8QE-oR-NgD" kind="show" identifier="AddToCharacterController" id="mQs-6n-DAT"/>
                     </connections>
                 </viewController>
@@ -641,14 +641,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wn-hi-fom">
-                                <rect key="frame" x="0.0" y="64" width="359" height="534"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-Ct-fmT">
+                                <rect key="frame" x="19" y="560" width="337" height="50"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="a4U-Wu-ixd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="le0-o7-Jed" eventType="touchUpInside" id="mlm-c6-w5h"/>
+                                    <action selector="backButtonPressed:" destination="8QE-oR-NgD" eventType="touchUpInside" id="2Tk-G9-pNt"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wn-hi-fom">
+                                <rect key="frame" x="16" y="28" width="343" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ELF-Ct-fmT" secondAttribute="trailing" constant="3" id="1u6-c6-PmG"/>
+                            <constraint firstItem="6Wn-hi-fom" firstAttribute="leading" secondItem="gNc-cl-qfn" secondAttribute="leadingMargin" id="MAm-ag-mKd"/>
+                            <constraint firstItem="ELF-Ct-fmT" firstAttribute="top" secondItem="6Wn-hi-fom" secondAttribute="bottom" constant="8" id="UKs-th-yL7"/>
+                            <constraint firstItem="ELF-Ct-fmT" firstAttribute="top" secondItem="6Wn-hi-fom" secondAttribute="bottom" constant="8" id="Xeg-62-UaM"/>
+                            <constraint firstItem="ELF-Ct-fmT" firstAttribute="leading" secondItem="gNc-cl-qfn" secondAttribute="leadingMargin" constant="3" id="nKx-16-I9L"/>
+                            <constraint firstItem="6Wn-hi-fom" firstAttribute="top" secondItem="Jlp-eT-ByO" secondAttribute="bottom" constant="8" id="q3e-nq-ekj"/>
+                            <constraint firstItem="vR9-1o-p0z" firstAttribute="top" secondItem="ELF-Ct-fmT" secondAttribute="bottom" constant="8" id="vSe-oS-IdY"/>
+                            <constraint firstItem="6Wn-hi-fom" firstAttribute="trailing" secondItem="gNc-cl-qfn" secondAttribute="trailingMargin" id="x6A-Vo-FDR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="smallCharacterTableView" destination="6Wn-hi-fom" id="ZwX-eg-tX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqT-LJ-ffq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

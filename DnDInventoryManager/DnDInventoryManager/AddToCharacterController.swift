@@ -11,27 +11,56 @@ import UIKit
 class AddToCharacterController: UIViewController {
     
     var item : Item!
+    var characters = [Character]()
 
+    @IBOutlet weak var smallCharacterTableView: UITableView!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fetchAllCharacters()
+        self.smallCharacterTableView.dataSource = self
+        self.smallCharacterTableView.delegate = self
+        let smallCharacterCell = UINib(nibName: "SmallCharacterCell", bundle: nil)
+        self.smallCharacterTableView.register(smallCharacterCell, forCellReuseIdentifier: SmallCharacterCell.identifier)
+        self.smallCharacterTableView.rowHeight = UITableViewAutomaticDimension
+        print(characters)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func fetchAllCharacters() {
+        CloudKit.shared.fetchAllCharacters() { (characterArray, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            if let characterArray = characterArray {
+                self.characters = characterArray
+                print(characterArray.first ?? "Fuck... no character.")
+                print(self.characters)
+            }
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//MARK: UITableViewDataSource
+extension AddToCharacterController : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return characters.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SmallCharacterCell.identifier, for: indexPath) as! SmallCharacterCell
+        let character = characters[indexPath.row]
+        cell.character = character
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character = characters[indexPath.row]
+        CloudKit.shared.addItemToCharacter(characterName: character.name!, item: item)
+        self.dismiss(animated: true, completion: nil)
+    }
 }
