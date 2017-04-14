@@ -21,9 +21,14 @@ class InventoryDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        update()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        update()
+        
+    }
+
     func update() {
         self.itemName.text = item.name
         self.itemText.text = item.text
@@ -49,7 +54,8 @@ class InventoryDetailController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: Any) {
         if item.quantity > 0 {
             CloudKit.shared.updateItemQuanitityOnCharacter(characterName: character.name!, item: item)
-            CloudKit.shared.updateCharacter(character: character)
+//            CloudKit.shared.updateCharacter(character: character)
+            self.dismiss(animated: true, completion: nil)
         }
 
 //        character.inventory[itemIndex].quantity = item.quantity
