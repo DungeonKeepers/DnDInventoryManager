@@ -11,7 +11,11 @@ import UIKit
 class AddToCharacterController: UIViewController {
     
     var item : Item!
-    var characters = [Character]()
+    var characters = [Character](){
+        didSet {
+            self.smallCharacterTableView.reloadData()
+        }
+    }
 
     @IBOutlet weak var smallCharacterTableView: UITableView!
     
