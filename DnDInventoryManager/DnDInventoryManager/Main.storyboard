@@ -110,48 +110,49 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VK-5n-SkO">
-                                <rect key="frame" x="16" y="28" width="343" height="31"/>
+                                <rect key="frame" x="16" y="28" width="343" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-Rl-snM">
-                                        <rect key="frame" x="0.0" y="5" width="343" height="21"/>
-                                        <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Xlb-V7-UH7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="36"/>
+                                        <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wmU-Rl-snM" secondAttribute="trailing" id="21h-rQ-dZQ"/>
-                                    <constraint firstItem="wmU-Rl-snM" firstAttribute="top" secondItem="7VK-5n-SkO" secondAttribute="top" constant="5" id="7xf-AS-NF5"/>
-                                    <constraint firstItem="wmU-Rl-snM" firstAttribute="top" secondItem="7VK-5n-SkO" secondAttribute="top" constant="5" id="Ja2-bT-UeY"/>
-                                    <constraint firstAttribute="bottom" secondItem="wmU-Rl-snM" secondAttribute="bottom" constant="5" id="Wdq-Sj-X2V"/>
+                                    <constraint firstItem="wmU-Rl-snM" firstAttribute="top" secondItem="7VK-5n-SkO" secondAttribute="top" id="7ms-Bz-CV4"/>
+                                    <constraint firstAttribute="bottom" secondItem="wmU-Rl-snM" secondAttribute="bottom" id="RzE-3L-RCx"/>
                                     <constraint firstItem="wmU-Rl-snM" firstAttribute="leading" secondItem="7VK-5n-SkO" secondAttribute="leading" id="iAR-u8-nb1"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1oX-pV-KXE">
-                                <rect key="frame" x="16" y="67" width="343" height="532"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="532" id="VBR-m4-DiH"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="86" width="343" height="513"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.9542352557182312" green="0.91149955987930298" blue="0.79844164848327637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1oX-pV-KXE" firstAttribute="trailing" secondItem="7VK-5n-SkO" secondAttribute="trailing" id="0Ns-n7-9uR"/>
                             <constraint firstItem="O8w-By-bS2" firstAttribute="top" secondItem="mcd-xk-1ns" secondAttribute="top" id="0au-ca-c0W"/>
                             <constraint firstItem="aX6-qF-kjd" firstAttribute="trailing" secondItem="mcd-xk-1ns" secondAttribute="trailingMargin" id="3TG-AM-RHE"/>
                             <constraint firstItem="O8w-By-bS2" firstAttribute="leading" secondItem="mcd-xk-1ns" secondAttribute="leading" id="ARg-my-Ogz"/>
-                            <constraint firstItem="1oX-pV-KXE" firstAttribute="top" secondItem="7VK-5n-SkO" secondAttribute="bottom" constant="8" id="BWn-Xu-IcK"/>
+                            <constraint firstItem="1oX-pV-KXE" firstAttribute="trailing" secondItem="aX6-qF-kjd" secondAttribute="trailing" id="KgW-xJ-b69"/>
+                            <constraint firstItem="1oX-pV-KXE" firstAttribute="leading" secondItem="aX6-qF-kjd" secondAttribute="leading" id="LfM-dU-FP3"/>
+                            <constraint firstItem="1oX-pV-KXE" firstAttribute="leading" secondItem="7VK-5n-SkO" secondAttribute="leading" id="N3L-xc-QfP"/>
                             <constraint firstItem="7VK-5n-SkO" firstAttribute="top" secondItem="XKL-bG-jXh" secondAttribute="bottom" constant="8" symbolic="YES" id="WGT-Lv-uEM"/>
                             <constraint firstItem="aX6-qF-kjd" firstAttribute="leading" secondItem="mcd-xk-1ns" secondAttribute="leadingMargin" id="ZQU-Zs-7Kn"/>
                             <constraint firstItem="ByI-7S-p7Y" firstAttribute="top" secondItem="aX6-qF-kjd" secondAttribute="bottom" constant="20" id="bkM-Ao-9no"/>
                             <constraint firstItem="O8w-By-bS2" firstAttribute="bottom" secondItem="ByI-7S-p7Y" secondAttribute="top" id="d4v-sc-5ly"/>
-                            <constraint firstItem="1oX-pV-KXE" firstAttribute="trailing" secondItem="mcd-xk-1ns" secondAttribute="trailingMargin" id="d6X-8b-eFi"/>
                             <constraint firstItem="7VK-5n-SkO" firstAttribute="centerX" secondItem="O8w-By-bS2" secondAttribute="centerX" id="dG4-lZ-te4"/>
-                            <constraint firstItem="7VK-5n-SkO" firstAttribute="leading" secondItem="1oX-pV-KXE" secondAttribute="leading" id="dZw-NJ-TmC"/>
-                            <constraint firstItem="1oX-pV-KXE" firstAttribute="leading" secondItem="mcd-xk-1ns" secondAttribute="leadingMargin" id="gg8-Mh-voC"/>
-                            <constraint firstItem="7VK-5n-SkO" firstAttribute="trailing" secondItem="1oX-pV-KXE" secondAttribute="trailing" id="jPX-MS-qJJ"/>
+                            <constraint firstItem="aX6-qF-kjd" firstAttribute="top" secondItem="1oX-pV-KXE" secondAttribute="bottom" constant="8" symbolic="YES" id="u2q-7x-p1V"/>
+                            <constraint firstItem="1oX-pV-KXE" firstAttribute="top" secondItem="7VK-5n-SkO" secondAttribute="bottom" constant="8" symbolic="YES" id="xCC-1B-MQ1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -540,7 +541,7 @@
                                 <rect key="frame" x="15" y="20" width="345" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Item Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPH-Aa-sJ0">
-                                        <rect key="frame" x="9" y="12" width="328" height="27"/>
+                                        <rect key="frame" x="9" y="12" width="328" height="26.5"/>
                                         <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="26"/>
                                         <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
