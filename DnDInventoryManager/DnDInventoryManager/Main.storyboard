@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Banda.otf">
+            <string>BandaRegular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Characters-->
         <scene sceneID="5wN-iF-g8d">
@@ -27,7 +32,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IVA-zj-Svh">
                                 <rect key="frame" x="16" y="20" width="343" height="537"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.9542352557182312" green="0.91149955987930298" blue="0.79844164848327637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou9-L8-wen">
@@ -36,7 +41,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="oOK-6Q-jYq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                 <state key="normal" title="ADD NEW CHARACTER">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -96,9 +101,9 @@
                                 <rect key="frame" x="16" y="267" width="343" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-Rl-snM">
-                                        <rect key="frame" x="0.0" y="5" width="343" height="21"/>
+                                        <rect key="frame" x="0.0" y="5" width="343" height="24.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                         <color key="textColor" red="0.92156862750000001" green="0.72156862749999995" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -121,7 +126,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-qF-kjd">
                                 <rect key="frame" x="16" y="602" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                 <state key="normal" title="RETURN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -181,7 +186,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b10-Gh-IbZ">
                                 <rect key="frame" x="16" y="602" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -218,7 +223,7 @@
                                     <constraint firstAttribute="height" constant="40" id="ben-o5-wNd"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fky-nD-MN7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -290,16 +295,16 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter character name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-XM-4wf">
                                 <rect key="frame" x="16" y="287" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8P-fG-qvq">
-                                <rect key="frame" x="16" y="325" width="150" height="30"/>
+                                <rect key="frame" x="16" y="325" width="150" height="37"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8GM-km-eBt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                 <state key="normal" title="CREATE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -308,11 +313,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
-                                <rect key="frame" x="209" y="325" width="150" height="30"/>
+                                <rect key="frame" x="209" y="325" width="150" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8D7-Sw-dxa"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" red="0.8712470531463623" green="0.69882971048355103" blue="0.034361071884632111" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -370,14 +376,14 @@
                                 <rect key="frame" x="0.0" y="-413" width="375" height="1080"/>
                             </imageView>
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
-                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-nd-92u">
                                 <rect key="frame" x="16" y="64" width="343" height="546"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -385,10 +391,10 @@
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="2Dn-Xh-sfH"/>
                             <constraint firstAttribute="trailing" secondItem="vWm-nd-92u" secondAttribute="trailing" constant="16" id="Bnc-X0-02g"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="HQ2-52-mkP"/>
-                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" constant="16" id="LOT-Ms-sfk"/>
                             <constraint firstItem="xPg-5v-8Fg" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="N5o-Cf-r0d"/>
                             <constraint firstItem="xPg-5v-8Fg" firstAttribute="centerX" secondItem="tLM-bO-TM5" secondAttribute="centerX" id="SDV-KN-CyL"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="YpC-WI-cTm"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="hzu-mR-BdZ"/>
+                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="maF-vS-wNv"/>
                             <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" constant="8" id="mmb-Te-m7Y"/>
                             <constraint firstAttribute="bottom" secondItem="xPg-5v-8Fg" secondAttribute="bottom" id="nmE-c3-ECu"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="sRP-26-yla"/>
