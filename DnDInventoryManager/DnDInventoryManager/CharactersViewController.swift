@@ -16,7 +16,7 @@ class CharactersViewController: UIViewController {
         }
     }
     
-    static let shared = CharactersViewController()
+//    static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
     
@@ -35,7 +35,7 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        update()
+//        update()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,6 +49,7 @@ class CharactersViewController: UIViewController {
                 destinationController.character = selectedCharacter
             }
         }
+        
     }
     
     func update() {
@@ -121,7 +122,12 @@ extension CharactersViewController  {
     }
 }
 
-
+//MARK: CharacterCreationControllerDelegate
+extension CharactersViewController: CharacterCreationControllerDelegate {
+    func updateCharacterList() {
+        self.characters = CloudKit.shared.characters
+    }
+}
 
 
 

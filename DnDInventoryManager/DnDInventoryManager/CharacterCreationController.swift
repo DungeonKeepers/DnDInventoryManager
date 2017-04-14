@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol CharacterCreationControllerDelegate : class {
+    func updateCharacterList()->()
+}
+
 class CharacterCreationController: UIViewController {
+    weak var delegate: CharacterCreationControllerDelegate?
     
     let imagePicker = UIImagePickerController()
     
@@ -28,9 +33,14 @@ class CharacterCreationController: UIViewController {
         let item = Item(name: "Super Sword", text: "This sword is REALLY super", quantity: 1)
         newCharacter.inventory = [item]
 //        print("Got this far")
-        CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
+        CloudKit.shared.saveCharacter(character: newCharacter, completion: {(newCharacter) in
+            CloudKit.shared.characters.append(Character(record: newCharacter!)!)
+            
+            if let delegate = self.delegate {
+                delegate.updateCharacterList()
+            }})
 //        CharactersViewController.shared.characters.append(newCharacter)
-        CharactersViewController.shared.fetchAllCharacters()
+//        CharactersViewController.shared.fetchAllCharacters()
         self.dismiss(animated: true, completion: nil)
     }
     

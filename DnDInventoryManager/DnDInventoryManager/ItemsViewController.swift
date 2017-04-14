@@ -105,12 +105,12 @@ extension ItemsViewController : UITableViewDelegate {
     func presentActionSheet(item: Item) {
         let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
         
-        let totalChar = CharactersViewController.shared.characters.count
-        print(CharactersViewController.shared.characters)
+        let totalChar = CloudKit.shared.characters.count
+        print(CloudKit.shared.characters)
         var actionChar = 0
         print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
         
-        for each in CharactersViewController.shared.characters {
+        for each in CloudKit.shared.characters {
             let action = UIAlertAction(title: each.name, style: .default) { (action) in
                 each.inventory.append(item)
                 actionChar += 1
