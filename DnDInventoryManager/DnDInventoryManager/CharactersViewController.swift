@@ -35,7 +35,7 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        update()
+        self.charactersViewTable.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,6 +100,7 @@ extension CharactersViewController : UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.charactersViewTable.reloadData()
         self.performSegue(withIdentifier: CharacterDetailController.identifier, sender: nil)
     }
 }
