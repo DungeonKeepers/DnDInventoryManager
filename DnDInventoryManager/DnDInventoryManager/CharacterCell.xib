@@ -6,43 +6,68 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FantaisieArtistique.ttf">
+            <string>FantaisieArtistique</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="278" id="KGk-i7-Jjw" customClass="CharacterCell" customModule="DnDInventoryManager" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="561" height="278"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="300" id="KGk-i7-Jjw" customClass="CharacterCell" customModule="DnDInventoryManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="561" height="277.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="359" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="734219" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-Vm-7AK">
-                        <rect key="frame" x="8" y="8" width="223" height="223"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hft-rE-udR">
-                        <rect key="frame" x="8" y="239" width="545" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hft-rE-udR">
+                        <rect key="frame" x="8" y="8" width="343" height="284"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okl-uu-EAy">
-                                <rect key="frame" x="0.0" y="8" width="279" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okl-uu-EAy">
+                                <rect key="frame" x="8" y="231" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R5n-d9-wKM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="734219" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-Vm-7AK">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="202"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W7I-Vm-7AK" firstAttribute="centerX" secondItem="okl-uu-EAy" secondAttribute="centerX" id="1Ib-N0-bfp"/>
+                            <constraint firstItem="W7I-Vm-7AK" firstAttribute="leading" secondItem="Hft-rE-udR" secondAttribute="leading" id="1cD-uJ-XlD"/>
+                            <constraint firstItem="W7I-Vm-7AK" firstAttribute="top" secondItem="Hft-rE-udR" secondAttribute="top" id="8oL-Al-ehO"/>
+                            <constraint firstItem="okl-uu-EAy" firstAttribute="leading" secondItem="Hft-rE-udR" secondAttribute="leadingMargin" id="EmJ-mx-Zcm"/>
+                            <constraint firstAttribute="bottom" secondItem="okl-uu-EAy" secondAttribute="bottom" constant="3" id="WXl-tD-Osv"/>
+                            <constraint firstItem="okl-uu-EAy" firstAttribute="top" secondItem="W7I-Vm-7AK" secondAttribute="bottom" constant="29" id="Zmu-p7-1P5"/>
+                            <constraint firstAttribute="trailing" secondItem="W7I-Vm-7AK" secondAttribute="trailing" id="kPT-4T-mk1"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Hft-rE-udR" secondAttribute="bottom" constant="-0.5" id="EiD-aB-HjY"/>
+                    <constraint firstItem="Hft-rE-udR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Iy4-Ah-xwp"/>
+                    <constraint firstItem="Hft-rE-udR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NM9-XB-ccB"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Hft-rE-udR" secondAttribute="leading" id="gHq-Cs-Iqf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hft-rE-udR" secondAttribute="trailing" id="gpA-qp-uxg"/>
+                    <constraint firstAttribute="bottom" secondItem="Hft-rE-udR" secondAttribute="bottom" constant="8" id="qKW-La-HYY"/>
+                    <constraint firstAttribute="topMargin" secondItem="Hft-rE-udR" secondAttribute="top" id="rzY-Dp-f6i"/>
+                    <constraint firstAttribute="trailing" secondItem="Hft-rE-udR" secondAttribute="trailing" constant="8" id="zvF-70-dqY"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="characterName" destination="okl-uu-EAy" id="LV1-FR-wuP"/>
             </connections>
-            <point key="canvasLocation" x="-24.5" y="46"/>
+            <point key="canvasLocation" x="20.5" y="57"/>
         </tableViewCell>
     </objects>
     <resources>
