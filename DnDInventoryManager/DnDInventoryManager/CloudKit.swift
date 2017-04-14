@@ -83,7 +83,7 @@ class CloudKit {
         
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Character", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]
+        query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacters, error) in
             if error != nil {
                 print(".........error in fetchedCharacters...............")

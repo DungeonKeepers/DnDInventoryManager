@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     func validate() -> Bool {
-        let pattern = "[^0-9a-z]"
+        let pattern = "[^0-9a-z- ]"
         
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
