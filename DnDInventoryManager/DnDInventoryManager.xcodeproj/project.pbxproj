@@ -15,6 +15,7 @@
 		832B13AC1E9D6BFF00BD36EE /* InventoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */; };
 		832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */; };
 		832B13B01E9D868800BD36EE /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B13AF1E9D868800BD36EE /* ItemList.swift */; };
+		834BA6C61EA09D4E00F88757 /* AddInventoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BA6C51EA09D4E00F88757 /* AddInventoryController.swift */; };
 		8352CC3D1E9E86DD004E8949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352CC3C1E9E86DD004E8949 /* Main.storyboard */; };
 		8352CC3F1E9E8C41004E8949 /* EditCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */; };
 		8352CC411E9E95FD004E8949 /* InventoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */; };
@@ -80,6 +81,7 @@
 		832B13AA1E9D6BFF00BD36EE /* InventoryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItemCell.swift; sourceTree = "<group>"; };
 		832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryItemCell.xib; sourceTree = "<group>"; };
 		832B13AF1E9D868800BD36EE /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		834BA6C51EA09D4E00F88757 /* AddInventoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryController.swift; sourceTree = "<group>"; };
 		8352CC3C1E9E86DD004E8949 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8352CC3E1E9E8C41004E8949 /* EditCharacterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCharacterController.swift; sourceTree = "<group>"; };
 		8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				834BA6C51EA09D4E00F88757 /* AddInventoryController.swift */,
 				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
 				C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */,
 				EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */,
@@ -356,6 +359,7 @@
 				83CB37381E9BE3AE00B6FEA6 /* tokens.swift in Sources */,
 				EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */,
 				8352CC411E9E95FD004E8949 /* InventoryDetailController.swift in Sources */,
+				834BA6C61EA09D4E00F88757 /* AddInventoryController.swift in Sources */,
 				C8523CAF1E9D47980004652C /* InventoryTableViewController.swift in Sources */,
 				EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,

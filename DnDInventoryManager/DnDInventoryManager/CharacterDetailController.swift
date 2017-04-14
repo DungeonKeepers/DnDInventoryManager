@@ -22,6 +22,8 @@ class CharacterDetailController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addItemButtonPressed(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

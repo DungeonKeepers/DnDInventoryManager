@@ -1,5 +1,5 @@
 //
-//  ItemsViewController.swift
+//  AddInventoryController.swift
 //  DnDInventoryManager
 //
 //  Created by Mike Miksch on 4/12/17.
@@ -10,7 +10,9 @@ import UIKit
 
 //typealias characterCallback = ([Character]) -> ()
 
-class ItemsViewController: UIViewController {
+class AddInventoryController: UIViewController {
+    
+    var character : Character!
     
     var allItems = [Item]() {
         didSet {
@@ -61,7 +63,7 @@ class ItemsViewController: UIViewController {
 
 
 //MARK: UITableViewDataSource
-extension ItemsViewController : UITableViewDataSource {
+extension AddInventoryController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayItems?.count ?? allItems.count
         
@@ -86,51 +88,51 @@ extension ItemsViewController : UITableViewDataSource {
 }
 
 //MARK: UITableViewDelegate {
-extension ItemsViewController : UITableViewDelegate {
+extension AddInventoryController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = allItems[indexPath.row]
         print(selectedItem)
-//        presentActionSheet(item: selectedItem)
+        //        presentActionSheet(item: selectedItem)
     }
     
-//    func getCharacters(completion: @escaping characterCallback) {
-//        func returnToMain(results: [Character]?) {
-//            OperationQueue.main.addOperation {
-//                completion(results!)
-//            }
-//        }
-//    }
-//    
-//    
-//    func presentActionSheet(item: Item) {
-//        let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
-//        
-//        let totalChar = CloudKit.shared.characters.count
-//        print(CloudKit.shared.characters)
-//        var actionChar = 0
-//        print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
-//        
-//        for each in CloudKit.shared.characters {
-//            let action = UIAlertAction(title: each.name, style: .default) { (action) in
-//                each.inventory.append(item)
-//                actionChar += 1
-//                actionSheetController.addAction(action)
-//            }
-//            //actionSheetController.addAction(action)
-//            
-//        }
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-//        actionSheetController.addAction(cancelAction)
-//        
-//        if actionChar == totalChar {
-//            self.present(actionSheetController, animated: true, completion: nil)
-//        }
-//    }
+    //    func getCharacters(completion: @escaping characterCallback) {
+    //        func returnToMain(results: [Character]?) {
+    //            OperationQueue.main.addOperation {
+    //                completion(results!)
+    //            }
+    //        }
+    //    }
+    //
+    //
+    //    func presentActionSheet(item: Item) {
+    //        let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
+    //
+    //        let totalChar = CloudKit.shared.characters.count
+    //        print(CloudKit.shared.characters)
+    //        var actionChar = 0
+    //        print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
+    //
+    //        for each in CloudKit.shared.characters {
+    //            let action = UIAlertAction(title: each.name, style: .default) { (action) in
+    //                each.inventory.append(item)
+    //                actionChar += 1
+    //                actionSheetController.addAction(action)
+    //            }
+    //            //actionSheetController.addAction(action)
+    //
+    //        }
+    //        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+    //        actionSheetController.addAction(cancelAction)
+    //
+    //        if actionChar == totalChar {
+    //            self.present(actionSheetController, animated: true, completion: nil)
+    //        }
+    //    }
     
 }
 
 //MARK: UISearchBarDelegate
-extension ItemsViewController : UISearchBarDelegate {
+extension AddInventoryController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.validate() {
             let lastIndex = searchText.index(before: searchText.endIndex)
