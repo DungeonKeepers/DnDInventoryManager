@@ -36,6 +36,7 @@ class CharacterDetailController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.inventoryTableView.reloadData()
         update()
     }
     

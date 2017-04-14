@@ -49,6 +49,10 @@ class ItemsViewController: UIViewController {
         update()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.itemsTableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: segue)
         if segue.identifier == ItemDetailController.identifier {
