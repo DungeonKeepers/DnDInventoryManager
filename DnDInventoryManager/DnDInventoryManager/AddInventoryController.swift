@@ -35,6 +35,7 @@ class AddInventoryController: UIViewController {
         super.viewDidLoad()
         self.searchBar.delegate = self
         self.itemsTableView.delegate = self
+        self.itemsTableView.dataSource = self
         
         if allItems.count == 0 {
             JSONParser.itemsFrom(data: JSONParser.jsonData) { (success, items) in
@@ -54,7 +55,7 @@ class AddInventoryController: UIViewController {
         let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
         self.itemsTableView.register(itemNib, forCellReuseIdentifier: ItemViewCell.identifier)
         self.itemsTableView.estimatedRowHeight = 50
-        self.itemsTableView.dataSource = self
+
     }
     
     
