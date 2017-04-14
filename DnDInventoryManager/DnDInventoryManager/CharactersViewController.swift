@@ -56,7 +56,7 @@ class CharactersViewController: UIViewController {
         self.navigationItem.title = "My Characters"
         let characterCell = UINib(nibName: "CharacterCell", bundle: nil)
         self.charactersViewTable.register(characterCell, forCellReuseIdentifier: CharacterCell.identifier)
-        self.charactersViewTable.estimatedRowHeight = 250
+        self.charactersViewTable.estimatedRowHeight = 200
         self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
         fetchAllCharacters()
 
