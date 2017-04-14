@@ -25,7 +25,7 @@ class ItemsViewController: UIViewController {
     }
     
     //Populate all items with CloudKit?
-
+    
     @IBOutlet weak var itemsTableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -34,7 +34,7 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         self.searchBar.delegate = self
         self.itemsTableView.delegate = self
-
+        
         if allItems.count == 0 {
             JSONParser.itemsFrom(data: JSONParser.jsonData) { (success, items) in
                 if success {
@@ -55,8 +55,8 @@ class ItemsViewController: UIViewController {
         self.itemsTableView.estimatedRowHeight = 50
         self.itemsTableView.dataSource = self
     }
-
-
+    
+    
 }
 
 
@@ -105,12 +105,12 @@ extension ItemsViewController : UITableViewDelegate {
     func presentActionSheet(item: Item) {
         let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
         
-        let totalChar = CharactersViewController.shared.characters.count
-        print(CharactersViewController.shared.characters)
+        let totalChar = CloudKit.shared.characters.count
+        print(CloudKit.shared.characters)
         var actionChar = 0
         print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
         
-        for each in CharactersViewController.shared.characters {
+        for each in CloudKit.shared.characters {
             let action = UIAlertAction(title: each.name, style: .default) { (action) in
                 each.inventory.append(item)
                 actionChar += 1
@@ -135,7 +135,7 @@ extension ItemsViewController : UISearchBarDelegate {
         if !searchText.validate() {
             let lastIndex = searchText.index(before: searchText.endIndex)
             searchBar.text = searchText.substring(to: lastIndex)
-
+            
         }
         
         if let searchedText = searchBar.text {

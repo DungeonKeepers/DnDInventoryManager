@@ -51,7 +51,6 @@ class InventoryDetailController: UIViewController {
             CloudKit.shared.updateItemQuanitityOnCharacter(characterName: character.name!, item: item)
             CloudKit.shared.updateCharacter(character: character)
         }
-        self.dismiss(animated: true, completion: nil)
 
 //        character.inventory[itemIndex].quantity = item.quantity
 //        CloudKit.shared.saveCharacter(character: self.character) { (success) in

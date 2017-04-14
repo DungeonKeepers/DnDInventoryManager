@@ -10,8 +10,13 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = [Character]()
-    static let shared = CharactersViewController()
+    var characters = [Character]() {
+        didSet {
+            self.charactersViewTable.reloadData()
+        }
+    }
+    
+//    static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
     
@@ -30,8 +35,7 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.charactersViewTable.reloadData()
-        update()
+//        update()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,6 +49,7 @@ class CharactersViewController: UIViewController {
                 destinationController.character = selectedCharacter
             }
         }
+        
     }
     
     func update() {
@@ -117,7 +122,12 @@ extension CharactersViewController  {
     }
 }
 
-
+//MARK: CharacterCreationControllerDelegate
+extension CharactersViewController: CharacterCreationControllerDelegate {
+    func updateCharacterList() {
+        self.characters = CloudKit.shared.characters
+    }
+}
 
 
 
