@@ -23,6 +23,7 @@ class CharacterDetailController: UIViewController {
     }
     
     @IBAction func addItemButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "AddInventoryController", sender: sender)
     }
     
     override func viewDidLoad() {
@@ -38,6 +39,7 @@ class CharacterDetailController: UIViewController {
         super.viewDidAppear(animated)
         update()
     }
+    
     
     func update() {
         let inventoryItemNib = UINib(nibName: "InventoryItemCell", bundle: nil)
@@ -61,9 +63,9 @@ class CharacterDetailController: UIViewController {
             }
         }
         
-        if segue.identifier == EditCharacterController.identifier {
-            guard let destinationController = segue.destination as? EditCharacterController else { return }
-            destinationController.currentCharacter = character
+        if segue.identifier == AddInventoryController.identifier {
+            guard let destinationController = segue.destination as? AddInventoryController else { return }
+            destinationController.character = character
         }
     }
 
