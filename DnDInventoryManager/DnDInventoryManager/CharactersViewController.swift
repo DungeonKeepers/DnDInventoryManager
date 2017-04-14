@@ -10,12 +10,13 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = [Character]() {
-        didSet {
-            self.charactersViewTable.reloadData()
-        }
-    }
-    
+    var characters = [Character]()
+//    {
+//        didSet {
+//            self.charactersViewTable.reloadData()
+//        }
+//    }
+//    
     static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
@@ -35,6 +36,7 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.charactersViewTable.reloadData()
         update()
     }
     
