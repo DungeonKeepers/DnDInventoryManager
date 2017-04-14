@@ -15,7 +15,6 @@ class ItemDetailController: UIViewController {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemText: UILabel!
     
-    @IBOutlet weak var test: UIView!
 
     @IBAction func addButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "AddToCharacterController", sender: sender)
