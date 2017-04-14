@@ -10,6 +10,7 @@ import UIKit
 import CloudKit
 
 typealias PostCompletion = (Bool) -> ()
+typealias CharacterCompletion = (CKRecord?) -> ()
 //typealias CampaignsCompletion = ([Campaign]?) -> ()
 typealias CharactersCompetion = ([Character]?) -> ()
 typealias UserIDCompletion = (String) -> ()
@@ -18,6 +19,7 @@ typealias ItemsCompletion = ([Item]?) -> ()
 class CloudKit {
     
     static let shared = CloudKit()
+    var characters = [Character]()
     
     let container : CKContainer
     let privateDatabase : CKDatabase
@@ -48,13 +50,13 @@ class CloudKit {
     
     
 // TODO: Fix this shit somehow.
-    func saveCharacter(character: Character, completion: @escaping PostCompletion) {
+    func saveCharacter(character: Character, completion: @escaping CharacterCompletion) {
         let characterRecord = Character.recordFor(character: character)
         self.privateDatabase.save(characterRecord!) { (savedCharacter, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 OperationQueue.main.addOperation {
-                    completion(false)
+                    completion(savedCharacter)
                 }
             } else {
                 print("Saving Character")
@@ -69,7 +71,8 @@ class CloudKit {
             }
             print(savedCharacter ?? "No saved Character")
                 OperationQueue.main.addOperation {
-                    completion(true)
+                    self.characters.append(character)
+                    completion(savedCharacter)
                 }
             }
         }

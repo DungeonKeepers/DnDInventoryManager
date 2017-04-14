@@ -50,7 +50,9 @@
 		EFA2EA341E9D5D2E00AFEE91 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */; };
 		EFA2EA361E9D708300AFEE91 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA351E9D708300AFEE91 /* CloudKit.swift */; };
 		EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */; };
+		EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */; };
 		EFA2EA561E9E8C3000AFEE91 /* CampaignsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EA541E9E8C3000AFEE91 /* CampaignsCell.swift */; };
+		EFA2EA571E9E8C3000AFEE91 /* CampaignsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */; };
 		EFA7D9111E9C1869009C41DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9101E9C1869009C41DB /* Item.swift */; };
 		EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D9121E9C21A9009C41DB /* JSONParser.swift */; };
 /* End PBXBuildFile section */
@@ -114,7 +116,9 @@
 		EFA2EA331E9D5D2E00AFEE91 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EFA2EA351E9D708300AFEE91 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		EFA2EA501E9E76AA00AFEE91 /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsTableViewController.swift; sourceTree = "<group>"; };
+		EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignsTableViewController.xib; sourceTree = "<group>"; };
 		EFA2EA541E9E8C3000AFEE91 /* CampaignsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsCell.swift; sourceTree = "<group>"; };
+		EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignsCell.xib; sourceTree = "<group>"; };
 		EFA7D9101E9C1869009C41DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFA7D9121E9C21A9009C41DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,11 +210,13 @@
 			isa = PBXGroup;
 			children = (
 				8352CC491E9F1BC7004E8949 /* ItemViewCell.xib */,
+				EFA2EA551E9E8C3000AFEE91 /* CampaignsCell.xib */,
 				832B13A71E9D670700BD36EE /* CharacterCell.xib */,
 				832B13A41E9D649800BD36EE /* CustomTransition.swift */,
 				8352CC3C1E9E86DD004E8949 /* Main.storyboard */,
 				83CB372A1E9BD6F400B6FEA6 /* LaunchScreen.storyboard */,
 				C8523CAE1E9D47980004652C /* InventoryTableViewController.xib */,
+				EFA2EA511E9E76AA00AFEE91 /* CampaignsTableViewController.xib */,
 				832B13AB1E9D6BFF00BD36EE /* InventoryItemCell.xib */,
 			);
 			name = View;
@@ -328,10 +334,12 @@
 				83D911641E9D45D100E1F9C7 /* CharacterDetailController.xib in Resources */,
 				83D9116C1E9D486500E1F9C7 /* CharacterGalleryController.xib in Resources */,
 				832B13AD1E9D6BFF00BD36EE /* InventoryItemCell.xib in Resources */,
+				EFA2EA571E9E8C3000AFEE91 /* CampaignsCell.xib in Resources */,
 				8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */,
 				83CB372C1E9BD6F400B6FEA6 /* LaunchScreen.storyboard in Resources */,
 				832B13A31E9D620100BD36EE /* CharactersViewController.xib in Resources */,
 				83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */,
+				EFA2EA531E9E76AA00AFEE91 /* CampaignsTableViewController.xib in Resources */,
 				8352CC3D1E9E86DD004E8949 /* Main.storyboard in Resources */,
 				832B13A91E9D670700BD36EE /* CharacterCell.xib in Resources */,
 			);
