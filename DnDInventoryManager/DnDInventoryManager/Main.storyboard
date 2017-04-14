@@ -423,7 +423,7 @@
         <!--Items-->
         <scene sceneID="EfZ-hU-1ai">
             <objects>
-                <viewController id="RMa-f0-rq7" customClass="AddInventoryController" sceneMemberID="viewController">
+                <viewController id="RMa-f0-rq7" customClass="AddInventoryController" customModule="DnDInventoryManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KYJ-SP-y30"/>
                         <viewControllerLayoutGuide type="bottom" id="ILb-Rl-9bm"/>

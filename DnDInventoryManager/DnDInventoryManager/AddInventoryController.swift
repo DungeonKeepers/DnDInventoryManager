@@ -8,7 +8,6 @@
 
 import UIKit
 
-//typealias characterCallback = ([Character]) -> ()
 
 class AddInventoryController: UIViewController {
     
@@ -92,42 +91,9 @@ extension AddInventoryController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = allItems[indexPath.row]
         print(selectedItem)
-        //        presentActionSheet(item: selectedItem)
+        //        add selectedItem to character
+        // dismiss view
     }
-    
-    //    func getCharacters(completion: @escaping characterCallback) {
-    //        func returnToMain(results: [Character]?) {
-    //            OperationQueue.main.addOperation {
-    //                completion(results!)
-    //            }
-    //        }
-    //    }
-    //
-    //
-    //    func presentActionSheet(item: Item) {
-    //        let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
-    //
-    //        let totalChar = CloudKit.shared.characters.count
-    //        print(CloudKit.shared.characters)
-    //        var actionChar = 0
-    //        print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
-    //
-    //        for each in CloudKit.shared.characters {
-    //            let action = UIAlertAction(title: each.name, style: .default) { (action) in
-    //                each.inventory.append(item)
-    //                actionChar += 1
-    //                actionSheetController.addAction(action)
-    //            }
-    //            //actionSheetController.addAction(action)
-    //
-    //        }
-    //        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-    //        actionSheetController.addAction(cancelAction)
-    //
-    //        if actionChar == totalChar {
-    //            self.present(actionSheetController, animated: true, completion: nil)
-    //        }
-    //    }
     
 }
 
