@@ -53,7 +53,7 @@ class ItemsViewController: UIViewController {
         super.prepare(for: segue, sender: segue)
         if segue.identifier == ItemDetailController.identifier {
             if let selectedIndex = self.itemsTableView.indexPathForSelectedRow?.row {
-                let selectedItem = self.allItems[selectedIndex]
+                let selectedItem = self.displayItems?[selectedIndex] ?? self.allItems[selectedIndex]
                 guard let destinationController = segue.destination as? ItemDetailController else {return}
                 destinationController.item = selectedItem
             }

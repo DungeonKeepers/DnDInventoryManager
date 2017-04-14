@@ -27,6 +27,7 @@ class ItemDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itemName.text = item.name
+        print(item.text)
         self.itemText.text = item.text
     }
     

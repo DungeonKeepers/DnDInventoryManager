@@ -22,11 +22,13 @@ class Item {
         
         if let name = json["name"] as? String, let textJSON = json["text"] as? [Any] {
             self.name = name
+            var allText = ""
             for each in textJSON {
                 if let itemText = each as? String {
-                    self.text = "\(self.text)\r \(itemText)"
+                    allText += "\(itemText)\r"
                 }
             }
+            self.text = allText
         } else {
             return nil
         }
