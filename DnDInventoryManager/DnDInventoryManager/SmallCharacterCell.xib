@@ -27,11 +27,13 @@
                         <rect key="frame" x="8" y="8" width="304" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
-                        <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="name" destination="TVZ-qi-yrN" id="I6R-Fx-UNs"/>
             </connections>

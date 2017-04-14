@@ -641,6 +641,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="haJ-VH-HDo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-Ct-fmT">
                                 <rect key="frame" x="19" y="560" width="337" height="50"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -658,15 +661,19 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wn-hi-fom">
                                 <rect key="frame" x="16" y="28" width="343" height="524"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="haJ-VH-HDo" secondAttribute="bottom" id="0NU-3c-ggw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ELF-Ct-fmT" secondAttribute="trailing" constant="3" id="1u6-c6-PmG"/>
+                            <constraint firstItem="haJ-VH-HDo" firstAttribute="width" secondItem="gNc-cl-qfn" secondAttribute="width" id="6gN-Dg-Eve"/>
                             <constraint firstItem="6Wn-hi-fom" firstAttribute="leading" secondItem="gNc-cl-qfn" secondAttribute="leadingMargin" id="MAm-ag-mKd"/>
                             <constraint firstItem="ELF-Ct-fmT" firstAttribute="top" secondItem="6Wn-hi-fom" secondAttribute="bottom" constant="8" id="UKs-th-yL7"/>
                             <constraint firstItem="ELF-Ct-fmT" firstAttribute="top" secondItem="6Wn-hi-fom" secondAttribute="bottom" constant="8" id="Xeg-62-UaM"/>
+                            <constraint firstItem="haJ-VH-HDo" firstAttribute="top" secondItem="gNc-cl-qfn" secondAttribute="top" id="ghd-hR-Y2Y"/>
+                            <constraint firstItem="haJ-VH-HDo" firstAttribute="centerX" secondItem="ELF-Ct-fmT" secondAttribute="centerX" id="i09-BA-Cle"/>
                             <constraint firstItem="ELF-Ct-fmT" firstAttribute="leading" secondItem="gNc-cl-qfn" secondAttribute="leadingMargin" constant="3" id="nKx-16-I9L"/>
                             <constraint firstItem="6Wn-hi-fom" firstAttribute="top" secondItem="Jlp-eT-ByO" secondAttribute="bottom" constant="8" id="q3e-nq-ekj"/>
                             <constraint firstItem="vR9-1o-p0z" firstAttribute="top" secondItem="ELF-Ct-fmT" secondAttribute="bottom" constant="8" id="vSe-oS-IdY"/>
@@ -679,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqT-LJ-ffq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="1344"/>
+            <point key="canvasLocation" x="1808.8" y="1343.4782608695652"/>
         </scene>
     </scenes>
     <resources>
