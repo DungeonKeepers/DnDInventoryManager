@@ -587,6 +587,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="addButtonPressed:" destination="le0-o7-Jed" eventType="touchUpInside" id="zFc-qW-bhs"/>
                                     <action selector="saveButtonPressed:" destination="le0-o7-Jed" eventType="touchUpInside" id="Em9-Gl-RUy"/>
                                 </connections>
                             </button>
@@ -609,8 +610,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="itemName" destination="FPH-Aa-sJ0" id="7Cl-RH-dPC"/>
-                        <outlet property="itemText" destination="qqa-iZ-QBe" id="XOE-J1-MTi"/>
+                        <outlet property="backButtonPressed" destination="oJR-FC-kpW" id="6zg-a4-zBQ"/>
+                        <outlet property="itemName" destination="FPH-Aa-sJ0" id="fnd-AH-wFy"/>
+                        <outlet property="itemText" destination="UFh-70-s2g" id="5xj-Nd-fJo"/>
                         <outlet property="saveButton" destination="oJR-FC-kpW" id="euW-e3-gJ5"/>
                     </connections>
                 </viewController>

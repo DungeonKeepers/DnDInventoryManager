@@ -9,7 +9,20 @@
 import UIKit
 
 class ItemDetailController: UIViewController {
+    
+    var character : Character!
+    var itemIndex : Int!
+    var item: Item!
+    
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemText: UIView!
+    
 
+    @IBAction func addButtonPressed(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var backButtonPressed: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
