@@ -364,31 +364,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-5v-8Fg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-5v-8Fg">
+                                <rect key="frame" x="0.0" y="-413" width="375" height="1080"/>
                             </imageView>
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
-                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-nd-92u">
                                 <rect key="frame" x="16" y="64" width="343" height="546"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.9542352557182312" green="0.91149955987930298" blue="0.79844164848327637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="2Dn-Xh-sfH"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="2b9-St-REF"/>
+                            <constraint firstItem="xPg-5v-8Fg" firstAttribute="leading" secondItem="tLM-bO-TM5" secondAttribute="leading" id="BiG-Pu-isC"/>
                             <constraint firstAttribute="trailing" secondItem="vWm-nd-92u" secondAttribute="trailing" constant="16" id="Bnc-X0-02g"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="HQ2-52-mkP"/>
-                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" constant="16" id="LOT-Ms-sfk"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="YpC-WI-cTm"/>
+                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="HfU-F0-daB"/>
+                            <constraint firstItem="xPg-5v-8Fg" firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="eEz-tb-05C"/>
                             <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" constant="8" id="mmb-Te-m7Y"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="sRP-26-yla"/>
                             <constraint firstItem="tLM-bO-TM5" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" id="v2C-1i-Mtg"/>
+                            <constraint firstAttribute="bottom" secondItem="xPg-5v-8Fg" secondAttribute="bottom" id="y4i-kw-jPS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" image="items" id="wpd-WD-YfJ"/>
