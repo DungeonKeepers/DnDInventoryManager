@@ -27,13 +27,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quant." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL9-9c-ZlD">
-                        <rect key="frame" x="15" y="0.0" width="64" height="44"/>
+                        <rect key="frame" x="24" y="0.0" width="64" height="44"/>
                         <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="24"/>
                         <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-vf-0pc">
-                        <rect key="frame" x="97" y="0.0" width="223" height="43"/>
+                        <rect key="frame" x="106" y="0.0" width="214" height="43"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,11 +41,11 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="SL9-9c-ZlD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="7oj-7J-Vxo"/>
                     <constraint firstItem="sZF-vf-0pc" firstAttribute="leading" secondItem="SL9-9c-ZlD" secondAttribute="trailing" constant="18" id="M8G-Xy-vR2"/>
                     <constraint firstAttribute="trailing" secondItem="sZF-vf-0pc" secondAttribute="trailing" id="RiX-4u-Mgx"/>
                     <constraint firstAttribute="bottom" secondItem="sZF-vf-0pc" secondAttribute="bottom" id="Wj9-3W-BZo"/>
                     <constraint firstItem="SL9-9c-ZlD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c6n-gF-9AB"/>
-                    <constraint firstItem="SL9-9c-ZlD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="l0U-GJ-xoe"/>
                     <constraint firstAttribute="bottom" secondItem="SL9-9c-ZlD" secondAttribute="bottom" id="lHq-uv-Jiu"/>
                     <constraint firstItem="sZF-vf-0pc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yjk-ij-LCe"/>
                 </constraints>
