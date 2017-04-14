@@ -11,11 +11,6 @@ import UIKit
 class CharactersViewController: UIViewController {
     
     var characters = [Character]()
-//        didSet {
-//            self.charactersViewTable.reloadData()
-//        }
-    
-    
     static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
@@ -35,6 +30,7 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.charactersViewTable.reloadData()
         update()
     }
     
@@ -57,7 +53,11 @@ class CharactersViewController: UIViewController {
         self.charactersViewTable.register(characterCell, forCellReuseIdentifier: CharacterCell.identifier)
         self.charactersViewTable.estimatedRowHeight = 250
         self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
-        
+        fetchAllCharacters()
+
+    }
+    
+    func fetchAllCharacters() {
         CloudKit.shared.fetchAllCharacters() { (characterArray, error) in
             if error != nil {
                 print(error!.localizedDescription)
@@ -70,6 +70,7 @@ class CharactersViewController: UIViewController {
         }
     }
 }
+
 
 //MARK: UIViewControllerTransitioningDelegate
 extension CharactersViewController : UIViewControllerTransitioningDelegate {

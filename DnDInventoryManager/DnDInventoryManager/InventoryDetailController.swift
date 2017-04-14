@@ -47,14 +47,20 @@ class InventoryDetailController: UIViewController {
         update()
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
-        character.inventory[itemIndex].quantity = item.quantity
-        CloudKit.shared.saveCharacter(character: self.character) { (success) in
-            if success {
-                self.dismiss(animated: true, completion: nil)
-            } else {
-                print("that did NOT save...waaah-waaah-WAAAAAAA")
-            }
+        if item.quantity > 0 {
+            CloudKit.shared.updateItemQuanitityOnCharacter(characterName: character.name!, item: item)
+            CloudKit.shared.updateCharacter(character: character)
         }
+        self.dismiss(animated: true, completion: nil)
+
+//        character.inventory[itemIndex].quantity = item.quantity
+//        CloudKit.shared.saveCharacter(character: self.character) { (success) in
+//            if success {
+//                self.dismiss(animated: true, completion: nil)
+//            } else {
+//                print("that did NOT save...waaah-waaah-WAAAAAAA")
+//            }
+//        }
     }
 
 }
