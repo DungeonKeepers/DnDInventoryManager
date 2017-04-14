@@ -62,14 +62,24 @@ class ItemsViewController: UIViewController {
 //MARK: UITableViewDataSource
 extension ItemsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allItems.count
+        return displayItems?.count ?? allItems.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: ItemViewCell.identifier, for: indexPath) as! ItemViewCell
-        let selectedItem = allItems[indexPath.row]
+        //let selectedItem = allItems[indexPath.row]
         
-        cell.item = selectedItem
+        var currentItem : Item
+        
+        if searchBar.text == "" {
+            currentItem = allItems[indexPath.row]
+        } else {
+            currentItem = displayItems![indexPath.row]
+        }
+        cell.item = currentItem
+        
+        //cell.item = selectedItem
         return cell
     }
 }
