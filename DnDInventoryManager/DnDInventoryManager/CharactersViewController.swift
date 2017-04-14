@@ -11,12 +11,6 @@ import UIKit
 class CharactersViewController: UIViewController {
     
     var characters = [Character]()
-//    {
-//        didSet {
-//            self.charactersViewTable.reloadData()
-//        }
-//    }
-//    
     static let shared = CharactersViewController()
     
     @IBOutlet weak var charactersViewTable: UITableView!
