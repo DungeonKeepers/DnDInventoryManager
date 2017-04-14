@@ -11,10 +11,8 @@ import CloudKit
 
 typealias PostCompletion = (Bool) -> ()
 typealias CharacterCompletion = (CKRecord?) -> ()
-//typealias CampaignsCompletion = ([Campaign]?) -> ()
 typealias CharactersCompetion = ([Character]?) -> ()
-typealias UserIDCompletion = (String) -> ()
-typealias ItemsCompletion = ([Item]?) -> ()
+
 
 class CloudKit {
     
@@ -195,7 +193,7 @@ class CloudKit {
     }
     
     func removeItemFromCharacter(characterName: String, item: Item) {
-        let predicate = NSPredicate(format: "name == %0'", characterName)
+        let predicate = NSPredicate(format: "name == %@", characterName)
         let query = CKQuery(recordType: "Character", predicate: predicate)
         self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacter, error) in
             if error != nil {
@@ -204,7 +202,7 @@ class CloudKit {
             }
             
             if let fetchedCharacter = fetchedCharacter {
-                for charcterRecord in fetchedCharacter {
+                for characterRecord in fetchedCharacter {
                     let itemRecord = Item.recordFor(item: item)
                     let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [itemRecord.recordID])
                     operation.savePolicy = .allKeys
@@ -214,25 +212,13 @@ class CloudKit {
                         } else {
                             
                         }
+                    }
                 }
             }
-    }
-        
-        let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [record.recordID])
-        operation.savePolicy = .AllKeys
-        operation.modifyRecordsCompletionBlock = { added, deleted, error in
-            if error != nil {
-                println(error) // print error if any
-            } else {
-                // no errors, all set!
-            }
         }
-        CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
-        
-        
-        
+    }
 
-    func updateItemQuanitityOnCharacter(characterName: String, item: Item) {
+    func updateItemQuantityOnCharacter(characterName: String, item: Item) {
         let predicate = NSPredicate(format: "name == %@", characterName)
         let query = CKQuery(recordType: "Character", predicate: predicate)
         
@@ -265,33 +251,6 @@ class CloudKit {
         }
     }
     
-//    func fetchItems(characterRecord: CKRecord) -> [Item]? {
-//            if let character = Character(record: characterRecord) {
-//                let characterID = characterRecord.recordID
-//                let recordToMatch = CKReference(recordID: characterID, action: .deleteSelf)
-//                let predicate = NSPredicate(format: "owningCharacter =%@", recordToMatch)
-//                let query = CKQuery(recordType: "Item", predicate: predicate)
-//                self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
-//                    if error != nil {
-//                        print("Error fetching items in characterFetch")
-//                        print(error!.localizedDescription)
-//                    }
-//                    
-//                    if let fetchedItems = fetchedItems {
-//                        for record in fetchedItems {
-//                            if let fetchedItem = Item(record: record) {
-//                                print(fetchedItem)
-//                                character.inventory.append(fetchedItem)
-//                                print(character.inventory.first ?? "Fuck... no character.")
-//                            }
-//                        }
-//                    }
-//
-//                })
-//            }
-//
-//    }
-    
     func updateCharacter(character: Character) {
         let id = character.name
         let recordID = CKRecordID(recordName: id!)
@@ -311,8 +270,3 @@ class CloudKit {
         }
     }
 }
-//    func udpateItem(character: CKRecord, item: Item) {
-//        let 
-//    }
-
-
