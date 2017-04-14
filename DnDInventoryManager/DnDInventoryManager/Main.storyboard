@@ -215,8 +215,8 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ery-Dz-Bkr">
-                                <rect key="frame" x="16" y="512.5" width="51.5" height="29.5"/>
-                                <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="24"/>
+                                <rect key="frame" x="16" y="517.5" width="49.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="24"/>
                                 <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
