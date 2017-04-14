@@ -71,7 +71,7 @@ class ItemsViewController: UIViewController {
 
 
 //MARK: UITableViewDataSource
-extension ItemsViewController : UITableViewDataSource {
+extension ItemsViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayItems?.count ?? allItems.count
         
@@ -79,7 +79,6 @@ extension ItemsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: ItemViewCell.identifier, for: indexPath) as! ItemViewCell
-        //let selectedItem = allItems[indexPath.row]
         
         var currentItem : Item
         
@@ -89,14 +88,10 @@ extension ItemsViewController : UITableViewDataSource {
             currentItem = displayItems![indexPath.row]
         }
         cell.item = currentItem
-        
-        //cell.item = selectedItem
+
         return cell
     }
-}
 
-//MARK: UITableViewDelegate {
-extension ItemsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: ItemDetailController.identifier, sender: nil)
     }

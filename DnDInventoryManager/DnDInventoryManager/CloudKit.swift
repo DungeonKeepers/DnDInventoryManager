@@ -193,6 +193,44 @@ class CloudKit {
             }
         }
     }
+    
+    func removeItemFromCharacter(characterName: String, item: Item) {
+        let predicate = NSPredicate(format: "name == %0'", characterName)
+        let query = CKQuery(recordType: "Character", predicate: predicate)
+        self.privateDatabase.perform(query, inZoneWith: nil) { (fetchedCharacter, error) in
+            if error != nil {
+                print("Error in removeItemFromCharacter")
+                print(error!.localizedDescription)
+            }
+            
+            if let fetchedCharacter = fetchedCharacter {
+                for charcterRecord in fetchedCharacter {
+                    let itemRecord = Item.recordFor(item: item)
+                    let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [itemRecord.recordID])
+                    operation.savePolicy = .allKeys
+                    operation.modifyRecordsCompletionBlock = { added, deleted, error in
+                        if error != nil {
+                            print("Error deleteing item. \(error!.localizedDescription)")
+                        } else {
+                            
+                        }
+                }
+            }
+    }
+        
+        let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [record.recordID])
+        operation.savePolicy = .AllKeys
+        operation.modifyRecordsCompletionBlock = { added, deleted, error in
+            if error != nil {
+                println(error) // print error if any
+            } else {
+                // no errors, all set!
+            }
+        }
+        CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
+        
+        
+        
 
     func updateItemQuanitityOnCharacter(characterName: String, item: Item) {
         let predicate = NSPredicate(format: "name == %@", characterName)
