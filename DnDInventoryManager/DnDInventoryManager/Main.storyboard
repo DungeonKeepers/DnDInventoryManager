@@ -612,8 +612,9 @@
                     <connections>
                         <outlet property="backButtonPressed" destination="oJR-FC-kpW" id="6zg-a4-zBQ"/>
                         <outlet property="itemName" destination="FPH-Aa-sJ0" id="fnd-AH-wFy"/>
-                        <outlet property="itemText" destination="UFh-70-s2g" id="5xj-Nd-fJo"/>
+                        <outlet property="itemText" destination="qqa-iZ-QBe" id="ghb-oQ-YQm"/>
                         <outlet property="saveButton" destination="oJR-FC-kpW" id="euW-e3-gJ5"/>
+                        <outlet property="test" destination="UFh-70-s2g" id="4Tb-ga-4lh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJX-W6-Cpq" userLabel="First Responder" sceneMemberID="firstResponder"/>

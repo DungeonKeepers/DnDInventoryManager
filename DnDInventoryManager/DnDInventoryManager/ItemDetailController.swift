@@ -10,13 +10,13 @@ import UIKit
 
 class ItemDetailController: UIViewController {
     
-    var character : Character!
     var itemIndex : Int!
     var item: Item!
     
     @IBOutlet weak var itemName: UILabel!
-    @IBOutlet weak var itemText: UIView!
+    @IBOutlet weak var itemText: UILabel!
     
+    @IBOutlet weak var test: UIView!
 
     @IBAction func addButtonPressed(_ sender: Any) {
     }
@@ -25,24 +25,9 @@ class ItemDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.itemName.text = item.name
+        self.itemText.text = item.text
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
