@@ -11,6 +11,7 @@ import UIKit
 class CharactersViewController: UIViewController {
     
     var characters = [Character]() {
+        //print("RDXFCVGBHGHJVCFGCFGHHUGHVCFGGHVUGHVCFDXVYHUHIUGVDRTDFXFHYYTY")
         didSet {
             self.charactersViewTable.reloadData()
         }
