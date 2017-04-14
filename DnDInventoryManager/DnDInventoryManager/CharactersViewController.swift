@@ -10,11 +10,11 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    var characters = [Character]() {
-        didSet {
-            self.charactersViewTable.reloadData()
-        }
-    }
+    var characters = [Character]()
+//        didSet {
+//            self.charactersViewTable.reloadData()
+//        }
+    
     
     static let shared = CharactersViewController()
     
