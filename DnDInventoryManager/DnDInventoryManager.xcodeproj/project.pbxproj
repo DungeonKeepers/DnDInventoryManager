@@ -26,6 +26,7 @@
 		8389DA901E9D8A4A007F37D5 /* CharacterCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */; };
 		8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */; };
 		839C8D211EA0D04A00A7F8BD /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C8D201EA0D04A00A7F8BD /* ItemDetailController.swift */; };
+		839C8D231EA0D5B700A7F8BD /* AddToCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C8D221EA0D5B700A7F8BD /* AddToCharacterController.swift */; };
 		83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */; };
 		83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37231E9BD6F400B6FEA6 /* ViewController.swift */; };
 		83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCreationController.swift; sourceTree = "<group>"; };
 		8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCreationController.xib; sourceTree = "<group>"; };
 		839C8D201EA0D04A00A7F8BD /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		839C8D221EA0D5B700A7F8BD /* AddToCharacterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCharacterController.swift; sourceTree = "<group>"; };
 		83CB371E1E9BD6F400B6FEA6 /* DnDInventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDInventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CB37231E9BD6F400B6FEA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		83CB37351E9BE35800B6FEA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				839C8D221EA0D5B700A7F8BD /* AddToCharacterController.swift */,
 				834BA6C51EA09D4E00F88757 /* AddInventoryController.swift */,
 				83CB37231E9BD6F400B6FEA6 /* ViewController.swift */,
 				C8523CAD1E9D47980004652C /* InventoryTableViewController.swift */,
@@ -372,6 +375,7 @@
 				EFA7D9131E9C21A9009C41DB /* JSONParser.swift in Sources */,
 				C8523CB21E9D6E510004652C /* ItemCell.swift in Sources */,
 				8352CC4A1E9F1BC7004E8949 /* ItemViewCell.swift in Sources */,
+				839C8D231EA0D5B700A7F8BD /* AddToCharacterController.swift in Sources */,
 				832B13A51E9D649800BD36EE /* CustomTransition.swift in Sources */,
 				832B13A81E9D670700BD36EE /* CharacterCell.swift in Sources */,
 				83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */,

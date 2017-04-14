@@ -10,7 +10,6 @@ import UIKit
 
 class ItemDetailController: UIViewController {
     
-    var itemIndex : Int!
     var item: Item!
     
     @IBOutlet weak var itemName: UILabel!
@@ -19,15 +18,24 @@ class ItemDetailController: UIViewController {
     @IBOutlet weak var test: UIView!
 
     @IBAction func addButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "AddToCharacterController", sender: sender)
     }
     
-    @IBOutlet weak var backButtonPressed: UIButton!
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itemName.text = item.name
         self.itemText.text = item.text
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: segue)
+        if segue.identifier == AddToCharacterController.identifier {
+            guard let destinationController = segue.destination as? AddToCharacterController else {return}
+            destinationController.item = item
+        }
     }
 }
