@@ -57,7 +57,11 @@ class CharactersViewController: UIViewController {
         self.charactersViewTable.register(characterCell, forCellReuseIdentifier: CharacterCell.identifier)
         self.charactersViewTable.estimatedRowHeight = 250
         self.charactersViewTable.rowHeight = UITableViewAutomaticDimension
-        
+        fetchAllCharacters()
+
+    }
+    
+    func fetchAllCharacters() {
         CloudKit.shared.fetchAllCharacters() { (characterArray, error) in
             if error != nil {
                 print(error!.localizedDescription)
@@ -70,6 +74,7 @@ class CharactersViewController: UIViewController {
         }
     }
 }
+
 
 //MARK: UIViewControllerTransitioningDelegate
 extension CharactersViewController : UIViewControllerTransitioningDelegate {

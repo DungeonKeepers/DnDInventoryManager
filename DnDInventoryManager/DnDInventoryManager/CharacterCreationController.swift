@@ -30,6 +30,7 @@ class CharacterCreationController: UIViewController {
 //        print("Got this far")
         CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
 //        CharactersViewController.shared.characters.append(newCharacter)
+        CharactersViewController.shared.fetchAllCharacters()
         self.dismiss(animated: true, completion: nil)
     }
     
