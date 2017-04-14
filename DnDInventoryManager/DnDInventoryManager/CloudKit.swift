@@ -210,13 +210,9 @@ class CloudKit {
                     let query = CKQuery(recordType: "Item", predicate: predicate)
                     self.privateDatabase.perform(query, inZoneWith: nil, completionHandler: { (fetchedItems, error) in
                         
-   //DANGER:  BANG BANG Force unwrap
                         for fetchedItemRecord in fetchedItems! {
-                            let itemToUpdate = Item(record: fetchedItemRecord)
-                            itemToUpdate!.quantity = item.quantity
-    //DANGER:  BANG BANG Force unwrap
-                            let itemRecord = Item.recordFor(item: itemToUpdate!)
-                            self.privateDatabase.save(itemRecord, completionHandler: { (savedItem, error) in
+                            fetchedItemRecord["quantity"] = item.quantity as CKRecordValue
+                            self.privateDatabase.save(fetchedItemRecord, completionHandler: { (savedItem, error) in
                                 if error != nil {
                                     print("error adding Item to charater line 218")
                                     print(error!.localizedDescription)
