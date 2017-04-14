@@ -32,7 +32,6 @@ class CharacterDetailController: UIViewController {
         self.characterName.text = character.name
         self.inventoryTableView.delegate = self
         self.inventoryTableView.reloadData()
-        update()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,6 +46,7 @@ class CharacterDetailController: UIViewController {
 //        self.inventoryTableView.estimatedRowHeight = 50
 //        self.inventoryTableView.rowHeight = UITableViewAutomaticDimension
         self.inventoryTableView.dataSource = self
+        self.inventoryTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
