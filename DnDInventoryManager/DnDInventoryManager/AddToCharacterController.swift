@@ -9,6 +9,8 @@
 import UIKit
 
 class AddToCharacterController: UIViewController {
+    
+    var item : Item!
 
     override func viewDidLoad() {
         super.viewDidLoad()

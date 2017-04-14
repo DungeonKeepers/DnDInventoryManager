@@ -49,13 +49,23 @@ class ItemsViewController: UIViewController {
         update()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: segue)
+        if segue.identifier == ItemDetailController.identifier {
+            if let selectedIndex = self.itemsTableView.indexPathForSelectedRow?.row {
+                let selectedItem = self.allItems[selectedIndex]
+                guard let destinationController = segue.destination as? ItemDetailController else {return}
+                destinationController.item = selectedItem
+            }
+        }
+    }
+    
     func update() {
         let itemNib = UINib(nibName: "ItemViewCell", bundle: nil)
         self.itemsTableView.register(itemNib, forCellReuseIdentifier: ItemViewCell.identifier)
         self.itemsTableView.estimatedRowHeight = 50
         self.itemsTableView.dataSource = self
     }
-    
     
 }
 
@@ -88,44 +98,8 @@ extension ItemsViewController : UITableViewDataSource {
 //MARK: UITableViewDelegate {
 extension ItemsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = allItems[indexPath.row]
-        print(selectedItem)
-//        presentActionSheet(item: selectedItem)
+        self.performSegue(withIdentifier: ItemDetailController.identifier, sender: nil)
     }
-    
-//    func getCharacters(completion: @escaping characterCallback) {
-//        func returnToMain(results: [Character]?) {
-//            OperationQueue.main.addOperation {
-//                completion(results!)
-//            }
-//        }
-//    }
-//    
-//    
-//    func presentActionSheet(item: Item) {
-//        let actionSheetController = UIAlertController(title: "Add Item?", message: "Please Select Character", preferredStyle: .actionSheet)
-//        
-//        let totalChar = CloudKit.shared.characters.count
-//        print(CloudKit.shared.characters)
-//        var actionChar = 0
-//        print ("\(totalChar) TOTAL CHARACTERS COUNT FOUND")
-//        
-//        for each in CloudKit.shared.characters {
-//            let action = UIAlertAction(title: each.name, style: .default) { (action) in
-//                each.inventory.append(item)
-//                actionChar += 1
-//                actionSheetController.addAction(action)
-//            }
-//            //actionSheetController.addAction(action)
-//            
-//        }
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-//        actionSheetController.addAction(cancelAction)
-//        
-//        if actionChar == totalChar {
-//            self.present(actionSheetController, animated: true, completion: nil)
-//        }
-//    }
     
 }
 
