@@ -28,8 +28,8 @@ class CharacterCreationController: UIViewController {
         let item = Item(name: "Super Sword", text: "This sword is REALLY super", quantity: 1)
         newCharacter.inventory = [item]
 //        print("Got this far")
-        CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
-//        CharactersViewController.shared.characters.append(newCharacter)
+        //CloudKit.shared.saveCharacter(character: newCharacter, completion: {(success) in })
+        CharactersViewController.shared.characters.append(newCharacter)
         self.dismiss(animated: true, completion: nil)
     }
     
