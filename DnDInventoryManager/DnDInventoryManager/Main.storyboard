@@ -57,8 +57,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mGp-zn-FFa" firstAttribute="leading" secondItem="Vvg-6d-dzy" secondAttribute="leading" id="JpM-FE-azg"/>
+                            <constraint firstItem="NVI-IC-hU5" firstAttribute="top" secondItem="Ou9-L8-wen" secondAttribute="bottom" constant="8" id="L06-iC-hJ4"/>
                             <constraint firstItem="IVA-zj-Svh" firstAttribute="leading" secondItem="Vvg-6d-dzy" secondAttribute="leadingMargin" id="LOu-HC-UZL"/>
                             <constraint firstItem="IVA-zj-Svh" firstAttribute="trailing" secondItem="Vvg-6d-dzy" secondAttribute="trailingMargin" id="PuD-7z-bKJ"/>
+                            <constraint firstItem="IVA-zj-Svh" firstAttribute="top" secondItem="Da7-9D-ddv" secondAttribute="bottom" id="UbC-1W-lbR"/>
                             <constraint firstAttribute="bottom" secondItem="mGp-zn-FFa" secondAttribute="bottom" id="crf-Eh-9Sd"/>
                             <constraint firstItem="Ou9-L8-wen" firstAttribute="centerX" secondItem="mGp-zn-FFa" secondAttribute="centerX" id="hyN-em-KH1"/>
                             <constraint firstItem="NVI-IC-hU5" firstAttribute="top" secondItem="Ou9-L8-wen" secondAttribute="bottom" constant="8" symbolic="YES" id="io0-2e-GR4"/>
