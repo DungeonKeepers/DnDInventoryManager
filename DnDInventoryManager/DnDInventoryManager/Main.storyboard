@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FantaisieArtistique.ttf">
+            <string>FantaisieArtistique</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Characters-->
         <scene sceneID="5wN-iF-g8d">
@@ -36,7 +41,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="oOK-6Q-jYq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
                                 <state key="normal" title="ADD NEW CHARACTER">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -88,7 +93,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="O8w-By-bS2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etF-Qp-2kJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeons_and_dragons_40_ampersand_flat" translatesAutoresizingMaskIntoConstraints="NO" id="etF-Qp-2kJ">
                                 <rect key="frame" x="16" y="20" width="343" height="250"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -120,7 +125,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-qF-kjd">
                                 <rect key="frame" x="16" y="602" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
                                 <state key="normal" title="RETURN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -179,7 +184,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b10-Gh-IbZ">
                                 <rect key="frame" x="16" y="602" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -292,12 +297,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8P-fG-qvq">
-                                <rect key="frame" x="16" y="325" width="150" height="30"/>
+                                <rect key="frame" x="16" y="325" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8GM-km-eBt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
                                 <state key="normal" title="CREATE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -306,11 +311,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHP-vN-HYf">
-                                <rect key="frame" x="209" y="325" width="150" height="30"/>
+                                <rect key="frame" x="209" y="325" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8D7-Sw-dxa"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="27"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" red="0.8712470531463623" green="0.69882971048355103" blue="0.034361071884632111" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -428,6 +434,7 @@
     <resources>
         <image name="characters" width="20" height="20"/>
         <image name="default-profile" width="376" height="356"/>
+        <image name="dungeons_and_dragons_40_ampersand_flat" width="1000" height="964"/>
         <image name="items" width="20" height="20"/>
         <image name="landing page background" width="1920" height="1080"/>
     </resources>

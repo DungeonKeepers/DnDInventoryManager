@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Banda.otf">
+            <string>BandaRegular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="157" id="KGk-i7-Jjw" customClass="CharacterCell" customModule="DnDInventoryManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="156.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeons_and_dragons_40_ampersand_flat" translatesAutoresizingMaskIntoConstraints="NO" id="8Lp-az-23M">
+                        <rect key="frame" x="8" y="8" width="141" height="141"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-Q6-R5f">
+                        <rect key="frame" x="157" y="68" width="155" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="155" id="KRP-BU-kmT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BandaRegular" family="Banda Regular" pointSize="20"/>
+                        <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="8Lp-az-23M" secondAttribute="bottom" constant="8" id="0b3-nf-roc"/>
+                    <constraint firstAttribute="bottom" secondItem="8Lp-az-23M" secondAttribute="bottom" constant="8" id="FeW-7l-STo"/>
+                    <constraint firstItem="8Lp-az-23M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="S4J-63-AbO"/>
+                    <constraint firstItem="8Lp-az-23M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="T3n-cC-fd8"/>
+                    <constraint firstItem="Kg5-Q6-R5f" firstAttribute="leading" secondItem="8Lp-az-23M" secondAttribute="trailing" constant="8" id="YBR-bg-nJy"/>
+                    <constraint firstItem="8Lp-az-23M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nD1-dL-6kb"/>
+                    <constraint firstItem="Kg5-Q6-R5f" firstAttribute="centerY" secondItem="8Lp-az-23M" secondAttribute="centerY" id="oT7-LA-ppH"/>
+                    <constraint firstItem="Kg5-Q6-R5f" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="s3A-H4-f4i"/>
+                    <constraint firstItem="Kg5-Q6-R5f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="60" id="zak-Oa-Du2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="characterImage" destination="8Lp-az-23M" id="dkd-UI-0TP"/>
+                <outlet property="characterName" destination="Kg5-Q6-R5f" id="n8O-T8-Ue5"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="110.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dungeons_and_dragons_40_ampersand_flat" width="1000" height="964"/>
+    </resources>
+</document>
