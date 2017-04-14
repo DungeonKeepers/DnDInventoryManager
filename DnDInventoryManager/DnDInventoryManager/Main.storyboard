@@ -398,29 +398,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-5v-8Fg">
-                                <rect key="frame" x="16" y="-413" width="343" height="1080"/>
+                                <rect key="frame" x="0.0" y="-413" width="375" height="1080"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
-                                <rect key="frame" x="16" y="20" width="343" height="44"/>
-                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-nd-92u">
                                 <rect key="frame" x="16" y="64" width="343" height="546"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-bO-TM5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="2Dn-Xh-sfH"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="66g-a8-cmA"/>
+                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="9eL-qe-UvJ"/>
                             <constraint firstItem="xPg-5v-8Fg" firstAttribute="leading" secondItem="tLM-bO-TM5" secondAttribute="leading" id="BiG-Pu-isC"/>
                             <constraint firstAttribute="trailing" secondItem="vWm-nd-92u" secondAttribute="trailing" constant="16" id="Bnc-X0-02g"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="top" secondItem="tLM-bO-TM5" secondAttribute="bottom" id="HQ2-52-mkP"/>
-                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="Tlb-RU-yjr"/>
-                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" constant="16" id="b9X-dE-Jb2"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="width" secondItem="0Em-eU-bKW" secondAttribute="width" id="aHm-Ny-pEN"/>
                             <constraint firstItem="xPg-5v-8Fg" firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="eEz-tb-05C"/>
+                            <constraint firstAttribute="trailing" secondItem="tLM-bO-TM5" secondAttribute="trailing" id="h8D-TB-z44"/>
                             <constraint firstItem="JvU-vI-A3V" firstAttribute="top" secondItem="vWm-nd-92u" secondAttribute="bottom" constant="8" id="mmb-Te-m7Y"/>
+                            <constraint firstItem="tLM-bO-TM5" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" id="p8G-Mj-Jfg"/>
                             <constraint firstItem="vWm-nd-92u" firstAttribute="leading" secondItem="0Em-eU-bKW" secondAttribute="leading" constant="16" id="sRP-26-yla"/>
                             <constraint firstItem="tLM-bO-TM5" firstAttribute="top" secondItem="Uhh-ru-VcF" secondAttribute="bottom" id="v2C-1i-Mtg"/>
                             <constraint firstAttribute="bottom" secondItem="xPg-5v-8Fg" secondAttribute="bottom" id="y4i-kw-jPS"/>
@@ -450,10 +453,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing page background" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-j7-M1O">
-                                <rect key="frame" x="16" y="-413" width="343" height="1080"/>
+                                <rect key="frame" x="-772.5" y="-413" width="1920" height="1080"/>
                             </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b03-oU-CuQ">
-                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -465,17 +468,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="b03-oU-CuQ" secondAttribute="trailing" constant="16" id="27N-4O-0Zd"/>
-                            <constraint firstItem="aoz-AU-8q4" firstAttribute="top" secondItem="b03-oU-CuQ" secondAttribute="bottom" id="65f-QY-3NA"/>
-                            <constraint firstItem="b03-oU-CuQ" firstAttribute="top" secondItem="KYJ-SP-y30" secondAttribute="bottom" id="66u-lZ-GpB"/>
-                            <constraint firstItem="b03-oU-CuQ" firstAttribute="leading" secondItem="gir-Ik-ebS" secondAttribute="leading" constant="16" id="8Vz-HB-cSD"/>
+                            <constraint firstItem="b03-oU-CuQ" firstAttribute="centerX" secondItem="I8y-j7-M1O" secondAttribute="centerX" id="5BF-eu-YjJ"/>
                             <constraint firstItem="ILb-Rl-9bm" firstAttribute="top" secondItem="aoz-AU-8q4" secondAttribute="bottom" constant="8" id="DSN-4A-85i"/>
-                            <constraint firstItem="I8y-j7-M1O" firstAttribute="leading" secondItem="b03-oU-CuQ" secondAttribute="leading" id="EcG-hI-NTs"/>
+                            <constraint firstItem="b03-oU-CuQ" firstAttribute="top" secondItem="KYJ-SP-y30" secondAttribute="bottom" id="Fjd-d3-ejQ"/>
                             <constraint firstAttribute="trailing" secondItem="aoz-AU-8q4" secondAttribute="trailing" constant="16" id="HH6-e5-Aup"/>
-                            <constraint firstItem="aoz-AU-8q4" firstAttribute="top" secondItem="b03-oU-CuQ" secondAttribute="bottom" id="eMg-7g-9EU"/>
                             <constraint firstAttribute="bottom" secondItem="I8y-j7-M1O" secondAttribute="bottom" id="gCp-3G-pDj"/>
+                            <constraint firstItem="b03-oU-CuQ" firstAttribute="bottom" secondItem="aoz-AU-8q4" secondAttribute="top" id="kT3-Pv-Bju"/>
+                            <constraint firstItem="b03-oU-CuQ" firstAttribute="centerX" secondItem="aoz-AU-8q4" secondAttribute="centerX" id="kdX-PL-lHH"/>
+                            <constraint firstItem="b03-oU-CuQ" firstAttribute="leading" secondItem="gir-Ik-ebS" secondAttribute="leading" id="kxg-0l-t5K"/>
                             <constraint firstItem="aoz-AU-8q4" firstAttribute="leading" secondItem="gir-Ik-ebS" secondAttribute="leading" constant="16" id="xKq-2g-ugt"/>
-                            <constraint firstItem="I8y-j7-M1O" firstAttribute="trailing" secondItem="b03-oU-CuQ" secondAttribute="trailing" id="zcy-xW-Q5X"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" image="items" id="MYF-nI-9kb"/>
