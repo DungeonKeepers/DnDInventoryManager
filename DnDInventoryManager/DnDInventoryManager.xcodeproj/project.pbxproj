@@ -25,6 +25,7 @@
 		8352CC4B1E9F1BC7004E8949 /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8352CC491E9F1BC7004E8949 /* ItemViewCell.xib */; };
 		8389DA901E9D8A4A007F37D5 /* CharacterCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */; };
 		8389DA911E9D8A4A007F37D5 /* CharacterCreationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */; };
+		839C8D211EA0D04A00A7F8BD /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C8D201EA0D04A00A7F8BD /* ItemDetailController.swift */; };
 		83CB37221E9BD6F400B6FEA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */; };
 		83CB37241E9BD6F400B6FEA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB37231E9BD6F400B6FEA6 /* ViewController.swift */; };
 		83CB37291E9BD6F400B6FEA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CB37281E9BD6F400B6FEA6 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		8352CC491E9F1BC7004E8949 /* ItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemViewCell.xib; path = ../ItemViewCell.xib; sourceTree = "<group>"; };
 		8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCreationController.swift; sourceTree = "<group>"; };
 		8389DA8F1E9D8A4A007F37D5 /* CharacterCreationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCreationController.xib; sourceTree = "<group>"; };
+		839C8D201EA0D04A00A7F8BD /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
 		83CB371E1E9BD6F400B6FEA6 /* DnDInventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDInventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CB37211E9BD6F400B6FEA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CB37231E9BD6F400B6FEA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				8389DA8E1E9D8A4A007F37D5 /* CharacterCreationController.swift */,
 				8352CC401E9E95FD004E8949 /* InventoryDetailController.swift */,
 				8352CC461E9F1386004E8949 /* ItemsViewController.swift */,
+				839C8D201EA0D04A00A7F8BD /* ItemDetailController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				8352CC411E9E95FD004E8949 /* InventoryDetailController.swift in Sources */,
 				834BA6C61EA09D4E00F88757 /* AddInventoryController.swift in Sources */,
 				C8523CAF1E9D47980004652C /* InventoryTableViewController.swift in Sources */,
+				839C8D211EA0D04A00A7F8BD /* ItemDetailController.swift in Sources */,
 				EFA2EA521E9E76AA00AFEE91 /* CampaignsTableViewController.swift in Sources */,
 				83CB37401E9BE7FD00B6FEA6 /* Character.swift in Sources */,
 				83D911741E9D4DCC00E1F9C7 /* UIExtensions.swift in Sources */,
