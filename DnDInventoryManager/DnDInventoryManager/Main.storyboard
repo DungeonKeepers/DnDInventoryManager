@@ -541,7 +541,7 @@
                                 <rect key="frame" x="15" y="20" width="345" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Item Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPH-Aa-sJ0">
-                                        <rect key="frame" x="9" y="12" width="328" height="27"/>
+                                        <rect key="frame" x="9" y="12" width="328" height="26.5"/>
                                         <fontDescription key="fontDescription" name="FantaisieArtistique" family="FantaisieArtistique" pointSize="26"/>
                                         <color key="textColor" red="0.87124705309999995" green="0.69882971049999998" blue="0.034361071880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -613,7 +613,7 @@
                     </view>
                     <connections>
                         <outlet property="itemName" destination="FPH-Aa-sJ0" id="61S-0t-cRa"/>
-                        <outlet property="itemText" destination="qqa-iZ-QBe" id="nog-xo-8yt"/>
+                        <outlet property="itemText" destination="qqa-iZ-QBe" id="Wjf-z7-DeH"/>
                         <segue destination="8QE-oR-NgD" kind="show" identifier="AddToCharacterController" id="mQs-6n-DAT"/>
                     </connections>
                 </viewController>
